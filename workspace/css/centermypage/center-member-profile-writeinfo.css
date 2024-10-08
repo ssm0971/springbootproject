@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 마이페이지 목록 */
+.center-member-profile-navbox{
+  margin: 0 auto;
+  /* border: 1px solid black; */
+  border-bottom: 1px solid #9B805D;
+  border-top: 1px solid #9B805D;
+
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-member-profile-nav-ul{
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+}
+
+.center-member-profile-nav-ul li{
+  margin: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.center-member-profile-navboard{
+  margin: 0 auto;
+  border-bottom: 5px solid #9B805D;
+  width: 1080px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-member-profile-navboard-ul{
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+}
+
+.center-member-profile-navboard-ul li{
+  margin: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.center-member-profile-cumuboard-title{
+  margin: 0 auto;
+  width: 1080px;
+  height: 700px;
+  border: 1px solid black;
+}

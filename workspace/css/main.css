@@ -1,0 +1,112 @@
+main {
+  flex-grow: 1;
+  width: 100%;
+}
+
+.first-section {
+  width: 100%;
+  background-color: #FFF8E7;
+  padding: 80px 0;
+}
+
+.first-section-content {
+  max-width: 1080px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.first-section h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+/* section2 */
+.donation-options {
+  background-color: #FFF8E7;
+  padding: 40px 0; /* 상하 패딩 감소 */
+}
+
+.donation-cards {
+  max-width: 900px; /* 최대 너비 감소 */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.donation-card {
+  background-color: #FFFFFF;
+  border-radius: 8px; /* 모서리 둥글기 감소 */
+  padding: 20px; /* 내부 패딩 감소 */
+  width: calc(50% - 10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 그림자 감소 */
+  position: relative;
+  overflow: hidden;
+}
+
+.animal-icon {
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  width: 80px; /* 아이콘 크기 감소 */
+  height: 80px;
+}
+
+.card-icon {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 30px; /* 아이콘 크기 감소 */
+  height: 30px;
+}
+
+.card-content {
+  margin-top: 30px; /* 상단 여백 감소 */
+}
+
+.donation-card h3 {
+  color: #FF9B50;
+  font-size: 16px; /* 폰트 크기 감소 */
+  margin-bottom: 8px;
+}
+
+.donation-card h2 {
+  font-size: 22px; /* 폰트 크기 감소 */
+  margin-bottom: 15px;
+}
+
+.donation-card p {
+  font-size: 14px; /* 폰트 크기 감소 */
+  margin-bottom: 8px;
+}
+
+.donation-card .note {
+  font-size: 12px; /* 폰트 크기 감소 */
+  color: #666;
+  margin-top: 15px;
+}
+
+.more-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: #FF9B50;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px; /* 폰트 크기 감소 */
+}
+
+@media (max-width: 768px) {
+  .donation-cards {
+    flex-direction: column;
+  }
+
+  .donation-card {
+    width: 100%;
+    margin-bottom: 20px; /* 모바일에서 카드 간 간격 추가 */
+  }
+}

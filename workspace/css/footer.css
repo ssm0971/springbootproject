@@ -1,0 +1,13 @@
+footer {
+  width: 1060px;
+  height: 70px;
+  /* background-color: antiquewhite; */
+  margin: 0 auto;
+}
+
+h6 {
+  font-weight: 400;
+  font-size: 10px;
+  color: gray;
+  transform: translate(150px, 10px);
+}
