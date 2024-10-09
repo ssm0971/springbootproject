@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>센터게시글조회페이지</title>
+  <link rel="stylesheet" href="../../css/centermypage/center-member-profile-volun-signup.css">
+</head>
+
+<body>
+  <header></header>
+  <main>
+    <!-- 메인페이지 목록 -->
+    <div class="center-member-profile-navbox">
+      <nav>
+        <ul class="center-member-profile-nav-ul">
+          <li id="profile">개인정보수정</li>
+          <li id="mywrite">작성글조회</li>
+          <li id="volunteer">봉사</li>
+          <li id="adopt">입양</li>
+          <li id="notebox">쪽지함</li>
+          <li id="withdrawal">회원탈퇴</li>
+        </ul>
+      </nav>
+    </div>
+    <!-- 게시판 제목 -->
+    <div class="center-member-profile-navboard">
+      <h1>봉사신청서</h1>
+    </div>
+    <!-- 봉사신청서 양식 -->
+    <div class="center-member-profile-volun-container">
+      <form action="" method="">
+        <div class="center-member-profile-volun-contents">
+
+          <input type="text" id="korname" value="홍길동" readonly>
+
+          <input type="text" id="engname" value="dong" readonly>
+
+          <div>
+            <input type="text" id="religion" value="종교" readonly>
+            <input type="button" class="middle-button" value="남">
+            <input type="button" class="middle-button" value="여">
+          </div>
+
+          <input type="text" id="phonenumber" value="휴대전화" readonly>
+
+          <div>
+            <input type="text" id="birth" value="생년월일" readonly>
+            <input type="button" class="middle-button" value="미혼">
+            <input type="button" class="middle-button" value="기혼">
+          </div>
+          <input type="text" id="email" value="이메일" readonly>
+
+          <input type="text" id="affiliation" value="현재소속(직장 학교 단체 등)" readonly>
+
+          <div>
+            <input type="text" id="voluntime" value="봉사경험(기간)" readonly>
+            <button class="mini-button">유</button>
+            <button class="mini-button">무</button>
+          </div>
+          <input type="text" id="volunmotive" value="봉사 신청 동기" readonly>
+          <div style="display: flex;">
+            <div class="large-button-style">
+              <b>봉사 가능 시간<br>
+                (복수 선택 가능)</b>
+            </div>
+            <div class="mini-buttons-flex">
+              <button class="mini-button">월</button>
+              <button class="mini-button">화</button>
+              <button class="mini-button">수</button>
+              <button class="mini-button">목</button>
+              <button class="mini-button">금</button>
+            </div>
+          </div>
+          <input type="text" id="time" value="시간" readonly>
+          <div>
+            <div class="hope-select-area">
+              <p>희망봉사</p>
+              <div>
+                <button>산책</button>
+                <button>청소</button>
+                <button>의료</button>
+                <button>미용</button>
+                <button>기타</button>
+              </div>
+            </div>
+          </div>
+          <div class="choice-button-area">
+            <div class="choice-button-toparea">
+              <button class="select-button">수락</button>
+              <button class="select-button">거절</button>
+            </div>
+            <div class="choice-button-bottomarea">
+              <button class="select-button">봉사완료</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+
+  </main>
+  <footer></footer>
+
+</body>
+
+</html>
