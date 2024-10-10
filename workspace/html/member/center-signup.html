@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>센터 회원가입</title>
+  <link rel="stylesheet" href="../../css/member/center-signup.css">
+  <link rel="stylesheet" href="../../css/main/header.css">
+  <link rel="stylesheet" href="../../css/main/footer.css">
+</head>
+
+<body>
+  <!-- 헤더부분 -->
+  <header class="header">
+    <div class="logo-nav">
+      <div class="logo">
+        <a href="../../html/main/main.html">
+          <img src="../../img/header-logo.png" alt="로고이미지">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-items">
+          <li class="nav-item">
+            <a href="#">봉사</a>
+            <div class="dropdown-content">
+              <a href="#">봉사 신청</a>
+              <a href="#">봉사 후기</a>
+              <a href="#">봉사 안내</a>
+              <a href="../../html/volun/volun-main-guest.html">카풀</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">기부</a>
+            <div class="dropdown-content">
+              <a href="#">기부 게시판</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="../adopt/adopt-main.html">입양</a>
+            <div class="dropdown-content">
+              <a href="../adopt/adopt-adopt.html">안심 입양</a>
+              <a href="../adopt/adopt-protection.html">임시 보호</a>
+              <a href="../adopt/adopt-review.html">후기</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">커뮤니티</a>
+            <div class="dropdown-content">
+              <a href="#">자유게시판</a>
+              <a href="#">질문과 답변</a>
+              <a href="#">자랑</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">공지사항</a>
+            <div class="dropdown-content">
+              <a href="#">공지</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="user-section">
+      <ul class="user-actions">
+        <li class="user-action"><a href="../member/login-select.html">로그인</a></li>
+        <li class="user-action"><a href="../member/signup-select.html">회원가입</a></li>
+      </ul>
+    </div>
+  </header>
+  <!-- 여기까지 헤더 -->
+  <div class="center-container">
+    <h1>센터 회원가입</h1>
+    <form id="center-signupForm">
+      <div class="center-form-group">
+        <label for="center-name">센터 이름 <span class="center-required">*</span></label>
+        <input type="text" id="center-name" name="center-name" required>
+        <span class="center-error-message" id="center-name-error"></span>
+      </div>
+      <div class="center-form-group">
+        <label for="center-businessNumber">사업자 등록번호 <span class="center-required">*</span></label>
+        <div class="center-input-button-group">
+          <input type="text" id="center-businessNumber" name="center-businessNumber" required>
+          <button type="button" id="center-businessNumberVerify">사업자번호</button>
+        </div>
+        <span class="center-error-message" id="center-businessNumber-error"></span>
+      </div>
+      <div class="center-form-group">
+        <label for="center-userid">아이디 <span class="center-required">*</span></label>
+        <input type="text" id="center-userid" name="center-userid" required>
+        <span class="center-error-message" id="center-userid-error"></span>
+      </div>
+      <div class="center-form-group">
+        <label for="center-password">비밀번호 <span class="center-required">*</span></label>
+        <input type="password" id="center-password" name="center-password" required>
+        <span class="center-error-message" id="center-password-error"></span>
+      </div>
+      <div class="center-form-group">
+        <label for="center-passwordConfirm">비밀번호 확인 <span class="center-required">*</span></label>
+        <input type="password" id="center-passwordConfirm" name="center-passwordConfirm" required>
+        <span class="center-error-message" id="center-passwordConfirm-error"></span>
+      </div>
+      <div class="center-form-group">
+        <label for="center-phone">연락처 <span class="center-required">*</span></label>
+        <div class="center-input-button-group">
+          <input type="tel" id="center-phone" name="center-phone" required>
+          <button type="button" id="center-phoneVerify">인증번호 발송</button>
+        </div>
+        <span class="center-error-message" id="center-phone-error"></span>
+      </div>
+      <div class="center-form-group">
+        <label for="center-phoneVerifyCode">연락처 인증번호 <span class="center-required">*</span></label>
+        <div class="center-input-button-group">
+          <input type="text" id="center-phoneVerifyCode" name="center-phoneVerifyCode" required>
+          <button type="button" id="center-phoneVerifyConfirm">연락처 인증</button>
+        </div>
+        <span class="center-error-message" id="center-phoneVerifyCode-error"></span>
+      </div>
+      <div class="center-form-group">
+        <label for="center-email">대표 이메일 <span class="center-required">*</span></label>
+        <div class="center-input-button-group">
+          <input type="email" id="center-email" name="center-email" required>
+          <button type="button" id="center-emailVerify">이메일 발송</button>
+        </div>
+        <span class="center-error-message" id="center-email-error"></span>
+      </div>
+      <div class="center-form-group">
+        <label for="center-emailVerifyCode">이메일 인증번호 <span class="center-required">*</span></label>
+        <div class="center-input-button-group">
+          <input type="text" id="center-emailVerifyCode" name="center-emailVerifyCode" required>
+          <button type="button" id="center-emailVerifyConfirm">이메일 인증</button>
+        </div>
+        <span class="center-error-message" id="center-emailVerifyCode-error"></span>
+      </div>
+      <div class="center-form-group">
+        <label for="center-zipcode">우편번호 <span class="center-required">*</span></label>
+        <div class="center-input-button-group">
+          <input type="text" id="center-zipcode" name="center-zipcode" required readonly>
+          <button type="button" id="center-addressSearch">우편번호 찾기</button>
+        </div>
+        <span class="center-error-message" id="center-zipcode-error"></span>
+      </div>
+      <div class="center-form-group">
+        <label for="center-address">주소 <span class="center-required">*</span></label>
+        <input type="text" id="center-address" name="center-address" required readonly>
+        <span class="center-error-message" id="center-address-error"></span>
+      </div>
+      <div class="center-form-group">
+        <label for="center-detailAddress">상세주소</label>
+        <input type="text" id="center-detailAddress" name="center-detailAddress">
+        <span class="center-error-message" id="center-detailAddress-error"></span>
+      </div>
+      <div class="center-button-group">
+        <button type="button" id="center-cancelBtn">취소</button>
+        <button type="submit" id="center-submitBtn">확인</button>
+      </div>
+    </form>
+  </div>
+  <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script src="../../js/member/center-signup.js"></script>
+  <footer>
+    <div class="footer-links">
+      <a href="../member/term.html">이용약관</a> |
+      <a href="../member/term.html">개인정보처리방침</a>
+    </div>
+    <h6>(06236)서울특별시 강남구 테헤란로 146, 신한은행 건물 (3층) | 대표이사 강수정 김규열 김민채 신승민 이기철 정시우 | 회사업자등록번호104-81-4522690 |<br>
+      통신판매업신고번호 2017-서울용산-066 | 사업자정보확인호스팅사업자 NT넥스트레벨 대표이메일 nextlevel_224@next.com<br>
+      © NEXT LEVEL. All Rights Reserved</h6>
+  </footer>
+</body>
+
+</html>

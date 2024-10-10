@@ -1,0 +1,126 @@
+main{
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.protection-main-size{
+  width: 1080px;
+  min-height: 1300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.protection-nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  width: 1080px;
+  height: 60px;
+  background-color: white;
+  border-top: solid 2px #9B805D;
+  border-bottom: solid 2px #9B805D;
+}
+
+.protection-navList{
+  font-size: 18px;
+  font-weight: bold;
+  width: 180px;
+  text-align: center;
+}
+
+.protection-title1{
+  width: 1080px;
+  height: 45px;
+  background-color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.protection-title2{
+  width: 1080px;
+  height: 35px;
+  background-color: white;
+  font-size: 16px;
+  display: flex; 
+  justify-content: flex-end; 
+}
+
+.protection-postlist{
+  width: 1000px;
+  height: 1200px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 10px;
+}
+
+.protection-post{
+  height: 350px;
+  background-color: #F5EAD9;
+  text-align: center;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.protection-post-intro{
+  display: flex;
+  gap: 5px;
+}
+
+.protection-post-status{
+  font-weight: bold;
+}
+
+.protection-post-title{
+  font-weight: bold;
+}
+
+.protection-post-content{
+  font-size: 12px;
+}
+
+.protect-button-box{
+  width: 1000px;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.protect-button{
+  width: 100px;
+  height: 50px;
+  background-color: #F5EAD9;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+
+.protect-button:hover {
+  background-color: #9B805D; /* 마우스를 올렸을 때 변경될 색상 */
+  color: white;
+}
+
+.protection-pagenation{
+  width: 1000px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/adopt/adopt-protectmodify.css">
+  <link rel="stylesheet" href="../../css/header.css">
+  <link rel="stylesheet" href="../css/header.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo-nav">
+      <div class="logo">
+        <img src="../img/header_logo.png" alt="로고이미지">
+      </div>
+      <nav>
+        <ul class="nav-items">
+          <li class="nav-item">
+            <a href="#">봉사</a>
+            <div class="dropdown-content">
+              <a href="#">봉사 신청</a>
+              <a href="#">봉사 후기</a>
+              <a href="#">봉사 안내</a>
+              <a href="#">카풀</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">기부</a>
+            <div class="dropdown-content">
+              <a href="#">기부게시판</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">입양</a>
+            <div class="dropdown-content">
+              <a href="#">입양 신청</a>
+              <a href="#">입양 후기</a>
+              <a href="#">입양 안내</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">커뮤니티</a>
+            <div class="dropdown-content">
+              <a href="#">자유게시판</a>
+              <a href="#">질문과 답변</a>
+              <a href="#">자랑</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">공지사항</a>
+            <div class="dropdown-content">
+              <a href="#">공지</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="user-section">
+      <ul class="user-actions">
+        <li class="user-action"><a href="#">로그인</a></li>
+        <li class="user-action"><a href="#">회원가입</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <!-- 입양 후기 메인 크기 -->
+    <div class="adopt-main-size">
+      <!-- 입양/임보/후기 게시판 바 -->
+      <div class="adopt-nav">
+        <div class="adopt-navList">안심입양</div>
+        <div class="adopt-navList">임시보호</div>
+        <div class="adopt-navList">후기</div>
+      </div>
+
+      <!-- 임시보호 글 등록 -->
+      <div class="protect-wirtebanner">임시보호 수정</div>
+
+      <br>
+
+      <!-- 글작성 박스 -->
+      <div class="protect-write-area">
+        <form action="링크" method="post">
+          <br>
+          <!-- 임시보호 기간 입력 -->
+          <div class="protect-write-box">
+            <div class="protect-write-subtitle">*임시보호 기한</div>
+            시작일 : 　<input type="date" name="start-date">　　
+            종료일 : 　<input type="date" name="end-date">
+          </div>
+          <!-- 견종입력 -->
+          <div class="protect-write-box">
+            <div class="protect-write-subtitle">*견종</div>
+            <input class="adopt-write-breed" type="text" id="breedInput" onblur="checkBreedInput()">　　
+          </div>
+          <!-- 견종 미입력 에러메세지 -->
+          <div class="breadError">
+            <div class="protect-write-subtitle" id="breadError2" style="display: none;"></div>
+            <div id="breadError" style="color: red; display: none;">견종을 입력해주세요</div>
+          </div>
+          <!-- 중성화 여부 입력 -->
+          <div class="protect-write-box">
+            <div class="protect-write-subtitle">*중성화 여부</div>
+            <input class="protect-write-sterilization" type="radio" name="sterilization" value="O" checked>네
+            <input class="protect-write-sterilization" type="radio" name="sterilization" value="X">아니요
+          </div>
+          <!-- 성별 입력 -->
+          <div class="protect-write-box">
+            <div class="protect-write-subtitle">*성별</div>
+            <input class="protect-write-gender" type="radio" name="gender" value="male" checked> 남
+            <input class="protect-write-gender" type="radio" name="gender" value="female"> 여
+          </div>
+          <!-- 몸무게 입력 -->
+          <div class="protect-write-box">
+            <div class="protect-write-subtitle">*몸무게</div>
+            <input class="adopt-write-weight" type="text" id="weightInput" onblur="checkWeightInput()">　　
+          </div>
+          <!-- 몸무게 미입력 에러메세지 -->
+          <div class="weightError">
+            <div class="protect-write-subtitle" id="weightError2" style="display: none;"></div>
+            <div id="weightError" style="color: red; display: none;">몸무게를 입력해주세요</div>
+          </div>
+          <!-- 생년월일 입력 -->
+          <div class="protect-write-box">
+            <div class="protect-write-subtitle">*생년월일</div><input class="protect-write-birth" type="date">
+            <div class="protect-brirth-ex">　*정확한 생년월일을 모를 시 예상 생년월일을 선택해주세요</div>
+          </div>
+          <!-- 한줄소개 입력 -->
+          <div class="protect-write-box">
+            <div class="protect-write-subtitle">*한줄소개</div>
+            <input class="protect-write-introduce" type="text" id="introduceInput" onblur="checkIntroduceInput()"
+              placeholder="ex)애교가 많아요~">
+          </div>
+          <!-- 한줄소개 미입력 에러메세지 -->
+          <div class="introduceError">
+            <div class="protect-write-subtitle" id="introduceError2" style="display: none;"></div>
+            <div id="introduceError" style="color: red; display: none;">한줄소개를 입력해주세요</div>
+          </div>
+
+          <!-- 제목/본문 api 사용이라 지울 예정 -->
+          <br><br>
+          <div><input type="text" placeholder="제목을 입력해주세요" class="title"></div>
+          <br>
+          <div><input type="text" class="content" placeholder="api쓸거라 대충 만듦"></div>
+
+          <!-- 등록/취소 버튼 -->
+          <div class="protect-write-button-box">
+            <button class="protect-write-button">등록</button>
+            <button class="protect-cancle-button">취소</button>
+          </div>
+        </form>
+      </div>
+  </main>
+
+</body>
+
+<footer>
+  <h6>(06236)서울특별시 강남구 테헤란로 146, 신한은행 건물 (3층) | 대표이사 강수정 김규열 김민채 신승민 이기철 정시우 | 회사업자등록번호104-81-4522690 |<br>
+    통신판매업신고번호 2017-서울용산-066 | 사업자정보확인호스팅사업자 NT넥스트레벨 대표이메일 nextlevel_224@next.com<br>
+    © NEXT LEVEL. All Rights Reserved</h6>
+</footer>
+
+<script defer src="../js/header.js"></script>
+<script defer src="../../js/adopt/adopt-protectmodify.js"></script>
+
+
+
+</html>

@@ -1,0 +1,26 @@
+footer {
+  /* 기존 스타일 유지 */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-links {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #666;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+footer h6 {
+  /* 기존 스타일 유지 */
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
