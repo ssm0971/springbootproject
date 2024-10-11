@@ -112,22 +112,27 @@
       <!-- 버튼 -->
       <div class="adopt-detail-box3">
         <div>
-          <button class="adopt-modify-button" type="button">수정</button>　
-          <button class="adopt-delete-button" type="button">삭제</button>
+          <button class="adopt-modify-button" type="button" onclick="modifyClick()">수정</button>　
+          <button class="adopt-delete-button" type="button" onclick="deleteClick()">삭제</button>
         </div>
-        <button class="adopt-end-button" type="button">마감</button>
+        <button class="adopt-end-button" type="button" onclick="endClick()">마감</button>
       </div>
-      
+
       <br>
 
       <!-- 댓글창 -->
-      <div class="adopt-detail-box4">
-        <div class="adopt-detail-commentNum">댓글 1</div>
-        <div class="adopt-detail-commentbox">
-          <div class="adopt-detail-name">에드워드리</div>
-          <div class="adopt-detail-comment">싫어요</div>
-          <div class="adopt-detail-date">2024-10-14</div>
+      <div class="adopt-detail-commentbox">
+        <div class="adopt-detail-name">에드워드리</div>
+        <div class="adopt-detail-comment" id="adopt-comment">싫어요</div>
+        <div class="adopt-detail-comment" id="adopt-modifyInput" style="display:none;">
+          <input class="adopt-modify-comment">  
+          <button class="adopt-comment-button" onclick="editCommentBtnClcik()">등록</button>
         </div>
+        <div id="adopt-comment-buttonBox">
+          <button class="adopt-comment-button" type="button" onclick="modifyCommentBtnClcik()">수정</button>
+          <button class="adopt-comment-button" type="button" onclick="CommentDeleteClick()">삭제</button>
+        </div>
+        <div class="adopt-detail-date">2024-10-14</div>
       </div>
 
       <br>
@@ -150,6 +155,7 @@
 </footer>
 
 <script defer src="../../js/main/header.js"></script>
+<script defer src="../../js/adopt/adopt-adoptdetail.js"></script>
 
 
 

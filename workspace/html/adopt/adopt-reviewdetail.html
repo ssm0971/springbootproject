@@ -88,9 +88,9 @@
       <!-- 글내용 크기 -->
       <div class="review-detail-box2">
         <div class="review-detail-content">
-          <img src="../../images/adopt-main.jpg" width="200px" height="200px">
-          <img src="../../images/adopt-main.jpg" width="200px" height="200px">
-          <img src="../../images/adopt-main.jpg" width="200px" height="200px">
+          <img src="../../img/adopt-main.jpg" width="200px" height="200px">
+          <img src="../../img/adopt-main.jpg" width="200px" height="200px">
+          <img src="../../img/adopt-main.jpg" width="200px" height="200px">
           <div>모수에서 킥이었어요</div>
         </div>
       </div>
@@ -101,21 +101,26 @@
       <div class="review-detail-box3">
         <div>
           <button class="review-modify-button">수정</button>　
-          <button class="review-delete-button">삭제</button>
+          <button class="review-delete-button" onclick="deleteClick()">삭제</button>
         </div>
-        <button class="review-end-button">마감</button>
+        <button class="review-end-button" onclick="endClick()">마감</button>
       </div>
       
       <br>
 
       <!-- 댓글창 -->
-      <div class="review-detail-box4">
-        <div class="review-detail-commentNum">댓글 1</div>
-        <div class="review-detail-commentbox">
-          <div class="review-detail-name">에드워드리</div>
-          <div class="review-detail-comment">싫어요</div>
-          <div class="review-detail-date">2024-10-14</div>
+      <div class="review-detail-commentbox">
+        <div class="review-detail-name">에드워드리</div>
+        <div class="review-detail-comment" id="review-comment">싫어요</div>
+        <div class="review-detail-comment" id="review-modifyInput" style="display:none;">
+          <input class="review-modify-comment">  
+          <button class="review-comment-button" onclick="editCommentBtnClcik()">등록</button>
         </div>
+        <div id="review-comment-buttonBox">
+          <button class="review-comment-button" type="button" onclick="modifyCommentBtnClcik()">수정</button>
+          <button class="review-comment-button" type="button" onclick="CommentDeleteClick()">삭제</button>
+        </div>
+        <div class="review-detail-date">2024-10-14</div>
       </div>
 
       <br>
@@ -138,6 +143,7 @@
 </footer>
 
 <script defer src="../../js/main/header.js"></script>
+<script defer src="../../js/adopt/adopt-reviewdetail.js"></script>
 
 
 

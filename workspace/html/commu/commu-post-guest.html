@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>카풀 상세페이지(비회원)</title>
-  <link rel="stylesheet" href="../../css/volun/volun-post-guest.css">
+  <title>커뮤니티 글 상세(비회원)</title>
+  <link rel="stylesheet" href="../../css/commu/commu-post-member.css">
   <link rel="stylesheet" href="../../css/main/header.css">
   <link rel="stylesheet" href="../../css/main/footer.css">
 </head>
@@ -26,7 +26,7 @@
               <a href="#">봉사 신청</a>
               <a href="#">봉사 후기</a>
               <a href="#">봉사 안내</a>
-              <a href="../../html/volun/volun-main-guest.html">카풀</a>
+              <a href="../../html/comm/comm-main-guest.html">카풀</a>
             </div>
           </li>
           <li class="nav-item">
@@ -36,11 +36,11 @@
             </div>
           </li>
           <li class="nav-item">
-            <a href="../volun/volun-main.html">입양</a>
+            <a href="../comm/comm-main.html">입양</a>
             <div class="dropdown-content">
-              <a href="../volun/volun-volun.html">안심 입양</a>
-              <a href="../volun/volun-protection.html">임시 보호</a>
-              <a href="../volun/volun-review.html">후기</a>
+              <a href="../comm/comm-comm.html">안심 입양</a>
+              <a href="../comm/comm-protection.html">임시 보호</a>
+              <a href="../comm/comm-review.html">후기</a>
             </div>
           </li>
           <li class="nav-item">
@@ -68,85 +68,72 @@
     </div>
   </header>
   <main>
-    <!-- 입양 메인 크기 -->
-    <div class="volun-main-size">
-      <!-- 입양/임보/후기 게시판 바 -->
-      <div class="volun-nav">
-        <div class="volun-navList">봉사</div>
-        <div class="volun-navList1">카풀</div>
-      </div>
+    <!-- 카풀 메인  크기 -->
+    <div class="comm-main-size">
+        <!--게시글 상단-->
+        <div class="comm-header">
+          <div class="navcontainer">
+            <ul id="navlist">
+              <li><a id="current" href="" onfocus="blur()">전체</a></li>
+              <li><a href="" onfocus="blur()">인기</a></li>
+              <li><a href="" onfocus="blur()">자유</a></li>
+              <li><a href="" onfocus="blur()">봉사 후기</a></li>
+              <li><a href="" onfocus="blur()">질문</a></li>
+              <li><a href="" onfocus="blur()">자랑</a></li>
+            </ul>
+          </div>
+        </div>
 
       <!-- 제목/작성자/등록일 크기 -->
-      <div class="volun-detail-box1">
-        <div class="volun-detail-title">10월18일 남양주 행복한유기견 센터 카풀멤버 구해요</div>
-        <div class="volun-detail-info"><span>작성자 : 안성재</span>
-          <sapn>등록일 : 2024-10-10</sapn>
+      <div class="comm-detail-box1">
+        <div class="comm-detail-title">우리집 애기 귀엽죠 [1]</div>
+        <div class="comm-detail-info"><span>작성자 : 프린세스</span>
+          <sapn>등록일 : 2024-10-08</sapn>
         </div>
       </div>
 
       <!-- 글내용 크기 -->
-      <div class="volun-detail-box2">
-        <div class="volun-detail-content">
-          <div class="volun-detail-basicinfo">
-            <div class="volun-detail-basicinfo-title"></div>
-            <div>10월 18일에 카풀 멤버 구합니다.</div>
-            <div>시간과 장소는 연락 후에 정하겠습니다.</div>
-            <div>자차 없으신 분 연락 주세요.</div>
+      <div class="comm-detail-box2">
+        <div class="comm-detail-content">
+          <div class="comm-detail-basicinfo">
+            <div class="comm-detail-basicinfo-title"></div>
+            <div>가끔보면 사람같은 우리 집 애..</div>
+            <div>개 팔자가 상팔자다</div>
+            <div>부럽다</div>
           </div>
 
         </div>
       </div>
 
-      <br>
 
-      <!-- 버튼 -->
-      <!-- <div class="volun-detail-box3">
-        <div>
-          <button class="volun-modify-button" onclick="modifyAlert()">수정</button>　
-          <button class="volun-delete-button" onclick="deleteAlert()">삭제</button>
-        </div>
-        <button class="volun-end-button" onclick="endAlert()">신고</button>
-      </div> -->
-      
       <br>
 
       <!-- 댓글창 -->
-      <div class="volun-detail-box4">
-        <div class="volun-detail-commentNum">댓글 2</div>
-        <div class="volun-detail-commentbox">
-          <div class="volun-detail-name">행복이</div>
-          <div class="volun-detail-comment">저요!</div>
-          <div class="volun-detail-date">2024-10-10</div>
+      <div class="comm-detail-box4">
+        <div class="comm-detail-commentNum">댓글 2</div>
+        <div class="comm-detail-commentbox">
+          <div class="comm-detail-name">행복이</div>
+          <div class="comm-detail-comment">저희 집 애두요</div>
+          <div class="comm-detail-date">2024-10-08</div>
         </div>
         <br>
-        <div class="volun-detail-commentbox">
-          <div class="volun-detail-name">아가다</div>
-          <div class="volun-detail-comment">저요!</div>
-          <div class="volun-detail-date">2024-10-10</div>
+        <div class="comm-detail-commentbox">
+          <div class="comm-detail-name">아가다</div>
+          <div class="comm-detail-comment">배고파</div>
+          <div class="comm-detail-date">2024-10-08</div>
         </div>
       </div>
 
       <br>
 
+
       <br>
+    </div>
   </main>
-<!-- 수정 , 삭제 , 신고 알터창 -->
-  <script>
-    function modifyAlert() {
-      alert("로그인 후 수정 가능합니다.");
-    }
-  </script>
-    <script>
-      function deleteAlert() {
-        alert("로그인 후 삭제 가능합니다.");
-      }
-    </script>
-        <script>
-          function endAlert() {
-            alert("로그인 후 신고 가능합니다.");
-          }
-        </script>
 </body>
+
+
+
 <footer>
   <div class="footer-links">
     <a href="../member/term.html">이용약관</a> |

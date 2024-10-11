@@ -5,10 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>카풀 댓글 수정,삭제(작성자)</title>
-  <link rel="stylesheet" href="../../css/volun/volun-post-member.css">
+  <link rel="stylesheet" href="../../css/volun/volun-post-member-comm-writer.css">
   <link rel="stylesheet" href="../../css/main/header.css">
   <link rel="stylesheet" href="../../css/main/footer.css">
 </head>
+<!-- 수정 , 삭제 , 신고 버튼 눌렀을 떄 로그인 안내 알터창 추가 -->
 
 <body>
   <header class="header">
@@ -36,11 +37,11 @@
             </div>
           </li>
           <li class="nav-item">
-            <a href="../adopt/adopt-main.html">입양</a>
+            <a href="../volun/volun-main.html">입양</a>
             <div class="dropdown-content">
-              <a href="../adopt/adopt-adopt.html">안심 입양</a>
-              <a href="../adopt/adopt-protection.html">임시 보호</a>
-              <a href="../adopt/adopt-review.html">후기</a>
+              <a href="../volun/volun-volun.html">안심 입양</a>
+              <a href="../volun/volun-protection.html">임시 보호</a>
+              <a href="../volun/volun-review.html">후기</a>
             </div>
           </li>
           <li class="nav-item">
@@ -68,76 +69,110 @@
     </div>
   </header>
   <main>
-    <div class="post-guest-main">
-      <!--게시판 상단 (제목, 닉네임)-->
-      <div class="post-guest">
-        <div class="topTitle">
-          <h1>10월 18일 남양주 행복한유기견 센터 카풀 구해요<span id="comment">[5]</span></h1>
+    <!-- 입양 메인 크기 -->
+    <div class="volun-main-size">
+      <!-- 입양/임보/후기 게시판 바 -->
+      <div class="volun-nav">
+        <div class="volun-navList">봉사</div>
+        <div class="volun-navList1">카풀</div>
+      </div>
+
+      <!-- 제목/작성자/등록일 크기 -->
+      <div class="volun-detail-box1">
+        <div class="volun-detail-title">10월18일 남양주 행복한유기견 센터 카풀멤버 구해요</div>
+        <div class="volun-detail-info"><span>작성자 : 안성재</span>
+          <sapn>등록일 : 2024-10-10</sapn>
         </div>
-        <div class="topTitle-box">
-          <div class="topTitle-mainbox">
-            <div class="topTitle-name"><strong>프린세스</strong><small>등록일 2024-10-08 13:40</small></div>
+      </div>
+
+      <!-- 글내용 크기 -->
+      <div class="volun-detail-box2">
+        <div class="volun-detail-content">
+          <div class="volun-detail-basicinfo">
+            <div class="volun-detail-basicinfo-title"></div>
+            <div>10월 18일에 카풀 멤버 구합니다.</div>
+            <div>시간과 장소는 연락 후에 정하겠습니다.</div>
+            <div>자차 없으신 분 연락 주세요.</div>
           </div>
-        </div>
-        <div class="post-textarea">
-          <span>10월 18일 남양주 행복한 유기견 센터 카풀 구합니다.</span><br>
-          <span>출발 시간과 장소는 얘기 해봐요. 인원수는 4명 가능합니다.</span>
+
         </div>
       </div>
-      <div class="volun-button">
-        <div class="volun-admain-btuall">
-          <button class="volun-admain-btu" type="button" onclick="location.href='#'">
-            <span class="volun-admain-btu-sp">수정</span>
-          </button>
+
+      <br>
+
+      <!-- 버튼 -->
+      <div class="volun-detail-box3">
+        <div>
+          <button class="volun-modify-button" onclick="modifyAlert()">수정</button>　
+          <button class="volun-delete-button" onclick="deleteAlert()">삭제</button>
         </div>
-        <div class="volun-admain-btuall-delete">
-          <button class="volun-admain-btu-delete" type="button" onclick="location.href='#'">
-            <span class="volun-admain-btu-delete-sp">삭제</span>
-          </button>
-        </div>
-        <div class="volun-admain-btuall-complaint">
-          <button class="volun-admain-btu-complaint" type="button" onclick="location.href='#'">
-            <span class="volun-admain-btu-complaint-sp">신고</span>
-          </button>
-        </div>
+        <button class="volun-end-button" onclick="endAlert()">신고</button>
       </div>
-      <div class="volun-commentInfo">
-        <div class="comment-count">댓글 <span id="count">2</span></div>
-        <div class="comment-comment-list">
-          <div>
-            <div>
-              <div><strong>행복이</strong></div>
-              <div><span>저요</span></div>
-              <div class="comu-member-rewrite-contents">
-                <a href="../../html/volun/volun-post-member-comm-rewriter.html">
-                  <button class="comu-member-rewrite-contents-button" type="button">수정</button></a>
-                <button class="comu-member-rewrite-contents-button" id="comu-myModal" type="button"
-                  onclick="openDeleteModal()"><span>삭제</span></button>
-              </div>
+      
+      <br>
 
-              <div><small>2024-10-08 14:50</small></div>
-
-            </div>
-            <br>
-            <div>
-              <div><strong>아가다</strong></div>
-              <div><span>저요</span></div>
-
-              <div><small>2024-10-08 14:51</small></div>
-            </div>
-            <br>
-
+      <!-- 댓글창 -->
+      <div class="volun-detail-box4">
+        <div class="volun-detail-commentNum">댓글 2</div>
+        <div class="volun-detail-commentbox">
+          <div class="volun-detail-name">행복이</div>
+          <div class="volun-detail-comment">저요!</div>
+          <div class="volun-member-rewrite-contents">
+            <a href="../../html/volun/volun-post-member-comm-rewriter.html">
+              <button class="volun-member-rewrite-contents-button" type="button">수정</button></a>
+            <button class="volun-member-rewrite-contents-button" id="volun-myModal" type="button"
+              onclick="openDeleteModal()"><span>삭제</span></button>
           </div>
+          <div class="volun-detail-date">2024-10-10</div>
         </div>
-        <span class="comu-text-red">[알림]</span><span> 욕설,상처 줄 수 있는 악플은 삼가주세요</span>
-        <div class="comu-inputbox-but">
-          <input class="comment-input" placeholder="댓글을 입력해 주세요.">
-          <button class="comu-submit" id="comu-Null-Modal" type="button" onclick="openNullModal()">등록</button>
+        <div class="volun-detail-commentbox">
+          <div class="volun-detail-name">아가다</div>
+          <div class="volun-detail-comment">저요!</div>
+          <div class="volun-detail-date">2024-10-10</div>
         </div>
       </div>
-    </div>
 
+      <br>
+
+      <!-- 댓글입력 -->
+      <form onsubmit="return Comment()">
+        <input class="volun-detail-commentregi" type="text" id="commentInput" placeholder="욕설 및 혐오감을 주는 댓글은 삼가주세요">　
+        <button type="submit" class="volun-commentregi-button">등록</button>
+      </form>
+
+      <br>
+  </main>
 </body>
+<!-- 댓글 알터창 -->
+<script>
+  function Comment() {
+    const comment = document.getElementById('commentInput').value.trim();
+    
+    if (comment === '') {
+      alert('입력한 내용이 없습니다.');
+      return false; // 제출을 막습니다.
+    }
+    return true; // 내용이 있을 경우 제출합니다.
+  }
+</script>
+
+<!-- 수정 , 삭제 , 신고 알터창 -->
+<script>
+  function modifyAlert() {
+    alert("수정하시겠습니까?");
+  }
+</script>
+  <script>
+    function deleteAlert() {
+      alert("삭제하시겠습니까?");
+    }
+  </script>
+      <script>
+        function endAlert() {
+          alert("신고가 완료되었습니다.");
+        }
+      </script>
+
 <footer>
   <div class="footer-links">
     <a href="../member/term.html">이용약관</a> |
@@ -147,6 +182,7 @@
     통신판매업신고번호 2017-서울용산-066 | 사업자정보확인호스팅사업자 NT넥스트레벨 대표이메일 nextlevel_224@next.com<br>
     © NEXT LEVEL. All Rights Reserved</h6>
 </footer>
+
 <script defer src="../js/header.js"></script>
 
 </html>

@@ -5,7 +5,7 @@ main{
   align-items: center;
 }
 
-.adopt-main-size{
+.comm-main-size{
   width: 1080px;
   min-height: 500px;
   display: flex;
@@ -13,27 +13,43 @@ main{
   align-items: center;
 }
 
+/*게시글 상단*/
 
-.adopt-nav{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 150px;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul{
+  display: flex; /* 가로로 나열 */
+  list-style-type: none;
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+
+.comm-header{
+  height: 50px;
   width: 1080px;
-  height: 60px;
-  background-color: white;
-  border-top: solid 2px #9B805D;
-  border-bottom: solid 2px #9B805D;
+  border-bottom: 2px solid #9B805D; /* 아래쪽 경계선 추가 */
 }
 
-.adopt-navList{
-  font-size: 18px;
-  font-weight: bold;
-  width: 180px;
-  text-align: center;
+.navcontainer {
+  height: 30px;
+  display: flex;
+  margin: 10px 0 1px 0;
+  align-items: center;
 }
 
-.adopt-detail-box1{
+#navlist {
+  display: flex;
+  gap: 78px;
+}
+
+#navlist li{
+  margin: 0 10px;
+}
+
+.comm-detail-box1{
   width: 1080px;
   height: 100px;
   display: flex;
@@ -43,7 +59,7 @@ main{
   border-bottom: 2px solid #9B805D;
 }
 
-.adopt-detail-title{
+.comm-detail-title{
   width: 745px;
   height: 60px;
   font-size: 24px;
@@ -52,7 +68,7 @@ main{
   align-items: center;
 }
 
-.adopt-detail-info{
+.comm-detail-info{
   width: 745px;
   height: 15px;
   font-size: 14px;
@@ -62,7 +78,7 @@ main{
   align-items: center;
 }
 
-.adopt-detail-box2{
+.comm-detail-box2{
   width: 1080px;
   min-height: 500px;
   border-bottom: 2px solid #9B805D;
@@ -71,7 +87,7 @@ main{
   align-items: center;
 }
 
-.adopt-detail-content{
+.comm-detail-content{
   background-color: white;
   width: 745px;
   min-height: 450px;
@@ -80,19 +96,19 @@ main{
   flex-direction: column;
 }
 
-.adopt-detail-basicinfo{
+.comm-detail-basicinfo{
   font-size: 16px;
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
 
-.adopt-detail-basicinfo-title{
+.comm-detail-basicinfo-title{
   font-size: 18px;
   font-weight: bold;
 }
 
-.adopt-detail-box3{
+.comm-detail-box3{
   width: 745px;
   height: auto;
   display: flex;
@@ -100,7 +116,7 @@ main{
   align-items: center;
 }
 
-.adopt-modify-button{
+.comm-modify-button{
   width: 100px;
   height: 50px;
   background-color: #F5EAD9;
@@ -111,12 +127,12 @@ main{
   cursor: pointer;
 }
 
-.adopt-modify-button:hover {
+.comm-modify-button:hover {
   background-color: #9B805D; /* 마우스를 올렸을 때 변경될 색상 */
   color: white;
 }
 
-.adopt-delete-button{
+.comm-delete-button{
   width: 100px;
   height: 50px;
   background-color: #F5EAD9;
@@ -127,12 +143,12 @@ main{
   cursor: pointer;
 }
 
-.adopt-delete-button:hover {
+.comm-delete-button:hover {
   background-color: #9B805D; /* 마우스를 올렸을 때 변경될 색상 */
   color: white;
 }
 
-.adopt-end-button{
+.comm-end-button{
   width: 100px;
   height: 50px;
   background-color: #F5EAD9;
@@ -143,17 +159,17 @@ main{
   cursor: pointer;
 }
 
-.adopt-end-button:hover {
+.comm-end-button:hover {
   background-color: #9B805D; /* 마우스를 올렸을 때 변경될 색상 */
   color: white;
 }
 
-.adopt-detail-box4{
+.comm-detail-box4{
   width: 745px;
   height: auto;
 }
 
-.adopt-detail-commentNum{
+.comm-detail-commentNum{
   width: 745px;
   height: 35px;
   display: flex;
@@ -162,30 +178,30 @@ main{
   font-weight: bold;
 }
 
-.adopt-detail-commentbox{
+.comm-detail-commentbox{
   width: 745px;
   height: auto;
 }
 
-.adopt-detail-name{
+.comm-detail-name{
   font-size: 14px;
   font-weight: bold;
 }
 
-.adopt-detail-comment{
+.comm-detail-comment{
   font-size: 14px;
 }
 
-.adopt-detail-date{
+.comm-detail-date{
   font-size: 12px;
 }
 
-.adopt-detail-commentregi{
+.comm-detail-commentregi{
   width: 620px;
   height: 50px;
 }
 
-.adopt-commentregi-button{
+.comm-commentregi-button{
   width: 100px;
   height: 50px;
   background-color: #F5EAD9;
@@ -196,30 +212,7 @@ main{
   cursor: pointer;
 }
 
-.adopt-commentregi-button:hover {
+.comm-commentregi-button:hover {
   background-color: #9B805D; /* 마우스를 올렸을 때 변경될 색상 */
   color: white;
-}
-
-/* 댓글버튼 */
-.adopt-comment-button{
-  width: 50px;
-  height: 25px;
-  background-color: #F5EAD9;
-  border: none;
-  border-radius: 8px;
-  font-size: 10px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.adopt-comment-button:hover {
-  background-color: #9B805D; /* 마우스를 올렸을 때 변경될 색상 */
-  color: white;
-}
-
-/* 댓글수정 input 박스 */
-.adopt-modify-comment{
-  width: 300px;
-  height: 30px;
 }

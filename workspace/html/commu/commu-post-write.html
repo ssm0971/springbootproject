@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote.min.js"></script>
 
 
-  <link rel="stylesheet" href="../../css/volun/volun-post-write.css">
+  <link rel="stylesheet" href="../../css/commu/commu-post-write.css">
   <link rel="stylesheet" href="../../css/main/header.css">
   <link rel="stylesheet" href="../../css/main/footer.css">
 </head>
@@ -36,7 +36,7 @@
               <a href="#">봉사 신청</a>
               <a href="#">봉사 후기</a>
               <a href="#">봉사 안내</a>
-              <a href="../../html/volun/volun-main-guest.html">카풀</a>
+              <a href="../../html/commu/commu-main-guest.html">카풀</a>
             </div>
           </li>
           <li class="nav-item">
@@ -78,12 +78,20 @@
     </div>
   </header>
   <main>
-    <div class="volun-main">
-      <!-- 봉사, 카풀 게시판 바 -->
-      <div class="volun-nav">
-        <div class="volun-navList">봉사</div>
-        <div class="volun-navList1">카풀</div>
-      </div>
+    <div class="commu-main">
+        <!--게시글 상단-->
+        <div class="comm-header">
+          <div class="navcontainer">
+            <ul id="navlist">
+              <li><a id="current" href="" onfocus="blur()">전체</a></li>
+              <li><a href="" onfocus="blur()">인기</a></li>
+              <li><a href="" onfocus="blur()">자유</a></li>
+              <li><a href="" onfocus="blur()">봉사 후기</a></li>
+              <li><a href="" onfocus="blur()">질문</a></li>
+              <li><a href="" onfocus="blur()">자랑</a></li>
+            </ul>
+          </div>
+        </div>
 
 
       <!-- 카풀 글 작성 -->
@@ -108,7 +116,7 @@
           <!-- 등록/취소 버튼 -->
           <div class="protect-write-button-box">
             <button class="review-write-button" type="button"
-              onclick="if(registration()) { location.href='../../html/volun/volun-main-member.html'; }">등록</button>
+              onclick="if(registration()) { location.href='../../html/commu/commu-main-member.html'; }">등록</button>
               <button class="review-cancle-button" type="button" onclick="Cancel()">취소</button>
           </div>
         </form>
@@ -137,12 +145,12 @@ function Cancel() {
 
   if (subject === '' && contents === '') {
     // 아무 내용도 입력되지 않은 경우
-    location.href = '../../html/volun/volun-main-member.html'; // 바로 이동
+    location.href = '../../html/commu/commu-main-member.html'; // 바로 이동
   } else {
     // 내용이 입력된 경우 알림창
     const confirmResult = confirm('작성된 내용이 저장되지 않습니다. 취소하시겠습니까?');
     if (confirmResult) {
-      location.href = '../../html/volun/volun-main-member.html'; // 확인 시 이동
+      location.href = '../../html/commu/commu-main-member.html'; // 확인 시 이동
     }
     // 아니요 버튼을 누르면 페이지 그대로 유지
   }
@@ -160,6 +168,6 @@ function Cancel() {
 </footer>
 
 <script defer src="../js/header.js"></script>
-<script defer src="../../js/volun/volun-post-write.js"></script>
+<script defer src="../../js/commu/commu-post-write.js"></script>
 
 </html>
