@@ -260,7 +260,7 @@ div#paging-wrap {
 	width: 100px;
   }
   .info-cell-report-reason {
-	width: 420px;
+		flex-grow:1;
   }
   .checkbox-line {
 	width: 50px;

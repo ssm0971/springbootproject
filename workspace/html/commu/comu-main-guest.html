@@ -4,246 +4,237 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>커뮤톡톡!(비회원)</title>
-  <link rel="stylesheet" href="../../css/community/comu.css">
-  <link rel="stylesheet" href="../../css/main/footer.css">
+  <title>커뮤니티 게시판(전체)</title>
+  <link rel="stylesheet" href="../../css/commu/comu.css">
   <link rel="stylesheet" href="../../css/main/header.css">
-  <script defer src="../../js/main/header.js"></script>
+  <link rel="stylesheet" href="../../css/main/footer.css">
 </head>
 
 <body>
-  <header>
-    <section class="header-section">
-      <div class="header-fixed">
-        <ul class="header-list">
-          <li>
-            <!-- <a class="main-header-logo" href="../../html/main/main.html"> -->
-              <!-- 메인 로고 -->
-              <div id="header-img-0"><a href="../../html/main/main.html"><img src="../../images/logo-224-1.png" alt="로고"></div>
-              <div id="header-img-1"><img src="../../images/logo-224-0.png" alt="로고"></a></div>
-            </a>
+  <header class="header">
+    <div class="logo-nav">
+      <div class="logo">
+        <a href="../../html/main/main.html">
+          <img src="../../img/header-logo.png" alt="로고이미지">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-items">
+          <li class="nav-item">
+            <a href="#">봉사</a>
+            <div class="dropdown-content">
+              <a href="#">봉사 신청</a>
+              <a href="#">봉사 후기</a>
+              <a href="#">봉사 안내</a>
+              <a href="../../html/comm/comm-main-guest.html">카풀</a>
+            </div>
           </li>
-          <li>
-            <!-- 메인 검색창 -->
-            <a href="../../html/main/main-search.html">
-            <div class="header-search">
-              <div id="header-search-frame"><img src="../../images/main-search.png"></div>
-              <!-- <input id="search" type="text" placeholder="검색하세요"> -->
-            </div></a>
+          <li class="nav-item">
+            <a href="#">기부</a>
+            <div class="dropdown-content">
+              <a href="#">기부 게시판</a>
+            </div>
           </li>
-          <li class="main-login-btn">
-            <!-- 로그인 및 회원가입 버튼 -->
-            <div id="header-weather"><a href="#"><img src="../../images/weather.jpg"></a></div>
-            <a href="../../html/member/mem-login.html">
-              <div id="header-login-join-btn">
-                <h5>로그인 및 회원가입</h5>
-              </div>
-            </a>
+          <li class="nav-item">
+            <a href="../adopt/adopt-main.html">입양</a>
+            <div class="dropdown-content">
+              <a href="../adopt/adopt-adopt.html">안심 입양</a>
+              <a href="../adopt/adopt-protection.html">임시 보호</a>
+              <a href="../adopt/adopt-review.html">후기</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">커뮤니티</a>
+            <div class="dropdown-content">
+              <a href="#">자유게시판</a>
+              <a href="#">질문과 답변</a>
+              <a href="#">자랑</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">공지사항</a>
+            <div class="dropdown-content">
+              <a href="#">공지</a>
+            </div>
           </li>
         </ul>
-      </div>
-    </section>
-    <section class="main-dropdown">
-      <!-- 메인 메뉴 드롭다운-->
-      <div id="dropdown-container">
-        <div class="dropdown">
-          <!-- 2호선폭폭 -->
-          <div class="dropdown-menu"><img src="../../images/line-icon.png"></div>
-          <div class="dropdown-menu-txt"><a href="../../html/subway/subway-route.html">2호선폭폭</a></div>
-          <div class="dropdown-content">
-            <ul class="dropdown-subway">
-              <li>
-                <div class="dropdown-line"></div>
-              </li>
-              <li><a href="../../html/subway/subway-route.html">2호선 노선도</a></li>
-              <li><a href="../../html/subway/subway-schedule.html">2호선 배차시간표</a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- 핫플콕콕 -->
-        <div class="dropdown">
-          <div class="dropdown-menu"><img src="../../images/hotplace-icon.png"></div>
-          <div class="dropdown-menu-txt"><a href="../../html/hotplace/hotplace.html">핫플콕콕</a></div>
-          <div class="dropdown-content">
-            <ul class="dropdown-hot">
-              <li>
-                <div class="dropdown-line"></div>
-              </li>
-              <li><a href="../../html/hotplace/hotplace.html">핫플콕콕</a></li>
-              <li><a href="../../html/hotplace/hotplace-gangnam.html">강남역</a></li>
-              <li><a href="../hotplace/hotplace-jamsil.html">잠실역</a></li>
-              <li><a href="../hotplace/hotplace-seongsu.html">성수역</a></li>
-              <li><a href="../hotplace/hotplace-moonrae.html">문래역</a></li>
-              <li><a href="../hotplace/hotplace-hongdae.html">홍대입구역</a></li>
-              <li><a href="../hotplace/hotplace-euljiro.html">을지로입구역</a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- 편의공공 -->
-        <div class="dropdown">
-          <div class="dropdown-menu"><img src="../../images/convenience-icon.png"></div>
-          <div class="dropdown-menu-txt"><a href="../../html/convenience/conv-main.html">편의공공</a></div>
-          <div class="dropdown-content">
-            <ul class="dropdown-conv">
-              <li>
-                <div class="dropdown-line"></div>
-              </li>
-              <li><a href="../../html/convenience/conv-main.html">편의공공</a></li>
-              <li><a href="../../html/convenience/conv-storage.html">물품보관함</a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- 커뮤톡톡 -->
-        <div class="dropdown">
-          <div class="dropdown-menu"><img src="../../images/community-icon.png"></div>
-          <div class="dropdown-menu-txt"><a href="../../html/community/comu-main-guest.html">커뮤톡톡</a></div>
-          <div class="dropdown-content">
-            <ul class="dropdown-comu">
-              <li>
-                <div class="dropdown-line"></div>
-              </li>
-              <li><a href="../../html/community/comu-main-guest.html">커뮤톡톡</a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- 여기수정함 -->
-        <!-- 공지쏙쏙 -->
-        <div class="dropdown">
-          <div class="dropdown-menu"><img src="../../images/notice-icon.png"></div>
-          <div class="dropdown-menu-txt"><a href="../../html/notice/notice-admain.html">공지쏙쏙</a></div>
-          <div class="dropdown-content">
-            <ul class="dropdown-notice">
-              <li>
-                <div class="dropdown-line"></div>
-              </li>
-              <li><a href="../../html/notice/notice-admain.html">공지쏙쏙</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+      </nav>
+    </div>
+    <div class="user-section">
+      <ul class="user-actions">
+        <li class="user-action"><a href="../member/login-select.html">로그인</a></li>
+        <li class="user-action"><a href="../member/signup-select.html">회원가입</a></li>
+      </ul>
+    </div>
   </header>
   <main>
-    <div class="wrapper">
-      <div class="contnets">
-        <div class="container"></div>
-        <div>
-          <div id="header-box">
-            <div class="bbs-title">
-              <h1 style="font-weight: bold;">커뮤톡톡!</h1>
-            </div>
-            <div class="desc">
-              2호선 이용에 대한 정보 공유 및 각종 이야기를 나누는 공간입니다.
-            </div>
-          </div>
-
+    <div class="comm-main">
+      <div class="comm">
+        <!--게시글 상단-->
+        <div class="comm-header">
           <div class="navcontainer">
             <ul id="navlist">
               <li><a id="current" href="" onfocus="blur()">전체</a></li>
+              <li><a href="" onfocus="blur()">인기</a></li>
               <li><a href="" onfocus="blur()">자유</a></li>
-              <li><a href="" onfocus="blur()">핫플 자유</a></li>
-              <li><a href="" onfocus="blur()">핫플 후기</a></li>
-              <li><a href="" onfocus="blur()">편공 자유</a></li>
-              <li><a href="" onfocus="blur()">편공 후기</a></li>
+              <li><a href="" onfocus="blur()">봉사 후기</a></li>
+              <li><a href="" onfocus="blur()">질문</a></li>
+              <li><a href="" onfocus="blur()">자랑</a></li>
             </ul>
-
-          </div>
-
-          <div id="revolution-main-table" width="900" class="title-bg bbs bid-publictransport">
-            <div>
-              <div align="center" id="headNotice" style="display:flex;">
-                <div class="baseList-space" style="width: 63px;"><span class="baseList-sector">분류</span></div>
-                <div class="baseList-space" style="width: 100%;"><span class="baseList-sector">제목</span></div>
-                <div class="baseList-space" style="width: 90px;"><span class="baseList-sector">글쓴이</span></div>
-                <div class="baseList-space" style="width: 90px;"><span class="baseList-sector">등록일</span></div>
-                <div class="baseList-space" style="width: 60px;"><span class="baseList-sector">추천</span></div>
-              </div>
-            </div>
-          </div>
-          <div id="revolution-main-list">
-            <div align="center" class="baseList " style="display:flex;">
-              <div class="baseList-space baseList-numb" style="width: 63px;">자유</div>
-              <div class="baseList-space " align="left" style="width: 100%;">
-                <a class="baseList-title" href="./comu-post-guest.html"><span>고속버스 명당자리.jpg</span></a>
-                <span class="baseList-c">[38]</span>
-              </div>
-              <div class="baseList-space" align="center" style="width: 90px;">
-                <div class="list-name">닉네임1
-                </div>
-              </div>
-              <div class="baseList-space" title="24.08.23 13:40:24" style="width: 90px;"><time
-                  class="baseList-time">24/08/23</time></div>
-              <div class="baseList-space baseList-rec" style="width: 60px;">6</div>
-            </div>
-          </div>
-          <div id="revolution-main-list">
-            <div align="center" class="baseList " style="display:flex;">
-              <div class="baseList-space baseList-numb" style="width: 63px;">자유</div>
-              <div class="baseList-space " align="left" style="width: 100%;">
-                <a class="baseList-title" href="./comu-post-writer.html"><span>고속버스 명당자리(게시글 작성자).jpg</span></a>
-                <span class="baseList-c">[38]</span>
-              </div>
-              <div class="baseList-space" align="center" style="width: 90px;">
-                <div class="list-name">닉네임1
-                </div>
-              </div>
-              <div class="baseList-space" title="24.08.23 13:40:24" style="width: 90px;"><time
-                  class="baseList-time">24/08/23</time></div>
-              <div class="baseList-space baseList-rec" style="width: 60px;">6</div>
-            </div>
-          </div>
-          <div id="revolution-main-list">
-            <div align="center" class="baseList " style="display:flex;">
-              <div class="baseList-space baseList-numb" style="width: 63px;">자유</div>
-              <div class="baseList-space " align="left" style="width: 100%;">
-                <a class="baseList-title" href="./comu-post-member.html"><span>고속버스 명당자리(댓글 작성자).jpg</span></a>
-                <span class="baseList-c">[38]</span>
-              </div>
-              <div class="baseList-space" align="center" style="width: 90px;">
-                <div class="list-name">닉네임1
-                </div>
-              </div>
-              <div class="baseList-space" title="24.08.23 13:40:24" style="width: 90px;"><time
-                  class="baseList-time">24/08/23</time></div>
-              <div class="baseList-space baseList-rec" style="width: 60px;">6</div>
-            </div>
-          </div>
-          <div class="info-bg2">
-            <div class="bottom-list">
-              <a class="prev" onfocus="blur()" href="/zboard/&amp;page=10&amp;divpage=2"></a>
-              <a class="num on" onfocus="blur()" href="/zboard/&amp;page=11&amp;divpage=2">1</a>
-              <a class="num" onfocus="blur()" href="/zboard/&amp;page=12&amp;divpage=2">2</a>
-              <a class="num" onfocus="blur()" href="/zboard/&amp;page=13&amp;divpage=2">3</a>
-              <a class="num" onfocus="blur()" href="/zboard/&amp;page=14&amp;divpage=2">4</a>
-              <a class="num" onfocus="blur()" href="/zboard/&amp;page=15&amp;divpage=2">5</a>
-              <a class="next" onfocus="blur()" href="/zboard/&amp;page=21&amp;divpage=2"></a>
-            </div>
-            <div class="bottom-search">
-              <form method="get" name="search" action="/zboard/zboard.php">
-                <select name="search-type" id="search-type">
-                  <option value="sub-memo">제목+본문</option>
-                  <option value="subject">제목</option>
-                  <option value="contnets">본문</option>
-                  <option value="name">닉네임</option>
-                </select><span class="default">
-                  <input type="hidden" name="id" value="publictransport"><input type="hidden" name="page-num"
-                    value="25">
-                  <input type="text" name="keyword" id="keyword" value="">
-                  <input type="submit" onfocus="blur()" value="검색">
-                </span>
-              </form>
-            </div>
           </div>
         </div>
-      </div>
+        <!--게시글 칼럼 구분-->
+        <div class="comm-container">
+          <div class="comm-container-cate">분류</div>
+          <div class="comm-container-title">제목</div>
+          <div class="comm-container-audate">닉네임</div>
+          <div class="comm-container-audate">작성일</div>
+          <div class="comm-container-good">추천</div>
 
+        </div>
+        <!--게시글-->
+        <div class="comm-ul-all">
+          <div class="comm-ul-main">
+            <div class="comm-cate"></a>[자랑]</div>
+            <div class="comm-title"><a href="../../html/comm/comm-post-member.html">우리집 애기 좀 봐봐요</a>
+            </div>
+            <div class="comm-author">프린세스</div>
+            <div class="comm-date">2024-10-08</div>
+            <div class="comm-good">1</div>
+          </div>
+        </div>
+        <div class="comm-ul-all">
+          <div class="comm-ul-main">
+            <div class="comm-cate"></a>[자유]</div>
+            <div class="comm-title"><a href="../../html/comm/comm-post-member.html">오늘 2호선 사람 미쳤네요</a>
+            </div>
+            <div class="comm-author">민채</div>
+            <div class="comm-date">2024-10-08</div>
+            <div class="comm-good">1</div>
+          </div>
+        </div>
+        <div class="comm-ul-all">
+          <div class="comm-ul-main">
+            <div class="comm-cate"></a>[봉사후기]</div>
+            <div class="comm-title"><a href="../../html/comm/comm-post-member.html">행복한 유기견센터 봉사 후기!</a>
+            </div>
+            <div class="comm-author">아가다</div>
+            <div class="comm-date">2024-10-08</div>
+            <div class="comm-good">1</div>
+          </div>
+        </div>
+        <div class="comm-ul-all">
+          <div class="comm-ul-main">
+            <div class="comm-cate"></a>[자랑]</div>
+            <div class="comm-title"><a href="../../html/comm/comm-post-member.html">우리집 애기 좀 봐봐요</a>
+            </div>
+            <div class="comm-author">프린세스</div>
+            <div class="comm-date">2024-10-08</div>
+            <div class="comm-good">1</div>
+          </div>
+        </div>
+        <div class="comm-ul-all">
+          <div class="comm-ul-main">
+            <div class="comm-cate"></a>[질문]</div>
+            <div class="comm-title"><a href="../../html/comm/comm-post-member.html">애기가 밥을 너무 많이 먹어요 괜찮은가요?</a>
+            </div>
+            <div class="comm-author">프린세스</div>
+            <div class="comm-date">2024-10-08</div>
+            <div class="comm-good">1</div>
+          </div>
+        </div>
+        <div class="comm-ul-all">
+          <div class="comm-ul-main">
+            <div class="comm-cate"></a>[자랑]</div>
+            <div class="comm-title"><a href="../../html/comm/comm-post-member.html">우리집 애기 좀 봐봐요</a>
+            </div>
+            <div class="comm-author">프린세스</div>
+            <div class="comm-date">2024-10-08</div>
+            <div class="comm-good">1</div>
+          </div>
+        </div>
+        <div class="comm-ul-all">
+          <div class="comm-ul-main">
+            <div class="comm-cate"></a>[자유]</div>
+            <div class="comm-title"><a href="../../html/comm/comm-post-member.html">우리집 애기 좀 봐봐요</a>
+            </div>
+            <div class="comm-author">프린세스</div>
+            <div class="comm-date">2024-10-08</div>
+            <div class="comm-good">1</div>
+          </div>
+        </div>
+        <div class="comm-ul-all">
+          <div class="comm-ul-main">
+            <div class="comm-cate"></a>[자유]</div>
+            <div class="comm-title"><a href="../../html/comm/comm-post-member.html">우리집 애기 좀 봐봐요</a>
+            </div>
+            <div class="comm-author">프린세스</div>
+            <div class="comm-date">2024-10-08</div>
+            <div class="comm-good">1</div>
+          </div>
+        </div>
+        <div class="comm-ul-all">
+          <div class="comm-ul-main">
+            <div class="comm-cate"></a>[질문]</div>
+            <div class="comm-title"><a href="../../html/comm/comm-post-member.html">우리집 애기 좀 봐봐요</a>
+            </div>
+            <div class="comm-author">프린세스</div>
+            <div class="comm-date">2024-10-08</div>
+            <div class="comm-good">1</div>
+          </div>
+        </div>
+        <div class="comm-ul-all">
+          <div class="comm-ul-main">
+            <div class="comm-cate"></a>[자랑]</div>
+            <div class="comm-title"><a href="../../html/comm/comm-post-member.html">우리집 애기 좀 봐봐요</a>
+            </div>
+            <div class="comm-author">프린세스</div>
+            <div class="comm-date">2024-10-08</div>
+            <div class="comm-good">1</div>
+          </div>
+        </div>
+      <!-- 검색 창-->
+      <div class="bottom-search">
+        <form method="get" name="search" action="/zboard/zboard.php">
+          <select name="search-type" id="search-type">
+            <option value="sub-memo">태워줄게요</option>
+            <option value="subject">태워주세요</option>
+          </select><span class="default">
+            <input type="hidden" name="id" value="publictransport"><input type="hidden" name="page-num" value="25">
+            <input type="text" name="keyword" id="keyword" value="">
+            <input type="submit" onfocus="blur()" value="검색">
+            <!-- </span> -->
+        </form>
+      </div>
+      <div class="comm-admain-btuall">
+        <button class="comm-admain-btu" type="button" onclick="location.href='../../html/comm/comm-post-write.html'">
+          <span class="comm-admain-btu-sp">글쓰기</span>
+        </button>
+      </div>
+      <!-- 페이지네이션 -->
+      <div class="info-bg2">
+        <div class="bottom-list">
+          <a class="prev" onfocus="blur()" href="#"></a>
+          <a class="num on" onfocus="blur()" href="#">1</a>
+          <a class="num" onfocus="blur()" href="#">2</a>
+          <a class="num" onfocus="blur()" href="#">3</a>
+          <a class="num" onfocus="blur()" href="#">4</a>
+          <a class="num" onfocus="blur()" href="#">5</a>
+          <a class="next" onfocus="blur()" href="#"></a>
+        </div>
+      </div>
     </div>
   </main>
-  <footer>
-    <h6>(06236)서울특별시 강남구 테헤란로 146, 신한은행 건물 (3층) | 대표이사 강수정 김규열 김민채 신승민 이기철 정시우 | 회사업자등록번호104-81-4522690 |<br>
-      통신판매업신고번호 2017-서울용산-066 | 사업자정보확인호스팅사업자 NT넥스트레벨 대표이메일 nextlevel_224@next.com<br>
-      © NEXT LEVEL. All Rights Reserved</h6>
-  </footer>
 </body>
+<footer>
+  <div class="footer-links">
+    <a href="../member/term.html">이용약관</a> |
+    <a href="../member/term.html">개인정보처리방침</a>
+  </div>
+  <h6>(06236)서울특별시 강남구 테헤란로 146, 신한은행 건물 (3층) | 대표이사 강수정 김규열 김민채 신승민 이기철 정시우 | 회사업자등록번호104-81-4522690 |<br>
+    통신판매업신고번호 2017-서울용산-066 | 사업자정보확인호스팅사업자 NT넥스트레벨 대표이메일 nextlevel_224@next.com<br>
+    © NEXT LEVEL. All Rights Reserved</h6>
+</footer>
+<script defer src="../js/header.js"></script>
 
 </html>

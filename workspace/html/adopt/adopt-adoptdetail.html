@@ -6,15 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="../../css/adopt/adopt-adoptdetail.css">
-  <link rel="stylesheet" href="../../css/header.css">
-  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../../css/main/header.css">
+  <link rel="stylesheet" href="../../css/main/footer.css">
 </head>
 
 <body>
   <header class="header">
     <div class="logo-nav">
       <div class="logo">
-        <img src="../img/header_logo.png" alt="로고이미지">
+        <a href="../../html/main/main.html">
+          <img src="../../img/header-logo.png" alt="로고이미지">
+        </a>
       </div>
       <nav>
         <ul class="nav-items">
@@ -24,21 +26,21 @@
               <a href="#">봉사 신청</a>
               <a href="#">봉사 후기</a>
               <a href="#">봉사 안내</a>
-              <a href="#">카풀</a>
+              <a href="../../html/volun/volun-main-guest.html">카풀</a>
             </div>
           </li>
           <li class="nav-item">
             <a href="#">기부</a>
             <div class="dropdown-content">
-              <a href="#">기부게시판</a>
+              <a href="#">기부 게시판</a>
             </div>
           </li>
           <li class="nav-item">
-            <a href="#">입양</a>
+            <a href="../adopt/adopt-main.html">입양</a>
             <div class="dropdown-content">
-              <a href="#">입양 신청</a>
-              <a href="#">입양 후기</a>
-              <a href="#">입양 안내</a>
+              <a href="../adopt/adopt-adopt.html">안심 입양</a>
+              <a href="../adopt/adopt-protection.html">임시 보호</a>
+              <a href="../adopt/adopt-review.html">후기</a>
             </div>
           </li>
           <li class="nav-item">
@@ -60,8 +62,8 @@
     </div>
     <div class="user-section">
       <ul class="user-actions">
-        <li class="user-action"><a href="#">로그인</a></li>
-        <li class="user-action"><a href="#">회원가입</a></li>
+        <li class="user-action"><a href="../member/login-select.html">로그인</a></li>
+        <li class="user-action"><a href="../member/signup-select.html">회원가입</a></li>
       </ul>
     </div>
   </header>
@@ -98,9 +100,9 @@
 
           <br>
 
-          <img src="../../images/adopt-main.jpg" width="200px" height="200px">
-          <img src="../../images/adopt-main.jpg" width="200px" height="200px">
-          <img src="../../images/adopt-main.jpg" width="200px" height="200px">
+          <img src="../../img/adopt-main.jpg" width="200px" height="200px">
+          <img src="../../img/adopt-main.jpg" width="200px" height="200px">
+          <img src="../../img/adopt-main.jpg" width="200px" height="200px">
           <div>모수에서 킥이었어요</div>
         </div>
       </div>
@@ -110,10 +112,10 @@
       <!-- 버튼 -->
       <div class="adopt-detail-box3">
         <div>
-          <button class="adopt-modify-button">수정</button>　
-          <button class="adopt-delete-button">삭제</button>
+          <button class="adopt-modify-button" type="button">수정</button>　
+          <button class="adopt-delete-button" type="button">삭제</button>
         </div>
-        <button class="adopt-end-button">마감</button>
+        <button class="adopt-end-button" type="button">마감</button>
       </div>
       
       <br>
@@ -133,7 +135,7 @@
       <!-- 댓글입력 -->
       <form>
         <input class="adopt-detail-commentregi" type="text" placeholder="욕설 및 혐오감을 주는 댓글은 삼가주세요">　
-        <button class="adopt-commentregi-button">등록</button>
+        <button class="adopt-commentregi-button" type="button">등록</button>
       </form>
 
       <br>
@@ -147,7 +149,7 @@
     © NEXT LEVEL. All Rights Reserved</h6>
 </footer>
 
-<script defer src="../js/header.js"></script>
+<script defer src="../../js/main/header.js"></script>
 
 
 

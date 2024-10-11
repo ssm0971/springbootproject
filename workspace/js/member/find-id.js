@@ -32,14 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   });
 
-  findIdButton.addEventListener('click', function() {
+  findIdButton.addEventListener('click', function(e) {
       if (isVerified) {
        
           const userName = document.getElementById('userName').value;
           const userPhone = document.getElementById('userPhone').value;
     
           // 아이디를 찾은 후 findIdOk 페이지로 이동
-          window.location.href = '';
+          window.location.href = 'find-idOk.html';
       } else {
           alert('전화번호 인증을 완료해주세요.');
       }

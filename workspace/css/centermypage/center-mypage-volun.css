@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 a{
   text-decoration: none;
   color: black;
@@ -11,9 +12,9 @@ a{
 .center-member-profile-navbox{
   margin: 0 auto;
   /* border: 1px solid black; */
-  border-bottom: 1px solid #9B805D;
-  border-top: 1px solid #9B805D;
-
+  border-bottom: 2px solid #9B805D;
+  border-top: 2px solid #9B805D;
+  width: 1080px;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -35,8 +36,8 @@ a{
 /* 게시판 제목 */
 .center-member-profile-navboard{
   margin: 0 auto;
-  margin-top: 37px;
-  padding-bottom: 20px;
+  margin-top: 33px;
+  padding-bottom: 30px;
   border-bottom: 5px solid #9B805D;
   width: 850px;
   /* height: 100px; */
@@ -135,4 +136,15 @@ button:hover {
 
 button.prev, button.next {
   font-weight: bold;
+}
+
+/* 페이지선택 */
+#choice {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #9B805D;
+  transform: translate(-30px, 15px);
+  position: relative;
+  z-index: -1;
 }

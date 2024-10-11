@@ -4,11 +4,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>비밀번호 찾기</title>
+  <link rel="stylesheet" href="../../css/member/find-pw.css">
+  <link rel="stylesheet" href="../../css/main/header.css">
+  <link rel="stylesheet" href="../../css/main/footer.css">
 </head>
 
 <body>
+  <header class="header">
+    <div class="logo-nav">
+      <div class="logo">
+        <a href="../../html/main/main.html">
+          <img src="../../img/header-logo.png" alt="로고이미지">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-items">
+          <li class="nav-item">
+            <a href="#">봉사</a>
+            <div class="dropdown-content">
+              <a href="#">봉사 신청</a>
+              <a href="#">봉사 후기</a>
+              <a href="#">봉사 안내</a>
+              <a href="../../html/volun/volun-main-guest.html">카풀</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">기부</a>
+            <div class="dropdown-content">
+              <a href="#">기부 게시판</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="../adopt/adopt-main.html">입양</a>
+            <div class="dropdown-content">
+              <a href="../adopt/adopt-adopt.html">안심 입양</a>
+              <a href="../adopt/adopt-protection.html">임시 보호</a>
+              <a href="../adopt/adopt-review.html">후기</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">커뮤니티</a>
+            <div class="dropdown-content">
+              <a href="#">자유게시판</a>
+              <a href="#">질문과 답변</a>
+              <a href="#">자랑</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">공지사항</a>
+            <div class="dropdown-content">
+              <a href="#">공지</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="user-section">
+      <ul class="user-actions">
+        <li class="user-action"><a href="../member/login-select.html">로그인</a></li>
+        <li class="user-action"><a href="../member/signup-select.html">회원가입</a></li>
+      </ul>
+    </div>
+  </header>
 
+  <main class="find-pw-container">
+    <h1>회원 비밀번호 찾기</h1>
+    <form id="findPwForm">
+      <div class="input-group">
+        <label for="userName">회원 이름</label>
+        <input type="text" id="userName" name="userName" required>
+      </div>
+      <div class="input-group">
+        <label for="userId">아이디</label>
+        <input type="text" id="userId" name="userId" required>
+      </div>
+      <div class="input-group">
+        <label for="userEmail">등록된 이메일</label>
+        <input type="email" id="userEmail" name="userEmail" required>
+      </div>
+      <div class="button-group">
+        <button type="button" id="findPwButton">비밀번호 찾기</button>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="../member/term.html">이용약관</a> |
+      <a href="../member/term.html">개인정보처리방침</a>
+    </div>
+    <h6>(06236)서울특별시 강남구 테헤란로 146, 신한은행 건물 (3층) | 대표이사 강수정 김규열 김민채 신승민 이기철 정시우 | 회사업자등록번호104-81-4522690 |<br>
+      통신판매업신고번호 2017-서울용산-066 | 사업자정보확인호스팅사업자 NT넥스트레벨 대표이메일 nextlevel_224@next.com<br>
+      © NEXT LEVEL. All Rights Reserved</h6>
+  </footer>
 </body>
+
+<script defer src="../../js/member/find-pw.js"></script>
 
 </html>

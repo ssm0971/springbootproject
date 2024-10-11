@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+
 a{
   text-decoration: none;
   color: black;
@@ -132,6 +133,7 @@ a{
   margin: 20px 0 20px 0;
 }
 
+/* 버튼 */
 button {
   background-color: #F5EAD9;
   color: black;
@@ -150,4 +152,15 @@ button:hover {
 
 button.prev, button.next {
   font-weight: bold;
+}
+
+/* 페이지선택 */
+#choice {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #9B805D;
+  transform: translate(-30px, 15px);
+  position: relative;
+  z-index: -1;
 }

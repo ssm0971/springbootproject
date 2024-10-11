@@ -6,30 +6,13 @@
 	margin-top: 55px;
 }
 
-tr {
-	border-bottom: 0.5px solid #c60a164d;
-	line-height: 50px;
-}
 
-table th,
-table td {
-	font-size: 12px;
-	padding-left: 10px;
-}
 
 .checkbox-line {
 	line-height: 1px;
 }
 
-table td {
-	font-weight: 300;
-}
 
-table {
-	text-align: center;
-	width: 100%;
-	border-collapse: collapse
-}
 
 .board-info-box {
 	border: 0.0625rem solid #f2f2f2;
