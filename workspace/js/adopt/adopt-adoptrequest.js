@@ -16,8 +16,9 @@ function checkPhoneInput() {
   const inputField = document.getElementById('phoneInput');
   const phoneError = document.getElementById('phoneError');
   const phoneError2 = document.getElementById('phoneError2');
+  const phone_format = /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/;
 
-  if (inputField.value.trim() === '') {
+  if (inputField.value.trim() === '' || !phone_format.test(inputField.value)) {
       phoneError.style.display = 'block'; // 메시지 표시
       phoneError2.style.display = 'block'; // 메시지 표시
   } else {
@@ -30,8 +31,9 @@ function checkPhone2Input() {
   const inputField = document.getElementById('phone2Input');
   const phone2Error = document.getElementById('phone2Error');
   const phone2Error2 = document.getElementById('phone2Error2');
+  const phone_format = /^(01[016789]{1})-?[0-9]{3,4}-?[0-9]{4}$/;
 
-  if (inputField.value.trim() === '') {
+  if (inputField.value.trim() === '' || !phone_format.test(inputField.value)) {
       phone2Error.style.display = 'block'; // 메시지 표시
       phone2Error2.style.display = 'block'; // 메시지 표시
   } else {
@@ -44,8 +46,9 @@ function checkEmailInput() {
   const inputField = document.getElementById('emailInput');
   const emailError = document.getElementById('emailError');
   const emailError2 = document.getElementById('emailError2');
+  const email_format = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
-  if (inputField.value.trim() === '') {
+  if (inputField.value.trim() === '' || !email_format.test(inputField.value)) {
     emailError.style.display = 'block'; // 메시지 표시
     emailError2.style.display = 'block'; // 메시지 표시
   } else {

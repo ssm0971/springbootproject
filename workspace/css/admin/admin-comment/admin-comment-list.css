@@ -12,7 +12,10 @@
 	line-height: 1px;
 }
 
-
+.delete-button:hover{
+	color:white;
+	background-color: #9B805D;
+}
 
 .board-info-box {
 	border: 0.0625rem solid #f2f2f2;

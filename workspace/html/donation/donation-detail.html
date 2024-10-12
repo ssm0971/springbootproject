@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="../../css/donation/donation-detail.css">
   <link rel="stylesheet" href="../../css/main/header.css">
   <link rel="stylesheet" href="../../css/main/footer.css">
-  <script defer src="../../js/main.js"></script>
 </head>
 
 <body>
@@ -72,63 +71,77 @@
   
   <main>
     <div class="post-guest-main">
-      <!--게시판 상단 (제목, 닉네임)-->
       <div class="post-guest">
         <div class="topTitle">
           <h1>아픈 유기견을 도와주세요<span id="comment"> [2]</span></h1>
         </div>
         <div id="line"></div>
-        <div class="topTitle-box">
-          <div class="topTitle-mainbox">
-            <div class="topTitle-name"><strong>행복유기견센터</strong><small>등록일 2024-10-08 13:40</small></div>
+
+          <!--게시판 상단 (제목, 닉네임)-->
+        <div class="notice-addetail-content">
+          <div class="notice-addetail-tcontent">작성자</div>
+          <div class="notice-addetail-ttxt">행복한유기견</div>
+        </div>
+        <div class="notice-addetail-content">
+          <div class="notice-addetail-tcontent">작성일</div>
+          <div class="notice-addetail-ttxt">2024-08-26 13:04</div>
+        </div>
+        <div class="notice-addetail-maincont">
+          <div>
+            <pre>
+                  <p style="font-family: Noto Sans, malgun gothic, AppleGothic, dotum, sans-serif;">유기견 기부 내용</p>
+              </pre>
           </div>
         </div>
-        <div class="post-textarea">
-          <span>10월 18일 남양주 행복한 유기견 센터 카풀 구합니다.</span><br>
-          <span>출발 시간과 장소는 얘기 해봐요. 인원수는 4명 가능합니다.</span>
-        </div>
-      </div>
+
       <div class="volun-button">
         <div class="volun-admain-btuall">
-          <button class="volun-admain-btu" type="button" onclick="location.href='#'">
+          <button class="volun-admain-btu" type="button" onclick="location.href='../../html/donation/donation-modify.html'">
             <span class="volun-admain-btu-sp">수정</span>
           </button>
         </div>
         <div class="volun-admain-btuall-delete">
-          <button class="volun-admain-btu-delete" type="button" onclick="location.href='#'">
+          <button class="volun-admain-btu-delete" type="button" onclick="deleteClick()">
             <span class="volun-admain-btu-delete-sp">삭제</span>
           </button>
         </div>
         <div class="volun-admain-btuall-complaint">
-          <button class="volun-admain-btu-complaint" type="button" onclick="location.href='#'">
-            <span class="volun-admain-btu-complaint-sp">신고</span>
+          <button class="volun-admain-btu-complaint" type="button" onclick="location.href='../../html/donation/donation-main-center.html'">
+            <span class="volun-admain-btu-complaint-sp">목록</span>
           </button>
         </div>
       </div>
-      <div class="volun-commentInfo">
-        <div class="comment-comment-list">
-          <div>
-            <div>
-              <div><strong>행복이</strong></div>
-              <div><span>저요</span></div>
-                
-
-              <div><small>2024-10-08 14:50</small></div>
-              
-            </div>
-            <br>
-            <div>
-              <div><strong>아가다</strong></div>
-              <div><span>저요</span></div>
-
-              <div><small>2024-10-08 14:51</small></div>
-            </div>
-            <br>
-
+      <!-- 댓글창 -->
+      <div class="volun-detail-box4">
+        <div class="review-detail-commentbox">
+          <div class="review-detail-name">행복이</div>
+          <div class="review-detail-comment" id="review-comment">저요</div>
+          <div class="review-detail-comment" id="review-modifyInput" style="display:none;">
+            <input class="review-modify-comment">  
+            <button class="review-comment-button" onclick="editCommentBtnClcik()">등록</button>
           </div>
+          <div id="review-comment-buttonBox">
+            <button class="review-comment-button" type="button" onclick="modifyCommentBtnClcik()">수정</button>
+            <button class="review-comment-button" type="button" onclick="CommentDeleteClick()">삭제</button>
+          </div>
+          <div class="review-detail-date">2024-10-14</div>
+        </div>
+        <div class="review-detail-commentbox">
+          <div class="review-detail-name">아가다</div>
+          <div class="review-detail-comment" id="review-comment">저여!</div>
+          <div class="review-detail-comment" id="review-modifyInput" style="display:none;">
+            <input class="review-modify-comment">  
+            <button class="review-comment-button" onclick="editCommentBtnClcik()">등록</button>
+          </div>
+          <div id="review-comment-buttonBox">
+            <button class="review-comment-button" type="button" onclick="modifyCommentBtnClcik()">수정</button>
+            <button class="review-comment-button" type="button" onclick="CommentDeleteClick()">삭제</button>
+          </div>
+          <div class="review-detail-date">2024-10-14</div>
+        </div>
       </div>
     </div>
-
+  </main>
   <footer>
     <div class="footer-links">
       <a href="../member/term.html">이용약관</a> |
@@ -139,5 +152,8 @@
       © NEXT LEVEL. All Rights Reserved</h6>
   </footer>
 </body>
+
+<script defer src="../../js/main/header.js"></script>
+<script defer src="../../js/donation/donation-detail.js"></script>
 
 </html>

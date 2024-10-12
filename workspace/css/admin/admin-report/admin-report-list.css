@@ -269,3 +269,8 @@ div#paging-wrap {
   .info-cell:last-child {
 	border-right: none;
   }
+
+	.delete-button:hover{
+		color:white;
+		background-color: #9B805D;
+	}

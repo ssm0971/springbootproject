@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>임시보호 신청</title>
   <link rel="stylesheet" href="../../css/adopt/adopt-protectrequest.css">
   <link rel="stylesheet" href="../../css/main/header.css">
   <link rel="stylesheet" href="../../css/main/footer.css">
@@ -101,7 +101,7 @@
           <!-- 연락처 -->
           <div class="protectrequest-content-box">
             <div class="protectrequest-content-title">연락처</div><input class="protectrequest-input-small" id="phoneInput"
-              type="text" onblur="checkPhoneInput()">
+              type="text" onblur="checkPhoneInput()" placeholder="　-을 제외한 숫자만 입력해주세요">
           </div>
           <!-- 연락처 미입력 에러메세지 -->
           <div class="Error">
@@ -112,7 +112,7 @@
           <!-- 대체 연락처 -->
           <div class="protectrequest-content-box">
             <div class="protectrequest-content-title">대체 연락처</div><input class="protectrequest-input-small" type="text"
-              id="phone2Input" onblur="checkPhone2Input()">
+              id="phone2Input" onblur="checkPhone2Input()" placeholder="　-을 제외한 숫자만 입력해주세요">
           </div>
           <!-- 대체 연락처 미입력 에러메세지 -->
           <div class="Error">
@@ -432,7 +432,7 @@
 </footer>
 
 <script defer src="../../js/main/header.js"></script>
-<script defer src="../../js/protect/protect-protectrequest.js"></script>
+<script defer src="../../js/adopt/adopt-protectrequest .js"></script>
 <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script src="../../js/member/center-signup.js"></script>
 

@@ -93,6 +93,11 @@
 	font-weight: bold;
 }
 
+.delete-button:hover{
+	color:white;
+	background-color: #9B805D;
+}
+
 .container-margin {
 	margin: 40px 100px 0px;
 }

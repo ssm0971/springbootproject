@@ -83,21 +83,46 @@
         </ul>
       </nav>
     </div>
-    <div class="member-profile-infobox">
-      <div class="member-profile-info">
-        <div class="member-profile-infoimg">
-          <img id="puppy-logo" src="../../img/puppy-logo.jpg">
-        </div>
-        <div class="member-profile-infoarea">
-          <div class="member-profile-info-textarea">
-            <ul>
-              <li>아가다</li>
-              <li>010-1111-2222</li>
-              <li>coco@naver.com</li>
-            </ul>
+    
+    <div class="member-update-contents">
+      <div class="center-member-profile-infobox">
+        <div class="center-member-profile-info">
+          <div class="center-member-profile-infoarea">
+
+            <div class="center-member-profile-info-textarea">
+              <form action="" method="">
+                <div class="center-member-profile-inputbox">
+                  <label for="email">
+                  <div id="contents"><div id="labelname">이메일 : </div><div><input type="text" id="email"></div></div>
+                </label>
+                <label for="phonenumber">
+                  <div id="contents"><div id="labelname">전화번호 : </div><div><input type="text" id="phonenumber"></div><button class="center-member-profile-button-small">인증전송</button></div>
+                </label>
+                <label for="phonenumbercheck">
+                  <div id="contents"><div id="labelname">인증번호 : </div><div><input type="text" id="phonenumbercheck"></div><button class="center-member-profile-button-small">인증확인</button></div>
+                </label>
+                <label for="address">
+                  <div id="contents"><div id="labelname">주소 : </div><div><input type="text" id="address"></div><button class="center-member-profile-button-small">주소</button></div>
+                </label>
+                <label for="password">
+                  <div id="contents"><div id="labelname">비밀번호 : </div><div><input type="text" id="password"></div></div>
+                </label>
+                <label for="passwordcheck">
+                  <div id="contents"><div id="labelname">비밀번호 확인 : </div><input type="text" id="passwordcheck"></div>
+                </label>
+                  <div id="contents"><div id="labelname">알림수신 동의 </div>동의<input type="radio" name="agree" id="Y">비동의<input type="radio" name="agree" id="N"></div>
+                  <div class="center-member-profile-button">
+                  <a href="./center-mypage-profile.html">
+                    <button type="button">수정</button>
+                  </a>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
+
         </div>
-      </div>
+
     </div>
   </main>
   <footer>

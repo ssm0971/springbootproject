@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>봉사 글 상세</title>
+  <link rel="stylesheet" href="../../css/volun/volun-volundetail.css">
+  <link rel="stylesheet" href="../../css/main/header.css">
+  <link rel="stylesheet" href="../../css/main/footer.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo-nav">
+      <div class="logo">
+        <a href="../../html/main/main.html">
+          <img src="../../img/header-logo.png" alt="로고이미지">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-items">
+          <li class="nav-item">
+            <a href="#">봉사</a>
+            <div class="dropdown-content">
+              <a href="#">봉사 신청</a>
+              <a href="#">봉사 후기</a>
+              <a href="#">봉사 안내</a>
+              <a href="../../html/volun/volun-main-guest.html">카풀</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">기부</a>
+            <div class="dropdown-content">
+              <a href="#">기부 게시판</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="../volun/volun-main.html">입양</a>
+            <div class="dropdown-content">
+              <a href="../volun/volun-volun.html">안심 입양</a>
+              <a href="../volun/volun-protection.html">임시 보호</a>
+              <a href="../volun/volun-review.html">후기</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">커뮤니티</a>
+            <div class="dropdown-content">
+              <a href="#">자유게시판</a>
+              <a href="#">질문과 답변</a>
+              <a href="#">자랑</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#">공지사항</a>
+            <div class="dropdown-content">
+              <a href="#">공지</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="user-section">
+      <ul class="user-actions">
+        <li class="user-action"><a href="../member/login-select.html">로그인</a></li>
+        <li class="user-action"><a href="../member/signup-select.html">회원가입</a></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <!-- 입양 메인 크기 -->
+    <div class="volun-main-size">
+      <!-- 입양/임보/후기 게시판 바 -->
+      <div class="volun-nav">
+        <div class="volun-navList">봉사</div>
+        <div class="volun-navList">카풀</div>
+      </div>
+
+      <!-- 제목/작성자/등록일 크기 -->
+      <div class="volun-detail-box1">
+        <div class="volun-detail-title">11월 4일 성남시 유기견봉사</div>
+        <div class="volun-detail-info"><span>작성자 : 안성재</span>
+          <sapn>등록일 : 2024-10-05</sapn>
+        </div>
+      </div>
+
+      <!-- 글내용 크기 -->
+      <div class="volun-detail-box2">
+        <div class="volun-detail-content">
+          <div class="volun-detail-basicinfo">
+            <div class="volun-detail-basicinfo-title">기본정보</div>
+            <div>지역 : 경기도 성남시</div>
+            <div>모집기간 : 2024-11-4 ~ 2024-11-4</div>
+            <div>봉사날짜 : 2024-11-4 ~ 2024-11-4</div>
+            <div>봉사시간 : 12:00 ~ 18:00</div>
+            <div>모집인원 : 8명</div>
+          </div>
+
+          <br>
+
+          <img src="../../img/volun-main.jpg" width="200px" height="200px">
+          <img src="../../img/volun-main.jpg" width="200px" height="200px">
+          <img src="../../img/volun-main.jpg" width="200px" height="200px">
+          <div>이븐하게 봉사하실분</div>
+
+          <br>
+
+          <!-- 신청버튼 -->
+          <div class="volun-submit-box">
+            <button class="volun-submit-button" type="button">신청</button>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <!-- 버튼 -->
+      <div class="volun-detail-box3">
+        <div>
+          <button class="volun-modify-button" type="button" onclick="modifyClick()">수정</button>　
+          <button class="volun-delete-button" type="button" onclick="deleteClick()">삭제</button>
+        </div>
+        <button class="volun-end-button" type="button" onclick="endClick()">마감</button>
+      </div>
+
+      <br>
+
+      <!-- 댓글창 -->
+      <div class="volun-detail-commentbox">
+        <div class="volun-detail-name">에드워드리</div>
+        <div class="volun-detail-comment" id="volun-comment">싫어요</div>
+        <div class="volun-detail-comment" id="volun-modifyInput" style="display:none;">
+          <input class="volun-modify-comment">  
+          <button class="volun-comment-button" onclick="editCommentBtnClcik()">등록</button>
+        </div>
+        <div id="volun-comment-buttonBox">
+          <button class="volun-comment-button" type="button" onclick="modifyCommentBtnClcik()">수정</button>
+          <button class="volun-comment-button" type="button" onclick="CommentDeleteClick()">삭제</button>
+        </div>
+        <div class="volun-detail-date">2024-10-14</div>
+      </div>
+
+      <br>
+
+      <!-- 댓글입력 -->
+      <form>
+        <input class="volun-detail-commentregi" type="text" placeholder="욕설 및 혐오감을 주는 댓글은 삼가주세요">　
+        <button class="volun-commentregi-button" type="button">등록</button>
+      </form>
+
+      <br>
+  </main>
+
+</body>
+
+<footer>
+  <h6>(06236)서울특별시 강남구 테헤란로 146, 신한은행 건물 (3층) | 대표이사 강수정 김규열 김민채 신승민 이기철 정시우 | 회사업자등록번호104-81-4522690 |<br>
+    통신판매업신고번호 2017-서울용산-066 | 사업자정보확인호스팅사업자 NT넥스트레벨 대표이메일 nextlevel_224@next.com<br>
+    © NEXT LEVEL. All Rights Reserved</h6>
+</footer>
+
+<script defer src="../../js/main/header.js"></script>
+<script defer src="../../js/volun/volun-volundetail.js"></script>
+
+
+
+</html>
