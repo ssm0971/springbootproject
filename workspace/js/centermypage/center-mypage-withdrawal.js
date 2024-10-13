@@ -1,36 +1,23 @@
-function clearPlaceholder() {
-  const input = document.getElementById('agreement');
-  input.value = ''; // 입력창 클릭 시 내용 지우기
-  input.style.color = 'black'; // 텍스트 색상 변경
-}
+// 모달을 보여주는 함수
+function showModal() {
+  const agreementInput = document.getElementById('agreement').value.trim();
 
-function checkAgreement() {
-  const input = document.getElementById('agreement').value;
-  const button = document.getElementById('withdrawButton');
-  
-  if (input === "동의합니다") {
-      button.classList.add('active');
-      button.style.cursor = 'pointer';
-      button.disabled = false;
+  if (agreementInput === "동의합니다") {
+    document.getElementById('modalOverlay').style.display = 'block';
+    document.getElementById('modal').style.display = 'block';
   } else {
-      button.classList.remove('active');
-      button.style.cursor = 'not-allowed';
-      button.disabled = true;
+    alert("정확히 '동의합니다'라고 입력해주세요."); // 경고 메시지
   }
 }
 
-function showModal() {
-  document.getElementById('modalOverlay').style.display = 'block';
-  document.getElementById('modal').style.display = 'block';
-}
-
+// 모달을 닫는 함수
 function closeModal() {
   document.getElementById('modalOverlay').style.display = 'none';
   document.getElementById('modal').style.display = 'none';
 }
 
+// 회원 탈퇴 확인 함수
 function confirmWithdrawal() {
-  alert("회원탈퇴가 완료되었습니다.");
-  // 여기서 실제 회원탈퇴 로직을 추가하면 됩니다.
+  alert("회원 탈퇴가 완료되었습니다.");
   closeModal();
 }

@@ -88,27 +88,24 @@
       <div class="note-title">
         <h1>쪽지 쓰기</h1>
       </div>
-      <form method="get">
+      <form method="get" id="noteForm">
         <div class="note-write-wrap">
           <div class="note-write">
             <div class="note-title">
-              <input id="note-board-title" name="notbTitle" type="text" placeholder="제목을 입력해 주세요" />
+              <input id="note-board-title" name="noteTitle" type="text" placeholder="제목을 입력해 주세요" />
             </div>
             <div class="note-title">
-              <input id="note-board-title" name="notbTitle" type="text" placeholder="보내실 분의 닉네임을 입력해 주세요" />
+              <input id="note-board-nickname" name="notename" type="text" placeholder="보내실 분의 닉네임을 입력해 주세요" />
             </div>
             <div class="note-cont">
-              <textarea id="note-board-content" name="notbContent" inputmode="text" placeholder="내용을 입력하세요">
-                </textarea>
+              <textarea id="note-board-content" name="notbContent" inputmode="text" placeholder="내용을 입력하세요"></textarea>
             </div>
           </div>
         </div>
         <div class="volun-admain-btuall">
-          <a href="./center-mypage-notebox-send.html">
-          <button class="volun-admain-btu" type="button">
+          <button class="volun-admain-btu" type="button" onclick="goBack()">
             <span class="volun-admain-btu-sp">이전</span>
           </button>
-        </a>
           <button class="volun-admain-btu" type="button">
             <a href="#"><span class="volun-admain-btu-sp">보내기</span></a>
           </button>
@@ -128,5 +125,5 @@
       © NEXT LEVEL. All Rights Reserved</h6>
   </footer>
 </body>
-
+<script src="../../js/centermypage/center-mypage-notebox-write.js"></script>
 </html>

@@ -61,7 +61,7 @@ a{
   margin: 0 auto;
   width: 800px;
   height: 600px;
-  border: 1px solid black;
+  border: 1px solid #9B805D;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -103,7 +103,7 @@ a{
   margin: 20px;
   border: 1px solid black;
   border-radius: 15px;
-  cursor: not-allowed;
+  /* cursor: not-allowed; */
 }
 
 .button.active {
