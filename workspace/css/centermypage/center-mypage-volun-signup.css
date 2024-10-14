@@ -9,7 +9,7 @@ a {
 }
 
 /* 마이페이지 목록 */
-.center-member-profile-navbox {
+.center-member-profile-navbox{
   margin: 0 auto;
   /* border: 1px solid black; */
   border-bottom: 2px solid #9B805D;
@@ -19,176 +19,284 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-.center-member-profile-nav-ul {
+.center-member-profile-nav-ul{
   display: flex;
   text-decoration: none;
   list-style: none;
+  position: relative;
+  z-index: 0;
 }
 
-.center-member-profile-nav-ul li {
+.center-member-profile-nav-ul li{
   margin: 20px;
   font-size: 20px;
   cursor: pointer;
+  z-index: 1;
+}
+
+.center-member-termbox {
+  background-color: white;
+  width: 1080px;
+  height: auto;
+  margin: 0 auto;
+
+}
+
+/* 페이지선택 */
+#choice {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #9B805D;
+  transform: translate(-30px, 15px);
+  position: relative;
+  z-index: -1;
 }
 
 /* 게시판 제목 */
-.center-member-profile-navboard {
-  margin: 0 auto;
-  margin-top: 37px;
-  padding-bottom: 20px;
-  border-bottom: 5px solid #9B805D;
+.center-member-volun-navbox {
+  margin-top: 50px;
   width: 1080px;
-  /* height: 100px; */
-  text-align: center;
-  font-size: 28px;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start; /* 오른쪽 정렬 */
+  align-items: center; /* 세로 중앙 정렬 (필요시) */
+  margin-left: 170px;
+  font-size: 25px;
+  font-weight: 600;
+
+}
+
+.center-member-volun-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 봉사신청서 양식 */
-.center-member-profile-volun-container {
-  margin: 0 auto;
-  width: 1080px;
-  display: flex;
-  justify-content: center;
-  border: 1px solid black;
-  /* height: 800px; */
+#volun-choice {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: #9B805D;
+  transform: translate(-20px, -5px);
+  position: relative;
+  z-index: -1;
 }
 
-.center-member-profile-volun-contents {
-  width: 400px;
+#volun-list {
+  margin-left: 10px;
+}
+
+#line {
+  width: 850px;
+  height: 4px;
+  background-color: #9B805D;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.volunrequest-main-size {
+
+  width: 1080px;
+  min-height: 1200px;
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
-  border: 1px solid black;
-  /* height: 800px;s */
-  /* padding-left: 150px; */
+  align-items: center;
 }
 
-.center-member-profile-volun-container form input[type="text"] {
-  margin: 5px 0px;
-  height: 35px;
-  background-color: gainsboro;
+
+.volunrequest-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  width: 1080px;
+  height: 60px;
+  background-color: white;
+  border-top: solid 2px #9B805D;
+  border-bottom: solid 2px #9B805D;
 }
 
-.center-member-profile-volun-container form input[type="number"] {
-  margin: 5px 0px;
-  height: 35px;
-  background-color: gainsboro;
-}
-
-.center-member-profile-volun-container form input[type="time"] {
-  margin: 5px 0px;
-  height: 35px;
-  background-color: gainsboro;
-}
-
-.time-input {
-  margin: 5px 0px;
-  width: 100%;
-  height: 35px;
+.volunrequest-navList {
+  font-size: 18px;
+  font-weight: bold;
+  width: 180px;
   text-align: center;
 }
 
-.readonly {
-  background-color: gainsboro; /* readonly처럼 보이게 스타일 */
-  pointer-events: none; /* 클릭 불가능하게 설정 */
+.volunrequest-wirtebanner {
+  background-color: #F5EAD9;
+  width: 1080px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
 }
 
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+.volunrequest-write-area {
+  width: 800px;
+  min-height: 1450px;
+  border: solid 1px #9B805D;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
-.center-member-profile-volun-container #religion {
-  width: 55%;
+.volunrequest-content-box {
+  width: 680px;
+  height: 50px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
 }
 
-.center-member-profile-volun-container #birth {
-  width: 55%;
+.volunrequest-content-title {
+  width: 170px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
 }
 
-.center-member-profile-volun-container #voluntime {
-  width: 75%;
+.volunrequest-input-small {
+  width: 400px;
+  height: 25px;
 }
 
-.center-member-profile-volun-container #volunmotive {
+.volunrequest-input-small2 {
+  width: 300px;
+  height: 25px;
+}
+
+.volunrequest-agreement-box {
+  border: solid 1px #9B805D;
+  border-radius: 15px;
+  width: 680px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p {
+  font-size: 12px;
+}
+
+.volunrequest-agreement-box2 {
+  border: solid 1px #9B805D;
+  border-radius: 15px;
+  width: 680px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+.volunrequest-content-title2 {
+  width: 650px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.volunrequest-input-big {
+  width: 600px;
   height: 70px;
 }
 
-/* 버튼 서식 */
-.large-button-style{
-  margin: 5px 0;
-  background-color: #F5EAD9;
-  width: 160px;
-  height: 38px;
-  border: 1px solid black;
-  margin-right: 20px;
-  font-size: 13px;
-  text-align: center;
-}
-
-.mini-buttons-flex{
+.volunrequest-agreement-box2 {
+  border: solid 1px #9B805D;
+  border-radius: 15px;
+  width: 680px;
+  height: 430px;
   display: flex;
-  justify-content: center
+  flex-direction: column;
+  justify-content: center;
 }
 
-.mini-buttons-flex button{
-  margin-right: 5px;
-}
-
-.large-button{
+.volunrequest-search-button {
+  width: 50px;
+  height: 28px;
   background-color: #F5EAD9;
-  width: 150px;
-  height: 40px;
+  border: none;
+  border-radius: 15px;
+  font-size: 10px;
+  cursor: pointer;
 }
 
-.middle-button{
+.volunrequest-search-button:hover {
+  background-color: #9B805D;
+  /* 마우스를 올렸을 때 변경될 색상 */
+  color: white;
+}
+
+.volunrequest-buttonbox {
+  width: 680px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+}
+
+.volunrequest-button {
+  width: 100px;
+  height: 50px;
   background-color: #F5EAD9;
-  width: 80px;
-  height: 40px;
+  border: none;
+  border-radius: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.mini-button{
-  background-color: #F5EAD9;
-  width: 40px;
-  height: 40px;
+.volunrequest-button:hover {
+  background-color: #9B805D;
+  /* 마우스를 올렸을 때 변경될 색상 */
+  color: white;
 }
 
-.hope-select-area{
-  margin: 5px 0;
-  background-color: gainsboro;
-  border: 1px solid black;
+.Error {
+  display: flex;
 }
 
-.hope-select-area button{
-  background-color: #F5EAD9;
-  width: 65px;
-  height: 40px;
-  margin: 5px;
+/* readonly 읽기전용 */
+input {
+  background-color: #f0f0f0; /* 배경색 변경 */
+  color: #a0a0a0; /* 텍스트 색상 변경 */
+  cursor: not-allowed; /* 커서 스타일 변경 */
+  border: 1px solid #d0d0d0; /* 테두리 색상 변경 */
 }
+
 
 /* 승락/거절/봉사완료 버튼 */
-.choice-button-area{
+.choice-button-area {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 60px 0px 10px 0px;
 }
 
-.select-button{
+.select-button {
   background-color: #F5EAD9;
   width: 150px;
   height: 40px;
   border-radius: 20px;
 }
 
-.choice-button-toparea{
+.choice-button-toparea {
   margin-top: 10px;
 }
 
-.choice-button-bottomarea{
+.choice-button-bottomarea {
   display: none;
   margin-top: 40px;
 }

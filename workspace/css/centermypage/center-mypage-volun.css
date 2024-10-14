@@ -19,24 +19,28 @@ a{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .center-member-profile-nav-ul{
   display: flex;
   text-decoration: none;
   list-style: none;
+  position: relative;
+  z-index: 0;
 }
 
 .center-member-profile-nav-ul li{
   margin: 20px;
   font-size: 20px;
   cursor: pointer;
+  z-index: 1;
 }
 
 /* 게시판 제목 */
 .center-member-profile-navboard{
   margin: 0 auto;
-  margin-top: 33px;
+  margin-top: 32px;
   padding-bottom: 30px;
   border-bottom: 5px solid #9B805D;
   width: 850px;
@@ -44,6 +48,16 @@ a{
   font-size: 28px;
 }
 
+/* 페이지선택 */
+#choice {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #9B805D;
+  transform: translate(-30px, 15px);
+  position: relative;
+  z-index: -1;
+}
 
 /* 게시글 리스트 영역 */
 .center-member-profile-cumuboard-container{
@@ -136,15 +150,4 @@ button:hover {
 
 button.prev, button.next {
   font-weight: bold;
-}
-
-/* 페이지선택 */
-#choice {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  background-color: #9B805D;
-  transform: translate(-30px, 15px);
-  position: relative;
-  z-index: -1;
 }
