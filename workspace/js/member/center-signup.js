@@ -7,9 +7,16 @@ document.addEventListener('DOMContentLoaded', function() {
   const addressSearchBtn = document.getElementById('center-addressSearch');
   const cancelBtn = document.getElementById('center-cancelBtn');
   const businessNumberVerifyBtn = document.getElementById('center-businessNumberVerify');
+  const useridInput = document.getElementById('center-userid');
+  const passwordInput = document.getElementById('center-password');
+  const passwordConfirmInput = document.getElementById('center-passwordConfirm');
 
   let emailVerificationCode = '';
   let phoneVerificationCode = '';
+
+  // 정규표현식 패턴
+  const useridPattern = /^[a-zA-Z][a-zA-Z0-9]{5,19}$/;
+  const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/;
 
   // 사업자 등록번호 조회
   businessNumberVerifyBtn.addEventListener('click', function() {
@@ -32,8 +39,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputCode = document.getElementById('center-emailVerifyCode').value;
     if (inputCode === emailVerificationCode) {
       alert('이메일 인증이 완료되었습니다.');
+      hideError(document.getElementById('center-emailVerifyCode'));
     } else {
-      alert('인증 코드가 일치하지 않습니다.');
+      showError(document.getElementById('center-emailVerifyCode'), '인증 코드가 일치하지 않습니다.');
     }
   });
 
@@ -47,8 +55,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputCode = document.getElementById('center-phoneVerifyCode').value;
     if (inputCode === phoneVerificationCode) {
       alert('연락처 인증이 완료되었습니다.');
+      hideError(document.getElementById('center-phoneVerifyCode'));
     } else {
-      alert('인증 코드가 일치하지 않습니다.');
+      showError(document.getElementById('center-phoneVerifyCode'), '인증 코드가 일치하지 않습니다.');
     }
   });
 
@@ -59,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('center-zipcode').value = data.zonecode;
         document.getElementById('center-address').value = data.address;
         document.getElementById('center-detailAddress').focus();
+        hideError(document.getElementById('center-zipcode'));
+        hideError(document.getElementById('center-address'));
       }
     }).open();
   });
@@ -68,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
     e.preventDefault();
     if (validateForm()) {
       alert('센터 회원가입이 완료되었습니다.');
-    
       window.location.href = '../member/center-signupOk.html'; 
     }
   });
@@ -92,6 +102,35 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // 아이디 유효성 검사
+  useridInput.addEventListener('input', validateUserid);
+
+  function validateUserid() {
+    if (!useridPattern.test(useridInput.value)) {
+      showError(useridInput, '아이디는 영문자로 시작하는 6~20자의 영문자 또는 숫자여야 합니다.');
+    } else {
+      hideError(useridInput);
+    }
+  }
+
+  // 비밀번호 유효성 검사
+  passwordInput.addEventListener('input', validatePassword);
+  passwordConfirmInput.addEventListener('input', validatePassword);
+
+  function validatePassword() {
+    if (!passwordPattern.test(passwordInput.value)) {
+      showError(passwordInput, '비밀번호는 8~16자의 영문 대/소문자, 숫자, 특수문자를 포함해야 합니다.');
+    } else {
+      hideError(passwordInput);
+    }
+
+    if (passwordInput.value !== passwordConfirmInput.value) {
+      showError(passwordConfirmInput, '비밀번호가 일치하지 않습니다.');
+    } else {
+      hideError(passwordConfirmInput);
+    }
+  }
 
   function validateField(field) {
     if (field.value.trim() === '') {
@@ -134,6 +173,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (document.getElementById('center-phoneVerifyCode').value !== phoneVerificationCode) {
       showError(document.getElementById('center-phoneVerifyCode'), '연락처 인증이 완료되지 않았습니다.');
+      isValid = false;
+    }
+    if (!useridPattern.test(useridInput.value)) {
+      showError(useridInput, '아이디 형식이 올바르지 않습니다.');
+      isValid = false;
+    }
+    if (!passwordPattern.test(passwordInput.value)) {
+      showError(passwordInput, '비밀번호 형식이 올바르지 않습니다.');
+      isValid = false;
+    }
+    if (passwordInput.value !== passwordConfirmInput.value) {
+      showError(passwordConfirmInput, '비밀번호가 일치하지 않습니다.');
       isValid = false;
     }
     

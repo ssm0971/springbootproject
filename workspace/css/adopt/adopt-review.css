@@ -88,6 +88,7 @@ main{
   width: 250px;
   height: 79px;
   font-size: 12px;
+  word-wrap: break-word; 
 }
 
 .review-post-date{
@@ -127,3 +128,7 @@ main{
   gap: 15px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit; 
+}

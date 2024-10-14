@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>기부 - 글 작성페이지</title>
   <!-- include libraries(jQuery, bootstrap) -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -45,11 +45,11 @@
             </div>
           </li>
           <li class="nav-item">
-            <a href="../adopt/adopt-main.html">입양</a>
+            <a href="../dona/dona-main.html">입양</a>
             <div class="dropdown-content">
-              <a href="../adopt/adopt-adopt.html">안심 입양</a>
-              <a href="../adopt/adopt-protection.html">임시 보호</a>
-              <a href="../adopt/adopt-review.html">후기</a>
+              <a href="../dona/dona-dona.html">안심 입양</a>
+              <a href="../dona/dona-protection.html">임시 보호</a>
+              <a href="../dona/dona-review.html">후기</a>
             </div>
           </li>
           <li class="nav-item">
@@ -78,7 +78,7 @@
   </header>
   <main>
     <!-- 입양 메인 크기 -->
-    <div class="adopt-main-size">
+    <div class="dona-main-size">
 
       <!-- 입양신청 글 등록 -->
 
@@ -88,22 +88,22 @@
       <br>
 
       <!-- 글작성 박스 -->
-      <div class="adopt-write-area">
+      <div class="dona-write-area">
         <form action="링크" method="post">
           <br>
 
           <!-- 썸머노트 -->
           <div class="content">
             <form method="post" action="">
-              <input id="subject" name="subject" class="adoptwrite-title" placeholder="제목을 입력해주세요">
+              <input id="subject" name="subject" class="donawrite-title" placeholder="제목을 입력해주세요">
               <textarea id="contents" name="contents"></textarea>
             </form>
           </div>
 
           <!-- 등록/취소 버튼 -->
-          <div class="adopt-write-button-box">
-            <button class="adopt-cancle-button" type="button" onclick="cancleClick()">취소</button>
-            <button class="adopt-write-button" type="button">등록</button>
+          <div class="dona-write-button-box">
+            <button class="dona-cancle-button" type="button" onclick="cancleClick()">취소</button>
+            <button class="dona-write-button" type="button">등록</button>
           </div>
         </form>
       </div>

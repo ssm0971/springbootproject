@@ -27,7 +27,7 @@
               <a href="#">봉사 신청</a>
               <a href="#">봉사 후기</a>
               <a href="#">봉사 안내</a>
-              <a href="../../html/volun/volun-main-guest.html">카풀</a>
+              <a href="../../html/dona/dona-main-guest.html">카풀</a>
             </div>
           </li>
           <li class="nav-item">
@@ -41,7 +41,7 @@
             <div class="dropdown-content">
               <a href="../adopt/adopt-adopt.html">안심 입양</a>
               <a href="../adopt/adopt-protection.html">임시 보호</a>
-              <a href="../adopt/adopt-review.html">후기</a>
+              <a href="../adopt/adopt-dona.html">후기</a>
             </div>
           </li>
           <li class="nav-item">
@@ -94,64 +94,65 @@
           </div>
         </div>
 
-      <div class="volun-button">
-        <div class="volun-admain-btuall">
-          <button class="volun-admain-btu" type="button" onclick="location.href='../../html/donation/donation-modify.html'">
-            <span class="volun-admain-btu-sp">수정</span>
+      <div class="dona-button">
+        <div class="dona-admain-btuall">
+          <button class="dona-admain-btu" type="button" onclick="location.href='../../html/donation/donation-modify.html'">
+            <span class="dona-admain-btu-sp">수정</span>
           </button>
         </div>
-        <div class="volun-admain-btuall-delete">
-          <button class="volun-admain-btu-delete" type="button" onclick="deleteClick()">
-            <span class="volun-admain-btu-delete-sp">삭제</span>
+        <div class="dona-admain-btuall-delete">
+          <button class="dona-admain-btu-delete" type="button" onclick="deleteClick()">
+            <span class="dona-admain-btu-delete-sp">삭제</span>
           </button>
         </div>
-        <div class="volun-admain-btuall-complaint">
-          <button class="volun-admain-btu-complaint" type="button" onclick="location.href='../../html/donation/donation-main-center.html'">
-            <span class="volun-admain-btu-complaint-sp">목록</span>
+        <div class="dona-admain-btuall-complaint">
+          <button class="dona-admain-btu-complaint" type="button" onclick="location.href='../../html/donation/donation-main-center.html'">
+            <span class="dona-admain-btu-complaint-sp">목록</span>
           </button>
         </div>
       </div>
       <!-- 댓글창 -->
-      <div class="volun-detail-box4">
-        <div class="review-detail-commentbox">
-          <div class="review-detail-name">행복이</div>
-          <div class="review-detail-comment" id="review-comment">저요</div>
-          <div class="review-detail-comment" id="review-modifyInput" style="display:none;">
-            <input class="review-modify-comment">  
-            <button class="review-comment-button" onclick="editCommentBtnClcik()">등록</button>
+      <div class="dona-detail-box4">
+        <div class="dona-detail-commentbox">
+          <div class="dona-detail-name">행복이</div>
+          <div class="dona-detail-comment" id="dona-comment">저요</div>
+          <div class="dona-detail-comment" id="dona-modifyInput" style="display:none;">
+            <input class="dona-modify-comment">  
+            <button class="dona-comment-button" onclick="editCommentBtnClcik()">등록</button>
           </div>
-          <div id="review-comment-buttonBox">
-            <button class="review-comment-button" type="button" onclick="modifyCommentBtnClcik()">수정</button>
-            <button class="review-comment-button" type="button" onclick="CommentDeleteClick()">삭제</button>
+          <div id="dona-comment-buttonBox">
+            <button class="dona-comment-button" type="button" onclick="modifyCommentBtnClcik()">수정</button>
+            <button class="dona-comment-button" type="button" onclick="CommentDeleteClick()">삭제</button>
           </div>
-          <div class="review-detail-date">2024-10-14</div>
+          <div class="dona-detail-date">2024-10-14</div>
         </div>
-        <div class="review-detail-commentbox">
-          <div class="review-detail-name">아가다</div>
-          <div class="review-detail-comment" id="review-comment">저여!</div>
-          <div class="review-detail-comment" id="review-modifyInput" style="display:none;">
-            <input class="review-modify-comment">  
-            <button class="review-comment-button" onclick="editCommentBtnClcik()">등록</button>
+        <div class="dona-detail-commentbox">
+          <div class="dona-detail-name">아가다</div>
+          <div class="dona-detail-comment" id="dona-comment">저여!</div>
+          <div class="dona-detail-comment" id="dona-modifyInput" style="display:none;">
+            <input class="dona-modify-comment">  
+            <button class="dona-comment-button" onclick="editCommentBtnClcik()">등록</button>
           </div>
-          <div id="review-comment-buttonBox">
-            <button class="review-comment-button" type="button" onclick="modifyCommentBtnClcik()">수정</button>
-            <button class="review-comment-button" type="button" onclick="CommentDeleteClick()">삭제</button>
+          <div id="dona-comment-buttonBox">
+            <button class="dona-comment-button" type="button" onclick="modifyCommentBtnClcik()">수정</button>
+            <button class="dona-comment-button" type="button" onclick="CommentDeleteClick()">삭제</button>
           </div>
-          <div class="review-detail-date">2024-10-14</div>
+          <div class="dona-detail-date">2024-10-14</div>
         </div>
       </div>
     </div>
   </main>
-  <footer>
-    <div class="footer-links">
-      <a href="../member/term.html">이용약관</a> |
-      <a href="../member/term.html">개인정보처리방침</a>
-    </div>
-    <h6>(06236)서울특별시 강남구 테헤란로 146, 신한은행 건물 (3층) | 대표이사 강수정 김규열 김민채 신승민 이기철 정시우 | 회사업자등록번호104-81-4522690 |<br>
-      통신판매업신고번호 2017-서울용산-066 | 사업자정보확인호스팅사업자 NT넥스트레벨 대표이메일 nextlevel_224@next.com<br>
-      © NEXT LEVEL. All Rights Reserved</h6>
-  </footer>
 </body>
+
+<footer>
+  <div class="footer-links">
+    <a href="../member/term.html">이용약관</a> |
+    <a href="../member/term.html">개인정보처리방침</a>
+  </div>
+  <h6>(06236)서울특별시 강남구 테헤란로 146, 신한은행 건물 (3층) | 대표이사 강수정 김규열 김민채 신승민 이기철 정시우 | 회사업자등록번호104-81-4522690 |<br>
+    통신판매업신고번호 2017-서울용산-066 | 사업자정보확인호스팅사업자 NT넥스트레벨 대표이메일 nextlevel_224@next.com<br>
+    © NEXT LEVEL. All Rights Reserved</h6>
+</footer>
 
 <script defer src="../../js/main/header.js"></script>
 <script defer src="../../js/donation/donation-detail.js"></script>

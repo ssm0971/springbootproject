@@ -71,7 +71,7 @@ main{
   margin-left: 20px;
 }
 
-.member-volun-nav-ul{
+.member-outbox-nav-ul{
   display: flex;
   text-decoration: none;
   list-style: none;
@@ -80,7 +80,7 @@ main{
   font-size: 25px;
 }
 
-.member-volun-nav-ul a{
+.member-outbox-nav-ul a{
   display: flex;
   text-decoration: none;
   list-style: none;
@@ -88,7 +88,7 @@ main{
   margin-right: 10px;
 }
 
-#volun-choice {
+#outbox-choice {
   width: 20px;
   height: 20px;
   border-radius: 100px;

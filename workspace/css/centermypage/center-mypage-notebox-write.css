@@ -82,6 +82,10 @@ a {
   text-align: center;
 }
 
+.note-cont{
+  text-align: center;
+}
+
 .note-write .note-title {
   margin-bottom: 20px;
 }
@@ -106,7 +110,6 @@ a {
   border: 1px solid #ddd;
   border-radius: 4px;
   resize: vertical;
-  margin-left: 20px;
 }
 
 .note-button-container {

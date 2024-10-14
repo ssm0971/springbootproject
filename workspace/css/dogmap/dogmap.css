@@ -8,10 +8,9 @@ a {
   color: black;
 }
 
-/* 마이페이지 목록 */
+/* 메인페이지 목록 */
 .doghouse-navbox {
   margin: 0 auto;
-  /* border: 1px solid black; */
   border-bottom: 2px solid #9B805D;
   border-top: 2px solid #9B805D;
   width: 1080px;
@@ -21,55 +20,83 @@ a {
   align-items: center;
 }
 
-.doghouse-nav-ul {
+.doghouse-nav {
   display: flex;
   text-decoration: none;
-  list-style: none;
 }
 
-.doghouse-nav-ul li {
+.doghouse-nav div {
   margin: 20px;
   font-size: 24px;
   cursor: pointer;
 }
 
-.doghouse-box{
+.doghouse-main{
+  width: 800px;
+  margin: 0 auto;
+}
+
+/* 보호소 목록 */
+.doghouse-box {
   margin: 0 auto;
   width: 600px;
+  max-height: max-content;
   text-align: center;
   margin-top: 50px;
 }
 
-.doghouse-list-title{
-  width: 600px;
+.doghouse-item {
   margin-bottom: 20px;
-}
-
-.doghouse-box ul{
-  margin: 20px 0px;
-  list-style: none;
-}
-.doghouse-box ul li{
-  margin-bottom: 20px;
-  list-style: none;
   border: 2px solid #9B805D; 
   border-radius: 15px; 
+  position: relative; /*상대위치설정*/
 }
+
+/* 보호소 이름 */
+.doghouse-list-title {
+  height: 45px;
+  justify-content: center;
+  align-items: center;/*수직 가운데*/
+  text-align: center;
+  display: flex;
+  width: 100%; /* 부모 요소의 너비를 100%로 설정 */
+}
+
+.doghouse-image {
+  width: 50px; /* 이미지의 너비 설정 */
+  height: 45px; /* 이미지의 높이 설정 */
+  position: absolute; /*절대 위치 설정*/
+  right: 9px; /*박스 오른쪽으로부터*/
+  border-radius: 5px;
+}
+
+.doghouse-name {
+  display: flex;            /* flex 컨테이너로 설정 */
+  align-items: center;     /* 수직 가운데 정렬 */
+  text-align: center;
+}
+
 
 .doghouse {
   height: 50px;
-  display: flex;
+  /* display: flex; */
   border-top: 2px solid #9B805D;
   border-bottom: 2px solid #9B805D;
-  /* border: 1px solid #9B805D; */
+  align-items: center;
 }
+
+.doghouse-information {
+  display: flex;
+  flex-direction: column; /* 세로 방향으로 나열 */
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
 .doghouse-map {
   width: 600px;
   height: 400px;
-  display: flex;
-  /* border: 1px solid #9B805D; */
 }
-
 
 /* js */
 .doghouse-list-info {

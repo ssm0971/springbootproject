@@ -4,11 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>마이페이지-봉사</title>
+  <title>마이페이지-탈퇴</title>
   <link rel="stylesheet" href="../../css/mypage/mypage-quit.css">
   <link rel="stylesheet" href="../../css/main/header.css">
   <link rel="stylesheet" href="../../css/main/footer.css">
-  <script defer src="../../js/main.js"></script>
 </head>
 
 <body>
@@ -70,60 +69,63 @@
     </div>
   </header>
   <main>
-    <div class="member-profile-navbox">
+    <!-- 메인페이지 목록 -->
+    <div class="center-member-profile-navbox">
       <nav>
-        <ul class="member-profile-nav-ul">
-          <li id="profile"><a href="../../html/mypage/mypage-update.html">개인정보수정</li></a>
-          <li id="posts"><a href="../../html/mypage/mypage-posts.html">작성글조회</li></a>
-          <li id="volunteer"><a href="../../html/mypage/mypage-volunteer.html">봉사</li></a>
-          <li id="adopt"><a href="../../html/mypage/mypage-adopt.html">입양</li></a>
-          <li id="inbox"><a href="../../html/mypage/mypage-inbox.html">쪽지함</li></a>
-          <li id="auth"><a href="../../html/mypage/mypage-auth.html">2차인증</li></a>
-          <li id="withdrawal"><a href="../../html/mypage/mypage-quit.html">회원탈퇴</li>          
-          <div id="choice"></div></a>
+        <ul class="center-member-profile-nav-ul">
+          <li id="profile"><a href="./center-mypage-profile-update.html"> 개인정보수정</a></li>
+          <li id="mywrite"><a href="./center-mypage-writeinfo-my.html"> 작성글조회</a></li>
+          <li id="volunteer"><a href="./center-mypage-volun-list.html"> 봉사</a></li>
+          <div id="choice"></div>
+          <li id="adopt"><a href="./center-mypage-adopt-adopt-list.html"> 입양</a></li>
+          <li id="notebox"><a href="./center-mypage-notebox-send.html"> 쪽지함</a></li>
+          <li id="withdrawal"><a href=""> 회원탈퇴</a></li>
         </ul>
       </nav>
     </div>
-
-    <div class="member-volun-navbox">
+    <!-- 제목 -->
+    <div class="center-member-profile-navboard">
       <nav>
-        <ul class="member-volun-nav-ul">
-          <li id="auth"><a href="#">회원탈퇴</li></a>
+        <ul class="center-member-profile-navboard-ul">
+          <li>회원 탈퇴</li>
         </ul>
       </nav>
     </div>
-    <div id="line"></div>
-    <div class="auth-title">
-      <h3>저희 희멍의 집 사이트를 이용해주셔서 감사합니다. <br>
-        불편하셨던 점이나 불만사항을 알려주시면 적극 반영해서  <br>
-        고객님의 불편함을 해결해드리도록 노력하겠습니다. <br>
-        <br> <br>
-        아울러 회원 탈퇴 시의 아래 사항을 숙지하시기 바랍니다. <br>
-        <br> <br>
-        1. 회원 탈퇴 시 계정 관련 데이터는 1년 후 삭제됩니다. <br>
-        2. 회원 탈퇴 후 같은 이메일로 3개월동안 재가입이 불가능합니다. <br>
-        3. 회원 탈퇴 시 신중히 진행하세요. <br>
-        <br> <br>
-        아래 입력창에 "동의합니다"라고 입력하세요.</h3>
-      <div><input id="auth-input" placeholder="　동의합니다"></div>
-      <div class="volun-admain-btuall">
-        <button class="volun-admain-btu" type="button" onclick="location.href='#'">
-            <span class="volun-admain-btu-sp">회원탈퇴</span>
-        </button>
+    <!-- 내용 -->
+    <div class="center-withdrawal-container">
+      <div class="center-withdrawal-terms">
+        <b>회원 탈퇴 약관</b>
+        <p>회원탈퇴를 진행하기 전에 아래 약관 및 주의사항을 반드시 확인하시기 바랍니다.</p>
+        <p>약관 내용: 회원 탈퇴 시 모든 데이터가 삭제되며 복구할 수 없습니다.</p>
+        <p>위 내용에 동의하면 아래에 "동의합니다"라고 적어주세요</p>
+      </div>
+      <div>
+        <input type="text" id="agreement" class="center-withdrawal-agreeinput" placeholder="동의합니다" oninput="checkAgreement()">
+      </div>
+      <div>
+        <button id="withdrawButton" class="button" onclick="showModal()">회원 탈퇴</button>
       </div>
     </div>
+    <div class="modal-overlay" id="modalOverlay"></div>
 
-
-  </main>
-  <footer>
-    <div class="footer-links">
-      <a href="../member/term.html">이용약관</a> |
-      <a href="../member/term.html">개인정보처리방침</a>
+    <div class="modal" id="modal">
+      <div>
+        <p>정말 회원탈퇴를 진행하시겠습니까?</p>
+        <button onclick="confirmWithdrawal()">예</button>
+        <button onclick="closeModal()">아니오</button>
+      </div>
     </div>
-    <h6>(06236)서울특별시 강남구 테헤란로 146, 신한은행 건물 (3층) | 대표이사 강수정 김규열 김민채 신승민 이기철 정시우 | 회사업자등록번호104-81-4522690 |<br>
-      통신판매업신고번호 2017-서울용산-066 | 사업자정보확인호스팅사업자 NT넥스트레벨 대표이메일 nextlevel_224@next.com<br>
-      © NEXT LEVEL. All Rights Reserved</h6>
-  </footer>
+  </main>
 </body>
+
+
+<footer>
+  <h6>(06236)서울특별시 강남구 테헤란로 146, 신한은행 건물 (3층) | 대표이사 강수정 김규열 김민채 신승민 이기철 정시우 | 회사업자등록번호104-81-4522690 |<br>
+    통신판매업신고번호 2017-서울용산-066 | 사업자정보확인호스팅사업자 NT넥스트레벨 대표이메일 nextlevel_224@next.com<br>
+    © NEXT LEVEL. All Rights Reserved</h6>
+</footer>
+
+<script defer src="../../js/main/header.js"></script>
+<script defer src="../../js/mypage/mypage-quit.js"></script>
 
 </html>

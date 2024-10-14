@@ -1,27 +1,20 @@
 // 글수정버튼
 function modifyClick() {
   if (confirm('정말 수정하시겠습니까?')) {
-    console.log('후기글이 수정되었습니다.');
+    console.log('입양글이 수정되었습니다.');
+    window.location.href = '../../html/adopt/adopt-reviewmodify.html'
   } else {
-    console.log('후기글이 수정되지 않았습니다.');
+    console.log('입양글이 수정되지 않았습니다.');
   }
 }
 
 // 글삭제버튼
 function deleteClick() {
   if (confirm('정말 삭제하시겠습니까?')) {
-    console.log('후기글이 삭제되었습니다.');
+    console.log('입양글이 삭제되었습니다.');
+    window.location.href = '../../html/adopt/adopt-review.html'
   } else {
-    console.log('후기글이 삭제되지 않았습니다.');
-  }
-}
-
-// 글마감버튼
-function endClick() {
-  if (confirm('정말 마감하시겠습니까?')) {
-    console.log('후기글이 마감되었습니다.');
-  } else {
-    console.log('후기글이 마감되지 않았습니다.');
+    console.log('입양글이 삭제되지 않았습니다.');
   }
 }
 
@@ -57,4 +50,28 @@ function CommentDeleteClick() {
   } else {
     console.log('입양댓글이 삭제되지 않았습니다.');
   }
+}
+
+// 게시글 신고 버튼
+function ContentReportClick() {
+  const contentReport = prompt('신고사유를 입력해주세요');
+  if (result) {
+    console.log('게시글이 신고되었습니다')
+    // 이후에 값 넘기기
+  } else {
+    console.log('게시글신고가 취소되었습니다.')
+  }
+
+}
+
+// 댓글 신고 버튼
+function CommentReportClick() {
+  const commentReport = prompt('신고사유를 입력해주세요');
+  if (result) {
+    console.log('댓글이 신고되었습니다')
+    // 이후에 값 넘기기
+  } else {
+    console.log('댓글신고가 취소되었습니다.')
+  }
+
 }

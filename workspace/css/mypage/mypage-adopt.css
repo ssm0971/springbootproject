@@ -54,7 +54,7 @@ main{
   cursor: pointer;
 }
 
-.member-volun-navbox {
+.member-adopt-navbox {
   margin-top: 50px;
   width: 1080px;
   height: 80px;
@@ -64,7 +64,7 @@ main{
   margin-right: 50px;
 }
 
-.member-volun-nav-ul{
+.member-adopt-nav-ul{
   display: flex;
   text-decoration: none;
   list-style: none;
@@ -74,7 +74,7 @@ main{
   font-size: 25px;
 }
 
-.member-volun-nav-ul a{
+.member-adopt-nav-ul a{
   display: flex;
   text-decoration: none;
   list-style: none;
@@ -82,7 +82,7 @@ main{
   margin-right: 10px;
 }
 
-#volun-choice {
+#adopt-choice {
   width: 20px;
   height: 20px;
   border-radius: 100px;
@@ -92,7 +92,7 @@ main{
   z-index: -1;
 }
 
-#volun-list {
+#protect-list {
   margin-left: 10px;
 }
 
@@ -104,7 +104,7 @@ main{
 }
 
 /* 게시글 리스트 영역 */
-.member-profile-cumuboard-container{
+.member-profile-adoptboard-container{
   margin: 0 auto;
   width: 850px;
   height: 500px;
@@ -112,61 +112,61 @@ main{
 }
 
 /* 게시글 제목 */
-.member-profile-cumuboard-titlebox{
+.member-profile-adoptboard-titlebox{
   display: flex;
   text-align: center;
   list-style: none;
   border-bottom: 2px solid #F5EAD9;
 }
 
-.member-profile-cumuboard-titlebox li:nth-child(1){
+.member-profile-adoptboard-titlebox li:nth-child(1){
   width: 70%;
   margin: 20px;
 }
-.member-profile-cumuboard-titlebox li:nth-child(2){
+.member-profile-adoptboard-titlebox li:nth-child(2){
   width: 15%;
   margin: 20px;
 }
-.member-profile-cumuboard-titlebox li:nth-child(3){
+.member-profile-adoptboard-titlebox li:nth-child(3){
   width: 15%;
   margin: 20px;
 }
 
 
 /* 게시글 목록 */
-.member-profile-cumuboard-contentsbox{
+.member-profile-adoptboard-contentsbox{
   width: 850px;
   height: 650px;
   /* border: 1px solid blue; */
 }
 
-.member-profile-cumuboard-content{
+.member-profile-adoptboard-content{
   list-style: none;
 }
 
-.member-profile-cumuboard-contentbox{
+.member-profile-adoptboard-contentbox{
   display: flex;
   text-align: center;
   list-style: none;
   border-bottom: 1px solid #F5EAD9;
 }
 
-.member-profile-cumuboard-contentbox li a {
+.member-profile-adoptboard-contentbox li a {
   display: flex;
   text-decoration: none;
   list-style: none;
   color: black;
 }
 
-.member-profile-cumuboard-contentbox li:nth-child(1){
+.member-profile-adoptboard-contentbox li:nth-child(1){
   width: 70%;
   margin: 20px;
 }
-.member-profile-cumuboard-contentbox li:nth-child(2){
+.member-profile-adoptboard-contentbox li:nth-child(2){
   width: 15%;
   margin: 20px;
 }
-.member-profile-cumuboard-contentbox li:nth-child(3){
+.member-profile-adoptboard-contentbox li:nth-child(3){
   width: 15%;
   margin: 20px;
 }

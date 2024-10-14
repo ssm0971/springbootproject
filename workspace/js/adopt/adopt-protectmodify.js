@@ -70,6 +70,7 @@ $(function () {
 function modifyCancle() {
   if (confirm('정말 취소하시겠습니까? 수정중이던 글은 저장되지 않습니다')) {
     console.log('입양 글수정이 취소되었습니다.');
+    window.location.href = '../../html/adopt/adopt-adoptdetail.html'
   } else {
     console.log('입양 글수정이 취소되지 않았습니다.');
   }

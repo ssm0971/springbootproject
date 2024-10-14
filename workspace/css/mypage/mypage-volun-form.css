@@ -66,9 +66,11 @@ main{
   width: 1080px;
   height: 80px;
   display: flex;
-  justify-content: flex-end; /* 오른쪽 정렬 */
+  justify-content: flex-start; /* 오른쪽 정렬 */
   align-items: center; /* 세로 중앙 정렬 (필요시) */
-  margin-right: 50px;
+  margin-left: 170px;
+  font-size: 25px;
+  font-weight: 600;
 }
 
 .member-volun-nav-ul{
@@ -108,6 +110,7 @@ main{
   height: 4px;
   background-color: #9B805D;
   margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .volunrequest-main-size{
@@ -275,36 +278,4 @@ p{
 
 .Error{
   display: flex;
-}
-
-
-
-
-
-/* 페이지네이션 */
-.pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0 20px 0;
-}
-
-button {
-  background-color: #F5EAD9;
-  color: black;
-  border: none;
-  padding: 10px 15px;
-  margin: 0 5px;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #9B805D;
-  color:white;
-}
-
-button.prev, button.next {
-  font-weight: bold;
 }

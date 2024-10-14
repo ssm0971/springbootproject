@@ -6,7 +6,7 @@
 main{
   background-color: white;
   width: 1080px;
-  height: 800px;
+  height: auto;
   margin: auto;
 
 }
@@ -53,6 +53,8 @@ main{
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 1px solid black; */
+  margin-top: 20px;
 }
 
 .member-profile-nav-ul li{
@@ -65,15 +67,15 @@ main{
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   width: 1080px;
-  height: 700px;
+  height: auto;
   /* border: 1px solid black; */
 }
 
 .member-profile-info{
-  width: 550px;
-  height: 650px;
+  width: 650px;
+  height: auto;
   margin: 30px;
   border: 2px solid #F5EAD9;
   display: flex;  
@@ -82,25 +84,17 @@ main{
   align-items: center; /* 가로 가운데 정렬 */
 }
 
-#puppy-logo {
-  width: 150px;
-  height: 150px;
-  border-radius: 100px;
-  border: 2px solid #9B805D;
-  justify-content: center;
-  align-items: center;
-}
 
 .member-profile-infoarea{
   width: 600px;
   display: flex;
   align-items: center;
-  margin-left: 30px;
+  margin-left: -20px;
+  /* border: 1px solid black; */
 }
 
 .member-profile-info-textarea{
   width: 300px;
-  /* border: 1px solid black; */
   margin: 20px;
 }
 
@@ -114,38 +108,26 @@ a{
   color: black;
 }
 
-/* 프로필 사진 */
-.center-member-profile-infoimg{
-  cursor: pointer;
-}
-
-.center-member-profile-infoimg img{
-  width: 150px;
-  height: 150px;
-  border-radius: 100px;
-  border: 2px solid #9B805D;
-}
-
-.center-member-profile-info-textarea{
+.member-profile-info-textarea{
   width: 600px;
   /* border: 1px solid black; */
   margin: 30px;
 }
 
 /* 프로필 입력란 서식 */
-.center-member-profile-inputbox {
+.member-profile-inputbox {
   margin: 20px;
   align-items: center;
 }
 
-.center-member-profile-infobox input[type=text]{
+.member-profile-infobox input[type=text]{
   margin: 10px 0px 10px 0px;
   width: 250px;
   height: 30px;
   border: none;  
 }
 
-.center-member-profile-info-textarea input[type=radio]{
+.member-profile-info-textarea input[type=radio]{
   margin: 10px 15px 10px 15px;
   height: 30px;
   
@@ -163,28 +145,31 @@ a{
 }
 
 /* 버튼 */
-.center-member-profile-button-small{
+.member-profile-button-small{
   width: 120px;
   height: 40px;
   border-radius: 20px;
   background-color: #F5EAD9;
   cursor: pointer;
   margin-left: 30px;
+  border: none;
 }
 
 
-.center-member-profile-button{
+.member-profile-button{
   display: flex;
   justify-content: center;
+  border: none;
 }
 
-.center-member-profile-button button{
+.member-profile-button button{
   width: 180px;
   height: 40px;
   border-radius: 20px;
   background-color: #F5EAD9;
   margin: 20px;
   cursor: pointer;
+  border: none;
 }
 
 /* 페이지선택 */

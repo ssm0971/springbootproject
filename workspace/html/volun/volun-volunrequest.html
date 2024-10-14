@@ -71,9 +71,13 @@
     <!-- 입양 메인 크기 -->
     <div class="volunrequest-main-size">
       <!-- 입양/임보/후기 게시판 바 -->
-      <div class="volunrequest-nav">
-        <div class="volunrequest-navList">봉사</div>
-        <div class="volunrequest-navList">카풀</div>
+      <div class="volun-nav">
+        <a href="../../html/volun/volun-volun-main.html">
+          <div class="volun-navList">봉사</div>
+        </a>
+        <a href="../../html/volun/volun-main-member.html">
+          <div class="volun-navList">카풀</div>
+        </a>
       </div>
 
       <!-- 입양신청 글 등록 -->
@@ -246,7 +250,7 @@
 
           <div class="volunrequest-buttonbox">
             <button class="volunrequest-button" onclick="validateInputs()" type="button">신청</button>
-            <button class="volunrequest-button">취소</button>
+            <button class="volunrequest-button" onclick="requestcancle()" type="button">취소</button>
           </div>
           <br>
 

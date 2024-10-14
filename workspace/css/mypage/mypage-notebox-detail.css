@@ -67,7 +67,7 @@ main{
   margin-left: 40px;
 }
 
-.member-volun-nav-ul{
+.member-notebox-nav-ul{
   display: flex;
   text-decoration: none;
   list-style: none;
@@ -76,7 +76,7 @@ main{
   font-size: 25px;
 }
 
-.member-volun-nav-ul a{
+.member-notebox-nav-ul a{
   display: flex;
   text-decoration: none;
   list-style: none;
@@ -84,7 +84,7 @@ main{
   margin-right: 10px;
 }
 
-#volun-choice {
+#notebox-choice {
   width: 20px;
   height: 20px;
   border-radius: 100px;
@@ -171,7 +171,7 @@ margin: 50px;
 }
 
 /* '글쓰기' 버튼 파트 컨테이너 */
-.volun-admain-btuall {
+.notebox-admain-btuall {
   display: flex;
   width: 100%;
   padding: 10px 0px;
@@ -180,7 +180,7 @@ margin: 50px;
 }
 
 /* '글쓰기' 버튼 */
-.volun-admain-btu {
+.notebox-admain-btu {
   display: block;
   padding: 0px 10px;
   text-align: center;
@@ -197,18 +197,18 @@ margin: 50px;
 }
 
 /* '글쓰기' 폰트사이즈 */
-.volun-admain-btuall span {
+.notebox-admain-btuall span {
   font-size: 13px;
 }
 
 /* '글쓰기' 폰트 두께 */
-.volun-admain-btu-sp {
+.notebox-admain-btu-sp {
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
 }
 
-.volun-admain-btu:hover {
+.notebox-admain-btu:hover {
   background-color: #9B805D; /* 마우스를 올렸을 때 배경색 */
   color: white; /* 마우스를 올렸을 때 텍스트 색상 */
 }

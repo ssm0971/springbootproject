@@ -18,6 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   findPasswordButton.addEventListener('click', function() {
-      window.location.href = '/html/member/find-idOk.html'; // 비밀번호 찾기 페이지로 이동
+      window.location.href = 'find-pw.html'; // 비밀번호 찾기 페이지로 이동
   });
 });

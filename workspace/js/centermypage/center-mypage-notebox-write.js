@@ -1,3 +1,4 @@
+// 이전 버튼 제한
 function goBack() {
   const title = document.getElementById('note-board-title').value;
   const nickname = document.getElementById('note-board-nickname').value;

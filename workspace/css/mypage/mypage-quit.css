@@ -3,15 +3,13 @@
   padding: 0;
 }
 
-main{
-  background-color: white;
-  width: 1080px;
-  height: 1000px;
-  margin: auto;
+a{
+  text-decoration: none;
+  color: black;
 }
 
 /* 마이페이지 목록 */
-.member-profile-navbox{
+.center-member-profile-navbox{
   margin: 0 auto;
   /* border: 1px solid black; */
   border-bottom: 2px solid #9B805D;
@@ -23,137 +21,150 @@ main{
   align-items: center;
 }
 
-.member-profile-nav-ul{
+.center-member-profile-nav-ul{
   display: flex;
   text-decoration: none;
   list-style: none;
-  position: relative;
-  z-index: 1;
 }
 
-.member-profile-nav-ul a{
-  display: flex;
-  text-decoration: none;
-  list-style: none;
-  color: black;
-}
-
-#choice {
-  width: 20px;
-  height: 20px;
-  border-radius: 100px;
-  background-color: #9B805D;
-  transform: translate(-30px, 15px);
-  position: relative;
-  z-index: -1;
-}
-
-.member-profile-nav-ul li{
+.center-member-profile-nav-ul li{
   margin: 20px;
   font-size: 20px;
   cursor: pointer;
 }
 
-.member-volun-navbox {
-  margin-top: 50px;
-  width: 1080px;
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 50px;
-}
-
-.member-volun-nav-ul{
-  display: flex;
-  text-decoration: none;
-  list-style: none;
-  position: relative;
-  /* z-index: 1; */
-}
-
-.member-volun-nav-ul a{
-  display: flex;
-  text-decoration: none;
-  list-style: none;
-  color: black;
-  font-size: 30px;
-}
-
-/* #volun-choice {
-  width: 20px;
-  height: 20px;
-  border-radius: 100px;
-  background-color: #9B805D;
-  transform: translate(-20px, -5px);
-  position: relative;
-  z-index: -1;
-} */
-
-#line {
-  width: 850px;
-  height: 4px;
-  background-color: #9B805D;
+/* 게시판 목록 */
+.center-member-profile-navboard{
   margin: 0 auto;
-}
-
-.auth-title {
+  border-bottom: 5px solid #9B805D;
   width: 850px;
-  height: 700px;
+  height: 100px;
+  display: flex;
   justify-content: center;
   align-items: center;
-  display: grid;
-  place-items: center;
-  text-align: center;
-  margin-left: 50px;
 }
 
-.auth-title h3{
-  font-size: 20px;
-  font-weight: 400;
-  margin-top: 80px;
-  margin-left: 150px;
+.center-member-profile-navboard-ul{
+  display: flex;
+  text-decoration: none;
+  list-style: none;
 }
 
-#auth-input {
-  width: 250px;
-  height: 30px;
-  margin-left: 150px;
-  background-color: #fffaf3;
-}
-
-
-/* 수정 버튼 */
-.volun-admain-btu {
-  display: block;
-  padding: 0px 10px;
-  text-align: center;
-  overflow: hidden;
-  width: 180px;
-  height: 40px;
-  border-radius: 15px;
-  color: black;
-  background-color:#F5EAD9;
-  border: 0px none;
+.center-member-profile-navboard-ul li{
+  margin: 20px;
+  font-size: 28px;
   cursor: pointer;
-  margin-left: 170px;
 }
 
-/* 수정 폰트사이즈 */
-.volun-admain-btuall span {
+/* 탈퇴 영역 */
+.center-withdrawal-container{
+  margin: 0 auto;
+  width: 800px;
+  height: 600px;
+  border: 1px solid #9B805D;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* 약관 */
+.center-withdrawal-terms{
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.center-withdrawal-terms b{
+  margin: 20px;
+  font-size: 20px;
+}
+
+.center-withdrawal-terms p{
+  margin: 10px;
   font-size: 16px;
 }
 
-/* 수정 폰트 두께 */
-.volun-admain-btu-sp {
-  display: inline-block;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.volun-admain-btu:hover {
-  background-color: #9B805D; /* 마우스를 올렸을 때 배경색 */
-  color: white; /* 마우스를 올렸을 때 텍스트 색상 */
+.center-withdrawal-agreeinput{
+  width: 200px;
+  height: 30px;
+  margin: 30px 0 10px;
 }
 
 
+.button {
+  background-color: #F5EAD9;
+  color: black;
+  width: 120px;
+  height: 50px;
+  margin: 20px;
+  border: none;
+  border-radius: 15px;
+  /* cursor: not-allowed; */
+}
+
+button:hover {
+  background-color: #9B805D;
+  color: white;
+}
+
+.button.active {
+  background-color: #9B805D;
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  
+}
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.modal div{
+  margin-top: 50px;
+}
+
+.modal button{
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #F5EAD9;
+  color: black;
+  margin: 50px 20px;
+  border: none;
+}
+
+
+.modal button:hover {
+  background-color: #9B805D;
+  color: white;
+}
+
+input {
+  color: gray;
+}

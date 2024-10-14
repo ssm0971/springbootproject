@@ -104,7 +104,7 @@ main{
 }
 
 /* 게시글 리스트 영역 */
-.member-profile-cumuboard-container{
+.member-profile-volunboard-container{
   margin: 0 auto;
   width: 850px;
   height: 500px;
@@ -112,61 +112,61 @@ main{
 }
 
 /* 게시글 제목 */
-.member-profile-cumuboard-titlebox{
+.member-profile-volunboard-titlebox{
   display: flex;
   text-align: center;
   list-style: none;
   border-bottom: 2px solid #F5EAD9;
 }
 
-.member-profile-cumuboard-titlebox li:nth-child(1){
+.member-profile-volunboard-titlebox li:nth-child(1){
   width: 70%;
   margin: 20px;
 }
-.member-profile-cumuboard-titlebox li:nth-child(2){
+.member-profile-volunboard-titlebox li:nth-child(2){
   width: 15%;
   margin: 20px;
 }
-.member-profile-cumuboard-titlebox li:nth-child(3){
+.member-profile-volunboard-titlebox li:nth-child(3){
   width: 15%;
   margin: 20px;
 }
 
 
 /* 게시글 목록 */
-.member-profile-cumuboard-contentsbox{
+.member-profile-volunboard-contentsbox{
   width: 850px;
   height: 650px;
   /* border: 1px solid blue; */
 }
 
-.member-profile-cumuboard-content{
+.member-profile-volunboard-content{
   list-style: none;
 }
 
-.member-profile-cumuboard-contentbox{
+.member-profile-volunboard-contentbox{
   display: flex;
   text-align: center;
   list-style: none;
   border-bottom: 1px solid #F5EAD9;
 }
 
-.member-profile-cumuboard-contentbox li a {
+.member-profile-volunboard-contentbox li a {
   display: flex;
   text-decoration: none;
   list-style: none;
   color: black;
 }
 
-.member-profile-cumuboard-contentbox li:nth-child(1){
+.member-profile-volunboard-contentbox li:nth-child(1){
   width: 70%;
   margin: 20px;
 }
-.member-profile-cumuboard-contentbox li:nth-child(2){
+.member-profile-volunboard-contentbox li:nth-child(2){
   width: 15%;
   margin: 20px;
 }
-.member-profile-cumuboard-contentbox li:nth-child(3){
+.member-profile-volunboard-contentbox li:nth-child(3){
   width: 15%;
   margin: 20px;
 }

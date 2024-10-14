@@ -147,36 +147,6 @@
   </main>
 </body>
 
-<script>
-  function Comment() {
-    const comment = document.getElementById('commentInput').value.trim();
-
-    if (comment === '') {
-      alert('입력한 내용이 없습니다.');
-      return false; // 제출을 막습니다.
-    }
-    return true; // 내용이 있을 경우 제출합니다.
-  }
-</script>
-
-
-<!-- 수정 , 삭제 , 신고 알터창 -->
-<script>
-  function modifyAlert() {
-    alert("수정하시겠습니까?");
-  }
-</script>
-<script>
-  function deleteAlert() {
-    alert("삭제하시겠습니까?");
-  }
-</script>
-<script>
-  function endAlert() {
-    alert("신고가 완료되었습니다.");
-  }
-</script>
-
 <footer>
   <div class="footer-links">
     <a href="../member/term.html">이용약관</a> |
@@ -187,6 +157,7 @@
     © NEXT LEVEL. All Rights Reserved</h6>
 </footer>
 
-<script defer src="../js/header.js"></script>
+<script defer src="../../js/main/header.js"></script>
+<script defer src="../../js/commu/commu-post-member.js"></script>
 
 </html>

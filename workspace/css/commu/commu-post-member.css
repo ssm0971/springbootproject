@@ -4,7 +4,7 @@ main{
   justify-content: center;
   align-items: center;
 }
-
+/* 커뮤니티 메인 크기 */
 .comm-main-size{
   width: 1080px;
   min-height: 500px;
@@ -14,7 +14,6 @@ main{
 }
 
 /*게시글 상단*/
-
 a {
   text-decoration: none;
   color: black;
@@ -49,6 +48,7 @@ ul{
   margin: 0 10px;
 }
 
+/* 제목,작성자,등록일 크기 */
 .comm-detail-box1{
   width: 1080px;
   height: 100px;
@@ -78,6 +78,7 @@ ul{
   align-items: center;
 }
 
+/* 글내용크기 */
 .comm-detail-box2{
   width: 1080px;
   min-height: 500px;
@@ -108,6 +109,7 @@ ul{
   font-weight: bold;
 }
 
+/* 글쓰기 */
 .comm-detail-box3{
   width: 745px;
   height: auto;
@@ -164,6 +166,7 @@ ul{
   color: white;
 }
 
+/* 글쓰기 버튼 */
 .comm-detail-box4{
   width: 745px;
   height: auto;

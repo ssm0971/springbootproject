@@ -1,12 +1,12 @@
 
-.comm-main{
+.commu-main{
   width: 1080px;
   height: 900px;
   background-color: white;
   margin: 0 auto;
 }
 
-.comm{
+.commu{
   width: 800px;
   justify-content: center;
   align-items: center;
@@ -27,7 +27,7 @@ ul{
 }
 
 
-.comm-header{
+.commu-header{
   height: 50px;
   margin: 0 auto;
   border-bottom: 2px solid #9B805D; /* 아래쪽 경계선 추가 */
@@ -51,7 +51,7 @@ ul{
 
 
 /* 분류, 제목, 작성자, 작성일 컨테이너 */
-.comm-container {
+.commu-container {
   display: flex;
   width: 100%;
   height: 20px;
@@ -62,7 +62,7 @@ ul{
 }
 
 /* 분류 */
-.comm-container-cate {
+.commu-container-cate {
   flex-basis: 50px;
   text-align: center;
   line-height: 20px;
@@ -72,7 +72,7 @@ ul{
 }
 
 /* 제목 */
-.comm-container-title {
+.commu-container-title {
   -webkit-box-flex: 1;
   flex-grow: 1;
   text-align: center;
@@ -82,7 +82,7 @@ ul{
 }
 
 /* 작성자, 작성일 */
-.comm-container-audate {
+.commu-container-audate {
   flex-basis: 100px;
   text-align: center;
   line-height: 20px;
@@ -91,7 +91,7 @@ ul{
 }
 
 /* 추천 */
-.comm-container-good {
+.commu-container-good {
   flex-basis: 100px;
   text-align: center;
   line-height: 20px;
@@ -100,7 +100,7 @@ ul{
 }
 
 /* 게시글 목록 ul태그 */
-.comm-ul-all {
+.commu-ul-all {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -112,7 +112,7 @@ ul{
 }
 
 /* 게시글 목록 ul>li 태그 내부 스타일 */
-.comm-ul-main {
+.commu-ul-main {
   display: flex;
   width: 100%;
   justify-content: center;
@@ -122,7 +122,7 @@ ul{
 }
 
 /* 분류*/
-.comm-cate {
+.commu-cate {
   color: rgb(76, 76, 76);
   text-align: center;
  /* margin: 0 auto; */
@@ -131,14 +131,14 @@ ul{
 } 
 
 /* 제목 */
-.comm-title {
+.commu-title {
   color: rgb(76, 76, 76);
   text-align: center;
   margin: 0 auto;
 }
 
 /* 글쓴이 */
-.comm-author {
+.commu-author {
   text-align: center;
   padding: 20px 0px;
   color: rgb(76, 76, 76);
@@ -146,7 +146,7 @@ ul{
 }
 
 /* 작성날짜 */
-.comm-date {
+.commu-date {
   text-align: center;
   padding: 20px 0px;
   flex-basis: 100px;
@@ -154,7 +154,7 @@ ul{
 }
 
 /*추천*/
-.comm-good{
+.commu-good{
   text-align: center;
   padding: 20px 0px;
   flex-basis: 100px;
@@ -226,7 +226,6 @@ li::marker {
 /* 검색창 */
 .bottom-search{
   display: flex;
-  justify-content: left;
   width: 400px;
   margin-top: 15px;
 }
@@ -237,6 +236,7 @@ input[type="submit"] {
   border-radius: 5px; /* 모서리 둥글게 */
   box-sizing: border-box; /* 패딩과 테두리를 포함한 너비 설정 */
   height: 26px;
+  width: 35px;
 }
 
 input[type="submit"]:hover{
@@ -245,7 +245,7 @@ input[type="submit"]:hover{
 }
 
 /* '글쓰기' 버튼 파트 컨테이너 */
-.comm-admain-btuall {
+.commu-admain-btuall {
   display: flex;
   width: 100%;
   padding: 10px 0px;
@@ -255,7 +255,7 @@ input[type="submit"]:hover{
 }
 
 /* '글쓰기' 버튼 */
-.comm-admain-btu {
+.commu-admain-btu {
   display: block;
   padding: 0px 10px;
   text-align: center;
@@ -271,18 +271,18 @@ input[type="submit"]:hover{
 }
 
 /* '글쓰기' 폰트사이즈 */
-.comm-admain-btuall span {
+.commu-admain-btuall span {
   font-size: 13px;
 }
 
 /* '글쓰기' 폰트 두께 */
-.comm-admain-btu-sp {
+.commu-admain-btu-sp {
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
 }
 
-.comm-admain-btu:hover {
+.commu-admain-btu:hover {
   background-color: #9B805D; /* 마우스를 올렸을 때 배경색 */
   color: white; /* 마우스를 올렸을 때 텍스트 색상 */
 }

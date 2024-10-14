@@ -163,13 +163,18 @@ main{
 }
 
 .adopt-detail-commentbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 745px;
-  height: auto;
+  min-height: 95px;
 }
 
 .adopt-detail-name{
   font-size: 14px;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
 }
 
 .adopt-detail-comment{
@@ -247,4 +252,9 @@ main{
 .adopt-submit-button:hover {
   background-color: #9B805D; /* 마우스를 올렸을 때 변경될 색상 */
   color: white;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; 
 }

@@ -5,7 +5,7 @@ main{
   align-items: center;
 }
 
-.adopt-main-size{
+.protect-main-size{
   width: 1080px;
   min-height: 1200px;
   display: flex;
@@ -14,7 +14,7 @@ main{
 }
 
 
-.adopt-nav{
+.protect-nav{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@ main{
   border-bottom: solid 2px #9B805D;
 }
 
-.adopt-navList{
+.protect-navList{
   font-size: 18px;
   font-weight: bold;
   width: 180px;
@@ -156,4 +156,9 @@ main{
 .adoptwrite-title{
   width: 780px;
   height: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; 
 }

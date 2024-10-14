@@ -16,7 +16,6 @@
   border-bottom: solid 2px #9B805D;
 }
 
-/*커뮤니티 게시판 회원*/
 /*게시글 상단*/
 a {
   text-decoration: none;
@@ -52,6 +51,7 @@ ul{
   margin: 0 10px;
 }
 
+/* 게시글 글 작성 */
 .protect-wirtebanner{
   background-color: #F5EAD9;
   width: 1080px;
@@ -64,6 +64,7 @@ ul{
   border-top: 2px solid #9B805D;
 }
 
+/* 글작성 박스 */
 .protect-write-area{
   width: 800px;
   height: auto;
@@ -75,6 +76,7 @@ ul{
   margin: 0 auto;
 }
 
+/* 등록/취소버튼 */
 .protect-write-button-box{
   width: 780px;
   height: 70px;
@@ -116,18 +118,6 @@ ul{
   color: white;
 }
 
-/* 지울꺼임 제목/본문 api사용예정 */
-.title{
-  background-color: white;
-  width: 780px;
-  height: 50px;
-}
-
-.content{
-  background-color: white;
-  width: 780px;
-  height: 400px;
-}
 
 /* 썸머노트 크기 js에서도 설정해야함 */
 .content{
