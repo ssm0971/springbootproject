@@ -139,17 +139,20 @@
                 </label>
                 <label for="password">
                   <div id="contents">
-                    <div id="labelname">비밀번호 </div>
-                    <div><input type="password" id="password"></div>
+                      <div id="labelname">비밀번호 </div>
+                      <div>
+                          <input type="password" id="password">
+                          <div class="alert"><p id="passwordStrengthMessage" style="color: red; display: none; font-size: 13px;">비밀번호는 최소 8자 이상, 대문자, 소문자, 숫자 및 특수문자 포함</p></div>
+                      </div>
                   </div>
-                </label>
-                <label for="passwordcheck">
+              </label>
+              <label for="passwordcheck">
                   <div id="contents">
-                    <div id="labelname">비밀번호 확인 </div>
-                    <input type="password" id="passwordcheck">
-                    <div class="alert"><p id="passwordMismatchMessage" style="color: red; display: none;">비밀번호 불일치</p></div>
+                      <div id="labelname">비밀번호 확인 </div>
+                      <input type="password" id="passwordcheck">
+                      <div class="alert"><p id="passwordMismatchMessage" style="color: red; display: none;">비밀번호 불일치</p></div>
                   </div>
-                </label>
+              </label>
                 <div id="contents">
                   <div id="labelname">알림수신 동의 </div>
                   동의<input type="radio" name="agree" id="Y">비동의<input type="radio" name="agree" id="N">
