@@ -56,10 +56,28 @@ function deleteAlert() {
 }
 
 function endAlert() {
-  const userConfirmed = confirm("신고하시겠습니까?");
-  if (userConfirmed) {
-      alert("신고가 완료되었습니다."); // 알림 창 표시
-      window.location.href = "../../html/commu/commu-main-member.html"; // 커뮤 메인으로 이동
+  const contentReport = prompt('신고사유를 입력해주세요');
+  
+  if (contentReport !== null) { // 사용자가 확인을 누르면
+    console.log('게시글이 신고되었습니다');
+    alert('게시글이 신고되었습니다'); // 알림창 추가
+    
+  } else {
+    console.log('게시글 신고가 취소되었습니다.');
+    alert('게시글 신고가 취소되었습니다.'); // 알림창 추가
+  }
+}
+
+//댓글신고
+function CommentReportClick() {
+  const commentReport = prompt('신고사유를 입력해주세요');
+  
+  if (commentReport !== null) { // 사용자가 확인을 눌렀을 때
+    console.log('댓글이 신고되었습니다');
+    alert('댓글이 신고되었습니다'); // 수정된 부분
+  } else {
+    console.log('댓글 신고가 취소되었습니다.');
+    alert('댓글 신고가 취소되었습니다.'); // 수정된 부분
   }
 }
 

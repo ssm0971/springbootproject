@@ -310,11 +310,19 @@ function validateInputs() {
     });
   });
 
+  // 체크박스 확인 추가
+  const checkbox1 = document.getElementById('info-agreement');
+  const checkbox2 = document.getElementById('protect-agreement');
+  if (!checkbox1.checked || !checkbox2.checked) {
+    alert('약관에 동의해 주세요.'); // 체크되지 않은 경우 경고
+    allValid = false;
+  }
+
   if (!allValid) {
     alert('모든 질문을 입력해 주세요.'); // 경고창 표시
   } else {
     alert('신청이 완료되었습니다'); // 모든 입력이 유효한 경우
-    window.location.href = '../../html/adopt/adopt-protectdetail.html'
+    window.location.href = '../../html/adopt/adopt-protectdetail.html';
   }
 }
 

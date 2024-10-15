@@ -162,3 +162,8 @@ a {
   text-decoration: none;
   color: inherit; 
 }
+
+.protect-nav a:hover {
+  text-decoration: none; 
+  color: inherit; 
+}

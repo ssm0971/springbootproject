@@ -31,43 +31,47 @@
       <nav>
         <ul class="nav-items">
           <li class="nav-item">
-            <a href="#">봉사</a>
+            <a href="../dogmap/dogmap.html">유기견 보호소</a>
             <div class="dropdown-content">
-              <a href="#">봉사 신청</a>
-              <a href="#">봉사 후기</a>
-              <a href="#">봉사 안내</a>
-              <a href="../../html/commu/commu-main-guest.html">카풀</a>
+              <a href="../dogmap/dogmap.html">유기견 보호소</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a href="#">기부</a>
-            <div class="dropdown-content">
-              <a href="#">기부 게시판</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="../adopt/adopt-main.html">입양</a>
-            <div class="dropdown-content">
-              <a href="../adopt/adopt-adopt.html">안심 입양</a>
-              <a href="../adopt/adopt-protection.html">임시 보호</a>
-              <a href="../adopt/adopt-review.html">후기</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="#">커뮤니티</a>
-            <div class="dropdown-content">
-              <a href="#">자유게시판</a>
-              <a href="#">질문과 답변</a>
-              <a href="#">자랑</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="#">공지사항</a>
-            <div class="dropdown-content">
-              <a href="#">공지</a>
-            </div>
-          </li>
-        </ul>
+          <ul class="nav-items">
+            <li class="nav-item">
+              <a href="../volun/volun-main.html">봉사</a>
+              <div class="dropdown-content">
+                <a href="../volun/volun-main.html">봉사 메인</a>
+                <a href="../volun/volun-volun-main.html">봉사 신청</a>
+                <a href="../../html/volun/volun-car-main-guest.html">카풀</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="../donation/donation-main-guest.html">기부</a>
+              <div class="dropdown-content">
+                <a href="../donation/donation-main-guest.html">기부 게시판</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="../adopt/adopt-main.html">입양</a>
+              <div class="dropdown-content">
+                <a href="../adopt/adopt-adopt.html">안심 입양</a>
+                <a href="../adopt/adopt-protection.html">임시 보호</a>
+                <a href="../adopt/adopt-review.html">후기</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="../commu/comu-main-guest.html">커뮤니티</a>
+              <div class="dropdown-content">
+                <a href="../commu/comu-main-guest.html">자유게시판</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="../notice/notice-list.html">공지사항</a>
+              <div class="dropdown-content">
+                <a href="../notice/notice-list.html">공지</a>
+              </div>
+            </li>
+          </ul>
       </nav>
     </div>
     <div class="user-section">
@@ -79,19 +83,19 @@
   </header>
   <main>
     <div class="commu-main">
-        <!--게시글 상단-->
-        <div class="comm-header">
-          <div class="navcontainer">
-            <ul id="navlist">
-              <li><a id="current" href="" onfocus="blur()">전체</a></li>
-              <li><a href="" onfocus="blur()">인기</a></li>
-              <li><a href="" onfocus="blur()">자유</a></li>
-              <li><a href="" onfocus="blur()">봉사 후기</a></li>
-              <li><a href="" onfocus="blur()">질문</a></li>
-              <li><a href="" onfocus="blur()">자랑</a></li>
-            </ul>
-          </div>
+      <!--게시글 상단-->
+      <div class="comm-header">
+        <div class="navcontainer">
+          <ul id="navlist">
+            <li><a id="current" href="" onfocus="blur()">전체</a></li>
+            <li><a href="" onfocus="blur()">인기</a></li>
+            <li><a href="" onfocus="blur()">자유</a></li>
+            <li><a href="" onfocus="blur()">봉사 후기</a></li>
+            <li><a href="" onfocus="blur()">질문</a></li>
+            <li><a href="" onfocus="blur()">자랑</a></li>
+          </ul>
         </div>
+      </div>
 
 
       <!-- 게시글 글 작성 -->
@@ -103,22 +107,33 @@
       <div class="protect-write-area">
         <form action="링크" method="post">
           <br>
+          <div class="input-group">
+            <!-- 카테고리 선택 -->
+            <div class="category-select">
+              <label for="category">카테고리:</label>
+              <select id="category" name="category">
+                <option value="인기">인기</option>
+                <option value="자유">자유</option>
+                <option value="봉사후기">봉사후기</option>
+                <option value="질문">질문</option>
+                <option value="자랑">자랑</option>
+              </select>
+            </div>
+            <br><br>
+            <!-- 썸머노트 -->
+            <div class="content">
+              <form method="post" action="">
+                <input id="subject" name="subject" class="adoptwrite-title" placeholder="제목을 입력해주세요">
+                <textarea id="contents" name="contents"></textarea>
+              </form>
+            </div>
 
-          <br><br>
-          <!-- 썸머노트 -->
-          <div class="content">
-            <form method="post" action="">
-              <input id="subject" name="subject" class="adoptwrite-title" placeholder="제목을 입력해주세요">
-              <textarea id="contents" name="contents"></textarea>
-            </form>
-          </div>
-
-          <!-- 등록/취소 버튼 -->
-          <div class="protect-write-button-box">
-            <button class="review-write-button" type="button"
-              onclick="if(registration()) { location.href='../../html/commu/commu-main-member.html'; }">등록</button>
+            <!-- 등록/취소 버튼 -->
+            <div class="protect-write-button-box">
+              <button class="review-write-button" type="button"
+                onclick="if(registration()) { location.href='../../html/commu/commu-main-member.html'; }">등록</button>
               <button class="review-cancle-button" type="button" onclick="Cancel()">취소</button>
-          </div>
+            </div>
         </form>
       </div>
     </div>

@@ -28,7 +28,7 @@ main{
   text-decoration: none;
   list-style: none;
   position: relative;
-  z-index: 1;
+  z-index: 0;
 }
 
 .member-profile-nav-ul a{
@@ -67,40 +67,47 @@ main{
   margin-left: 40px;
 }
 
-.member-notebox-nav-ul{
-  display: flex;
-  text-decoration: none;
-  list-style: none;
-  position: relative;
-  z-index: 1;
-  font-size: 25px;
+.note-wrap {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.member-notebox-nav-ul a{
-  display: flex;
-  text-decoration: none;
-  list-style: none;
-  color: black;
-  margin-right: 10px;
+.note-title {
+  margin-bottom: 20px;
+  text-align: center;
 }
 
-#notebox-choice {
-  width: 20px;
-  height: 20px;
-  border-radius: 100px;
-  background-color: #9B805D;
-  transform: translate(-20px, -5px);
-  position: relative;
-  z-index: -1;
+.note-write .note-title {
+  margin-bottom: 20px;
 }
 
-#line {
-  width: 850px;
-  height: 4px;
-  background-color: #9B805D;
-  margin: 0 auto;
+.note-write input[type='text'] {
+  width: 90%;
+  padding: 15px;
+  font-size: 1.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
+.note-cont {
+  margin-left: -20px;
+}
+
+.note-write textarea {
+  width: 90%;
+  height: 200px;
+  padding: 15px;
+  font-size: 1.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: vertical;
+  margin-left: 20px;
+}
+/**/
 html {
   font-size: 10px;
   font-family: Arial, sans-serif;

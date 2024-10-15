@@ -154,30 +154,35 @@ main{
   color: white;
 }
 
-.review-detail-commentbox{
+.volun-detail-commentbox{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 745px;
-  height: auto;
+  min-height: 95px;
 }
 
-.review-detail-name{
+.volun-detail-name{
   font-size: 14px;
   font-weight: bold;
+  display: flex;
+  justify-content: space-between;
 }
 
-.review-detail-comment{
+.volun-detail-comment{
   font-size: 14px;
 }
 
-.review-detail-date{
+.volun-detail-date{
   font-size: 12px;
 }
 
-.review-detail-commentregi{
+.volun-detail-commentregi{
   width: 620px;
   height: 50px;
 }
 
-.review-commentregi-button{
+.volun-commentregi-button{
   width: 100px;
   height: 50px;
   background-color: #F5EAD9;
@@ -188,13 +193,13 @@ main{
   cursor: pointer;
 }
 
-.review-commentregi-button:hover {
+.volun-commentregi-button:hover {
   background-color: #9B805D; /* 마우스를 올렸을 때 변경될 색상 */
   color: white;
 }
 
 /* 댓글버튼 */
-.review-comment-button{
+.volun-comment-button{
   width: 50px;
   height: 25px;
   background-color: #F5EAD9;
@@ -205,10 +210,12 @@ main{
   cursor: pointer;
 }
 
-.review-comment-button:hover {
+.volun-comment-button:hover {
   background-color: #9B805D; /* 마우스를 올렸을 때 변경될 색상 */
   color: white;
 }
+
+
 
 /* 댓글수정 input 박스 */
 .review-modify-comment{

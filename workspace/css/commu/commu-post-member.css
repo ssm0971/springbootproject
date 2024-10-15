@@ -172,14 +172,6 @@ ul{
   height: auto;
 }
 
-.comm-detail-commentNum{
-  width: 745px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: bold;
-}
 
 .comm-detail-commentbox{
   width: 745px;

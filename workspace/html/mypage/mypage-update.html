@@ -21,43 +21,47 @@
       <nav>
         <ul class="nav-items">
           <li class="nav-item">
-            <a href="#">봉사</a>
+            <a href="../dogmap/dogmap.html">유기견 보호소</a>
             <div class="dropdown-content">
-              <a href="#">봉사 신청</a>
-              <a href="#">봉사 후기</a>
-              <a href="#">봉사 안내</a>
-              <a href="../../html/volun/volun-main-guest.html">카풀</a>
+              <a href="../dogmap/dogmap.html">유기견 보호소</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a href="#">기부</a>
-            <div class="dropdown-content">
-              <a href="#">기부 게시판</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="../adopt/adopt-main.html">입양</a>
-            <div class="dropdown-content">
-              <a href="../adopt/adopt-adopt.html">안심 입양</a>
-              <a href="../adopt/adopt-protection.html">임시 보호</a>
-              <a href="../adopt/adopt-review.html">후기</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="#">커뮤니티</a>
-            <div class="dropdown-content">
-              <a href="#">자유게시판</a>
-              <a href="#">질문과 답변</a>
-              <a href="#">자랑</a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a href="#">공지사항</a>
-            <div class="dropdown-content">
-              <a href="#">공지</a>
-            </div>
-          </li>
-        </ul>
+          <ul class="nav-items">
+            <li class="nav-item">
+              <a href="../volun/volun-main.html">봉사</a>
+              <div class="dropdown-content">
+                <a href="../volun/volun-main.html">봉사 메인</a>
+                <a href="../volun/volun-volun-main.html">봉사 신청</a>
+                <a href="../../html/volun/volun-car-main-guest.html">카풀</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="../donation/donation-main-guest.html">기부</a>
+              <div class="dropdown-content">
+                <a href="../donation/donation-main-guest.html">기부 게시판</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="../adopt/adopt-main.html">입양</a>
+              <div class="dropdown-content">
+                <a href="../adopt/adopt-adopt.html">안심 입양</a>
+                <a href="../adopt/adopt-protection.html">임시 보호</a>
+                <a href="../adopt/adopt-review.html">후기</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="../commu/comu-main-guest.html">커뮤니티</a>
+              <div class="dropdown-content">
+                <a href="../commu/comu-main-guest.html">자유게시판</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="../notice/notice-list.html">공지사항</a>
+              <div class="dropdown-content">
+                <a href="../notice/notice-list.html">공지</a>
+              </div>
+            </li>
+          </ul>
       </nav>
     </div>
     <div class="user-section">
@@ -126,7 +130,13 @@
                 </label>
                 
                 <label for="address">
-                  <div id="contents"><div id="labelname">주소 : </div><div><input type="text" id="addressInput" onblur="checkAddressInput()"></div><button class="member-profile-button-small">주소</button></div>
+                  <div id="contents"><div id="labelname">우편번호 : </div><div><input type="text" id="addressInput" onblur="checkAddressInput()"></div><button class="member-profile-button-small">우편번호</button></div>
+                  <!-- 주소 미입력 에러메세지 -->
+                  <div class="Error">
+                    <div class="myupdate-content-title" id="addressError2" style="display: none;"></div>
+                    <div id="addressError" style="color: red; display: none;">주소를 정확히 입력해주세요</div>
+                  </div>
+                  <div id="contents"><div id="labelname">주소 : </div><div><input type="text" id="addressInput" onblur="checkAddressInput()"></div></div>
                     <!-- 주소 미입력 에러메세지 -->
                   <div class="Error">
                     <div class="myupdate-content-title" id="addressError2" style="display: none;"></div>
@@ -181,7 +191,7 @@
     통신판매업신고번호 2017-서울용산-066 | 사업자정보확인호스팅사업자 NT넥스트레벨 대표이메일 nextlevel_224@next.com<br>
     © NEXT LEVEL. All Rights Reserved</h6>
 </footer>
-
+<script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <script defer src="../../js/main/header.js"></script>
 <script defer src="../../js/mypage/mypage-update.js"></script>
 

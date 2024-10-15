@@ -3,13 +3,15 @@
   padding: 0;
 }
 
-a{
-  text-decoration: none;
-  color: black;
+main{
+  background-color: white;
+  width: 1080px;
+  height: 1000px;
+  margin: auto;
 }
 
 /* 마이페이지 목록 */
-.center-member-profile-navbox{
+.member-profile-navbox{
   margin: 0 auto;
   /* border: 1px solid black; */
   border-bottom: 2px solid #9B805D;
@@ -21,20 +23,40 @@ a{
   align-items: center;
 }
 
-.center-member-profile-nav-ul{
+.member-profile-nav-ul{
   display: flex;
   text-decoration: none;
   list-style: none;
+  position: relative;
+  z-index: 0;
 }
 
-.center-member-profile-nav-ul li{
+.member-profile-nav-ul a{
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+#choice {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  background-color: #9B805D;
+  transform: translate(-30px, 15px);
+  position: relative;
+  z-index: -1;
+}
+
+.member-profile-nav-ul li{
   margin: 20px;
   font-size: 20px;
   cursor: pointer;
 }
 
+
 /* 게시판 목록 */
-.center-member-profile-navboard{
+.member-profile-navboard{
   margin: 0 auto;
   border-bottom: 5px solid #9B805D;
   width: 850px;
@@ -44,20 +66,20 @@ a{
   align-items: center;
 }
 
-.center-member-profile-navboard-ul{
+.member-profile-navboard-ul{
   display: flex;
   text-decoration: none;
   list-style: none;
 }
 
-.center-member-profile-navboard-ul li{
+.member-profile-navboard-ul li{
   margin: 20px;
   font-size: 28px;
   cursor: pointer;
 }
 
 /* 탈퇴 영역 */
-.center-withdrawal-container{
+.withdrawal-container{
   margin: 0 auto;
   width: 800px;
   height: 600px;
@@ -68,7 +90,7 @@ a{
 }
 
 /* 약관 */
-.center-withdrawal-terms{
+.withdrawal-terms{
   margin: 0 auto;
   width: 80%;
   display: flex;
@@ -78,17 +100,17 @@ a{
   align-items: center;
 }
 
-.center-withdrawal-terms b{
+.withdrawal-terms b{
   margin: 20px;
   font-size: 20px;
 }
 
-.center-withdrawal-terms p{
+.withdrawal-terms p{
   margin: 10px;
   font-size: 16px;
 }
 
-.center-withdrawal-agreeinput{
+.withdrawal-agreeinput{
   width: 200px;
   height: 30px;
   margin: 30px 0 10px;
