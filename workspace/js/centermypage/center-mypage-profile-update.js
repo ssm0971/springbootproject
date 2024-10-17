@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const phoneSendButton = document.getElementById('phoneSendButton');
     const passwordInput = document.getElementById('password');
     const passwordCheckInput = document.getElementById('passwordcheck');
+    const addressSearchBtn = document.getElementById('addressSearch');
     const passwordMismatchMessage = document.getElementById('passwordMismatchMessage');
     const passwordStrengthMessage = document.getElementById('passwordStrengthMessage');
 
@@ -40,6 +41,17 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             alert('전화번호를 입력해주세요.');
         }
+    });
+
+    // 주소 검색
+    addressSearchBtn.addEventListener('click', function() {
+      new daum.Postcode({
+        oncomplete: function(data) {
+          document.getElementById('zipcode').value = data.zonecode; // 우편번호 입력
+          document.getElementById('address').value = data.address; // 주소 입력
+          document.getElementById('detailAddress').focus(); // 상세주소 입력란에 포커스
+        }
+      }).open();
     });
 
     // 비밀번호 입력 이벤트
