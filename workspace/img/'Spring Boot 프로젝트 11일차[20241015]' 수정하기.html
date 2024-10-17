@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://0720kmc.tistory.com/manage/newpost/12?type=post&returnURL=ENTRY -->
+<html lang="ko"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+        <title>'Spring  Boot 프로젝트 11일차[20241015]' 수정하기</title>
+
+    <link rel="stylesheet" href="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/font.css">
+    <link rel="stylesheet" href="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/editor-plugins.css">
+    <link rel="stylesheet" href="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/post-editor.min.css">
+    <style>
+        .photos-container {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 60000;
+            display: none
+        }
+
+        .googleRecaptcha {
+            height: 88px;
+            padding: 5px 0
+        }
+    </style>
+<style type="text/css">.mce-codeblock-dialog-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 65536;
+  background: transparent
+}
+
+.mce-codeblock-dialog-container .mce-codeblock-shadow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.75)
+}
+
+.mce-codeblock-dialog-container .mce-codeblock-dialog {
+  position: absolute;
+  width: 800px;
+  top: 50px;
+  bottom: 50px;
+  left: 50%;
+  margin-left: -400px;
+  background: #fff;
+  border-radius: 1px;
+  border: 1px solid #465467;
+  box-shadow:0 4px 8px rgba(0,0,0,0.3)
+}
+
+.mce-codeblock-dialog-container .mce-window-head .mce-close {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: 0;
+  height: 38px;
+  width: 38px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mce-codeblock-dialog-container .mce-window-head .mce-close .mce-ico {
+  color: #fff
+}
+
+
+.mce-codeblock-dialog-container .mce-window-head .mce-codeblock-select-wrapper {
+  position:absolute;
+  bottom: 22px;
+  left: 100px;
+}
+
+.mce-codeblock-dialog-container .mce-window-head .mce-codeblock-select-wrapper::before {
+  content: '';
+  width: 2px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #bebebe;
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.mce-codeblock-dialog-container .mce-window-head .mce-codeblock-select-wrapper .mce-listbox {
+  border: 0;
+}
+.mce-codeblock-dialog-container .mce-window-head .mce-codeblock-select-wrapper .mce-listbox.mce-active {
+  background-color:transparent;
+}
+.mce-codeblock-dialog-container .mce-window-head .mce-codeblock-select-wrapper .mce-listbox.mce-active button {
+  color: #333;
+}
+.mce-codeblock-dialog-container .mce-window-head .mce-codeblock-select-wrapper .mce-listbox.mce-active .mce-caret {
+  border-top-color:#333;
+}
+
+
+
+.mce-codeblock-dialog-container .mce-codeblock-content {
+  position: absolute;
+  top: 102px;
+  bottom: 123px;
+  left: 42px;
+  right: 42px;
+}
+
+.mce-codeblock-dialog-container .mce-codeblock-content .textarea {
+  width: 100%;
+  height: 100%;
+  resize: none;
+  border: 0;
+  padding: 0
+}
+
+.mce-codeblock-dialog-container .mce-codeblock-content .CodeMirror {
+  height: 100%;
+  width: 100%;
+  font-size: 13px;
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+  letter-spacing: 0
+}
+.mce-codeblock-dialog-container .mce-codeblock-content .CodeMirror .CodeMirror-linenumber {
+  padding-left:0;
+}
+.mce-codeblock-dialog-container .mce-codeblock-content .CodeMirror .CodeMirror-gutters {
+  border-color:transparent;
+  background-color:#fff;
+}
+
+.mce-codeblock-dialog-container .mce-foot {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.mce-codeblock-dialog-container .mce-foot .mce-codeblock-btn-submit:disabled {
+  background: #fff;
+  border-color: #E0E5EE;
+  color: #959595;
+  box-shadow: none;
+  cursor: not-allowed
+}
+
+</style><style type="text/css">/* BASICS */
+
+.CodeMirror {
+  /* Set height, width, borders, and global font properties here */
+  font-family: monospace;
+  height: 300px;
+  color: black;
+  direction: ltr;
+}
+
+/* PADDING */
+
+.CodeMirror-lines {
+  padding: 4px 0; /* Vertical padding around content */
+}
+.CodeMirror pre.CodeMirror-line,
+.CodeMirror pre.CodeMirror-line-like {
+  padding: 0 4px; /* Horizontal padding of content */
+}
+
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  background-color: white; /* The little square between H and V scrollbars */
+}
+
+/* GUTTER */
+
+.CodeMirror-gutters {
+  border-right: 1px solid #ddd;
+  background-color: #f7f7f7;
+  white-space: nowrap;
+}
+.CodeMirror-linenumbers {}
+.CodeMirror-linenumber {
+  padding: 0 3px 0 5px;
+  min-width: 20px;
+  text-align: right;
+  color: #999;
+  white-space: nowrap;
+}
+
+.CodeMirror-guttermarker { color: black; }
+.CodeMirror-guttermarker-subtle { color: #999; }
+
+/* CURSOR */
+
+.CodeMirror-cursor {
+  border-left: 1px solid black;
+  border-right: none;
+  width: 0;
+}
+/* Shown when moving in bi-directional text */
+.CodeMirror div.CodeMirror-secondarycursor {
+  border-left: 1px solid silver;
+}
+.cm-fat-cursor .CodeMirror-cursor {
+  width: auto;
+  border: 0 !important;
+  background: #7e7;
+}
+.cm-fat-cursor div.CodeMirror-cursors {
+  z-index: 1;
+}
+.cm-fat-cursor .CodeMirror-line::selection,
+.cm-fat-cursor .CodeMirror-line > span::selection, 
+.cm-fat-cursor .CodeMirror-line > span > span::selection { background: transparent; }
+.cm-fat-cursor .CodeMirror-line::-moz-selection,
+.cm-fat-cursor .CodeMirror-line > span::-moz-selection,
+.cm-fat-cursor .CodeMirror-line > span > span::-moz-selection { background: transparent; }
+.cm-fat-cursor { caret-color: transparent; }
+@-moz-keyframes blink {
+  0% {}
+  50% { background-color: transparent; }
+  100% {}
+}
+@-webkit-keyframes blink {
+  0% {}
+  50% { background-color: transparent; }
+  100% {}
+}
+@keyframes blink {
+  0% {}
+  50% { background-color: transparent; }
+  100% {}
+}
+
+/* Can style cursor different in overwrite (non-insert) mode */
+.CodeMirror-overwrite .CodeMirror-cursor {}
+
+.cm-tab { display: inline-block; text-decoration: inherit; }
+
+.CodeMirror-rulers {
+  position: absolute;
+  left: 0; right: 0; top: -50px; bottom: 0;
+  overflow: hidden;
+}
+.CodeMirror-ruler {
+  border-left: 1px solid #ccc;
+  top: 0; bottom: 0;
+  position: absolute;
+}
+
+/* DEFAULT THEME */
+
+.cm-s-default .cm-header {color: blue;}
+.cm-s-default .cm-quote {color: #090;}
+.cm-negative {color: #d44;}
+.cm-positive {color: #292;}
+.cm-header, .cm-strong {font-weight: bold;}
+.cm-em {font-style: italic;}
+.cm-link {text-decoration: underline;}
+.cm-strikethrough {text-decoration: line-through;}
+
+.cm-s-default .cm-keyword {color: #708;}
+.cm-s-default .cm-atom {color: #219;}
+.cm-s-default .cm-number {color: #164;}
+.cm-s-default .cm-def {color: #00f;}
+.cm-s-default .cm-variable,
+.cm-s-default .cm-punctuation,
+.cm-s-default .cm-property,
+.cm-s-default .cm-operator {}
+.cm-s-default .cm-variable-2 {color: #05a;}
+.cm-s-default .cm-variable-3, .cm-s-default .cm-type {color: #085;}
+.cm-s-default .cm-comment {color: #a50;}
+.cm-s-default .cm-string {color: #a11;}
+.cm-s-default .cm-string-2 {color: #f50;}
+.cm-s-default .cm-meta {color: #555;}
+.cm-s-default .cm-qualifier {color: #555;}
+.cm-s-default .cm-builtin {color: #30a;}
+.cm-s-default .cm-bracket {color: #997;}
+.cm-s-default .cm-tag {color: #170;}
+.cm-s-default .cm-attribute {color: #00c;}
+.cm-s-default .cm-hr {color: #999;}
+.cm-s-default .cm-link {color: #00c;}
+
+.cm-s-default .cm-error {color: #f00;}
+.cm-invalidchar {color: #f00;}
+
+.CodeMirror-composing { border-bottom: 2px solid; }
+
+/* Default styles for common addons */
+
+div.CodeMirror span.CodeMirror-matchingbracket {color: #0b0;}
+div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #a22;}
+.CodeMirror-matchingtag { background: rgba(255, 150, 0, .3); }
+.CodeMirror-activeline-background {background: #e8f2ff;}
+
+/* STOP */
+
+/* The rest of this file contains styles related to the mechanics of
+   the editor. You probably shouldn't touch them. */
+
+.CodeMirror {
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+
+.CodeMirror-scroll {
+  overflow: scroll !important; /* Things will break if this is overridden */
+  /* 50px is the magic margin used to hide the element's real scrollbars */
+  /* See overflow: hidden in .CodeMirror */
+  margin-bottom: -50px; margin-right: -50px;
+  padding-bottom: 50px;
+  height: 100%;
+  outline: none; /* Prevent dragging from highlighting the element */
+  position: relative;
+  z-index: 0;
+}
+.CodeMirror-sizer {
+  position: relative;
+  border-right: 50px solid transparent;
+}
+
+/* The fake, visible scrollbars. Used to force redraw during scrolling
+   before actual scrolling happens, thus preventing shaking and
+   flickering artifacts. */
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  position: absolute;
+  z-index: 6;
+  display: none;
+  outline: none;
+}
+.CodeMirror-vscrollbar {
+  right: 0; top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.CodeMirror-hscrollbar {
+  bottom: 0; left: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.CodeMirror-scrollbar-filler {
+  right: 0; bottom: 0;
+}
+.CodeMirror-gutter-filler {
+  left: 0; bottom: 0;
+}
+
+.CodeMirror-gutters {
+  position: absolute; left: 0; top: 0;
+  min-height: 100%;
+  z-index: 3;
+}
+.CodeMirror-gutter {
+  white-space: normal;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: -50px;
+}
+.CodeMirror-gutter-wrapper {
+  position: absolute;
+  z-index: 4;
+  background: none !important;
+  border: none !important;
+}
+.CodeMirror-gutter-background {
+  position: absolute;
+  top: 0; bottom: 0;
+  z-index: 4;
+}
+.CodeMirror-gutter-elt {
+  position: absolute;
+  cursor: default;
+  z-index: 4;
+}
+.CodeMirror-gutter-wrapper ::selection { background-color: transparent }
+.CodeMirror-gutter-wrapper ::-moz-selection { background-color: transparent }
+
+.CodeMirror-lines {
+  cursor: text;
+  min-height: 1px; /* prevents collapsing before first draw */
+}
+.CodeMirror pre.CodeMirror-line,
+.CodeMirror pre.CodeMirror-line-like {
+  /* Reset some styles that the rest of the page might have set */
+  -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+  border-width: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  white-space: pre;
+  word-wrap: normal;
+  line-height: inherit;
+  color: inherit;
+  z-index: 2;
+  position: relative;
+  overflow: visible;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-variant-ligatures: contextual;
+  font-variant-ligatures: contextual;
+}
+.CodeMirror-wrap pre.CodeMirror-line,
+.CodeMirror-wrap pre.CodeMirror-line-like {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+}
+
+.CodeMirror-linebackground {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  z-index: 0;
+}
+
+.CodeMirror-linewidget {
+  position: relative;
+  z-index: 2;
+  padding: 0.1px; /* Force widget margins to stay inside of the container */
+}
+
+.CodeMirror-widget {}
+
+.CodeMirror-rtl pre { direction: rtl; }
+
+.CodeMirror-code {
+  outline: none;
+}
+
+/* Force content-box sizing for the elements where we expect it */
+.CodeMirror-scroll,
+.CodeMirror-sizer,
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.CodeMirror-measure {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.CodeMirror-cursor {
+  position: absolute;
+  pointer-events: none;
+}
+.CodeMirror-measure pre { position: static; }
+
+div.CodeMirror-cursors {
+  visibility: hidden;
+  position: relative;
+  z-index: 3;
+}
+div.CodeMirror-dragcursors {
+  visibility: visible;
+}
+
+.CodeMirror-focused div.CodeMirror-cursors {
+  visibility: visible;
+}
+
+.CodeMirror-selected { background: #d9d9d9; }
+.CodeMirror-focused .CodeMirror-selected { background: #d7d4f0; }
+.CodeMirror-crosshair { cursor: crosshair; }
+.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection { background: #d7d4f0; }
+.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection { background: #d7d4f0; }
+
+.cm-searching {
+  background-color: #ffa;
+  background-color: rgba(255, 255, 0, .4);
+}
+
+/* Used to force a border model for a node */
+.cm-force-border { padding-right: .1px; }
+
+@media print {
+  /* Hide the cursor when printing */
+  .CodeMirror div.CodeMirror-cursors {
+    visibility: hidden;
+  }
+}
+
+/* See issue #2901 */
+.cm-tab-wrap-hack:after { content: ''; }
+
+/* Help users use markselection to safely style text background */
+span.CodeMirror-selectedtext { background: none; }
+</style><style type="text/css">.CodeMirror-dialog {
+  position: absolute;
+  left: 0; right: 0;
+  background: inherit;
+  z-index: 15;
+  padding: .1em .8em;
+  overflow: hidden;
+  color: inherit;
+}
+
+.CodeMirror-dialog-top {
+  border-bottom: 1px solid #eee;
+  top: 0;
+}
+
+.CodeMirror-dialog-bottom {
+  border-top: 1px solid #eee;
+  bottom: 0;
+}
+
+.CodeMirror-dialog input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 20em;
+  color: inherit;
+  font-family: monospace;
+}
+
+.CodeMirror-dialog button {
+  font-size: 70%;
+}
+</style><style type="text/css">.CodeMirror-search-match {
+  background: gold;
+  border-top: 1px solid orange;
+  border-bottom: 1px solid orange;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  opacity: .5;
+}
+</style><style type="text/css">.mce-window .mce-location{background-color:#FAFBFC}.mce-window .mce-location *{font-family:"Noto Sans DemiLight", AppleSDGothicNeo, "\B3CB\C6C0", dotum, sans-serif;letter-spacing:-0.2px}.mce-location .mce-location-header{padding:30px;position:relative}.mce-location-input{margin:20px}.mce-location .mce-location-input{width:100%;border:1px solid #C5CDD7;height:37px;padding:10px;box-sizing:border-box;font-size:13px;color:#333;background-color:#fff}.mce-location .mce-location-input:focus{border-color:#828C9B}.mce-location .mce-location-search{position:absolute;right:30px;top:30px;width:37px;height:37px;overflow:hidden;cursor:pointer;text-align:center;display:flex;justify-content:center;align-items:center}.mce-location .mce-location-input:focus+.mce-location-search .mce-ico.mce-plus{background-position:-26px 0}.mce-location .mce-ico.mce-plus{text-indent:-10000px;background-position:0 0}.mce-location .mce-location-body{width:100%;position:absolute;padding:20px 30px 0px 30px;top:70px;bottom:56px;left:0;right:0;display:flex;color:#828C9B;font-size:18px;overflow-y:scroll;box-sizing:border-box}.mce-location-text-wrapper{display:flex;align-items:center;justify-content:center}.mce-location .ico_loading{display:block;width:28px;height:28px;margin:0 auto;background-position:0 0;animation:aniSpinRev 1s infinite linear}.mce-location .ico_blog{display:inline-block;overflow:hidden;background:url(https://t1.daumcdn.net/tistory_admin/static/manage/images/r1/ico_tistory_170731.png) no-repeat;vertical-align:top;text-indent:-9999px}.mce-location .mce-location-preview{width:470px;height:330px;box-shadow:0 1px 5px #999;margin-top:-15px}.mce-location .mce-location-image{width:470px;height:235px;overflow:hidden}.mce-location .mce-location-image img{width:470px}.mce-location .mce-location-content{width:470px;height:95px;padding:10px;box-sizing:border-box;background-color:#fff}.mce-location .mce-location-title{font-weight:500;font-size:18px;overflow:hidden;word-wrap:break-word;line-height:25px;text-overflow:ellipsis;white-space:nowrap;color:#666}.mce-location .mce-location-description{font-size:12px;line-height:18px;height:36px;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;text-overflow:ellipsis;display:-webkit-box;overflow:hidden;color:#666}.mce-location .mce-location-host{font-size:11px;color:#999;line-height:14px}.mce-location .mce-location-media{width:470px;height:330px}.mce-location-result-place{list-style-type:none;text-align:left;cursor:pointer}.mce-location .mce-location-body .mce-location-place-list{margin:0px;width:100%}.mce-location .mce-location-body .mce-location-place-list .mce-location-result-place .mce-location-result-place-content{border-top-color:#f2f2f2;border-top-style:solid;border-top-width:1px;height:auto;padding:13px 5px 6px 5px;font-size:18px;display:block;cursor:pointer}.mce-location .mce-location-body .mce-location-place-list .mce-location-result-place .mce-location-result-address{color:#909090;font-size:12px}.mce-location .mce-location-body .mce-location-place-list .mce-location-result-more{border-top-color:#000;border-top-style:solid;border-top-width:1px;height:auto;padding:13px 5px 6px 5px;font-size:18px;display:block;cursor:pointer}.mce-location-result-address:before{content:'';display:block}.mce-location-result-place-content:hover{background:#181818;color:#FFF}.mce-location .mce-location-footer{position:absolute;bottom:-1px;height:56px;left:0;right:0;background-color:#fff;display:flex;align-items:center;justify-content:flex-end;border-top:1px solid #E0E5EE}.mce-location .mce-location-footer button{font-size:13px;border-radius:1px;width:76px;height:30px;line-height:30px;text-align:center;box-sizing:content-box}.mce-location .mce-location-footer .mce-location-cancel{margin-right:30px;float:left;border:1px solid #C5CDD7;background:#fff;box-shadow:0 1px 1px rgba(0,0,0,0.08)}.mce-location .mce-location-footer .mce-location-cancel:hover{border-color:#A5ADBA;box-shadow:0 2px 3px rgba(0,0,0,0.12)}.mce-location .mce-location-footer .mce-location-cancel:active{border-color:#C5CDD7;box-shadow:none}
+</style><style type="text/css">.mce-shortcut-dialog .mce-btn .mce-txt {
+  line-height: 38px;
+}
+
+.mce-container .wrap_shortcut {
+  overflow: auto;
+  width: 728px;
+  padding: 0 32px;
+}
+
+.wrap_shortcut .list_shortcut {
+  overflow: hidden;
+  flex-wrap: wrap;
+  padding-top: 8px;
+  margin: 0 0 20px 0;
+}
+
+.wrap_shortcut .list_shortcut li {
+  display: flex;
+  float: left;
+  width: 210px;
+  margin-top: 12px;
+  justify-content: space-between;
+}
+
+.wrap_shortcut .list_shortcut li:nth-child(3n+2) {
+  padding: 0 48px;
+}
+
+.wrap_shortcut .cont_shortcut {
+  font-size: 0;
+  line-height: 0;
+}
+
+.wrap_shortcut .tit_shortcut {
+  display: block;
+  color: #111;
+  font-size: 13px;
+  line-height: 34px;
+}
+
+.wrap_shortcut .key_type1 {
+  width: 44px;
+  font-size: 15px;
+  line-height: 31px;
+}
+
+.wrap_shortcut .key_type2 {
+  width: 31px;
+  font-size: 15px;
+  line-height: 31px;
+}
+
+.wrap_shortcut .key_type3 {
+  width: 44px;
+  font-size: 14px;
+  line-height: 31px;
+}
+
+.wrap_shortcut .key_type3, .wrap_shortcut .key_type2, .wrap_shortcut .key_type1 {
+  display: inline-block;
+  height: 33px;
+  border: 1px solid #dedede;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.03);
+  color: #111;
+  text-align: center;
+  font-family: -apple-system, BlinkMacSystemFont, AppleSDGothicNeo-Regular, "Malgun Gothic", "\B9D1\C740   \ACE0\B515", dotum, "\B3CB\C6C0", sans-serif;
+}
+
+.wrap_shortcut .key_type3 + .key_type3, .wrap_shortcut .key_type2 + .key_type3,
+.wrap_shortcut .key_type3 + .key_type2, .wrap_shortcut .key_type2 + .key_type2,
+.wrap_shortcut .key_type1 + .key_type3, .wrap_shortcut .key_type1 + .key_type2,
+.wrap_shortcut .key_type3 + .key_type1, .wrap_shortcut .key_type2 + .key_type1, 
+.wrap_shortcut .key_type1 + .key_type1 {
+  margin-left: 4px;
+}</style></head>
+
+<body id="editor-root" class="tistory">
+<div id="post-editor-app" class="post-editor"><div id="kakaoWrap"><div id="kakaoHead" role="banner" class="kakao_head gnb_mv"><div class="inner_header tistory"><h1 class="tistory_logo"><a href="https://www.tistory.com/" id="kakaoServiceLogo" class="link_logo"><span class="img_common_tistory tit_tistory">티스토리</span></a></h1><div class="info_tistory"><div class="profile_tistory"><strong class="tit_nickname">0720kmc</strong><a href="https://0720kmc.tistory.com/manage/newpost/12?type=post&amp;returnURL=ENTRY#" class="link_profile"><span class="thumb_profile" style="background-image: url(&quot;https://t1.daumcdn.net/tistory_admin/static/manage/images/r3/default_S.png&quot;);">0720kmc</span></a></div></div></div></div><main id="editorContainer" class="content-editor keditor"><div class="kakao-editor"><div class="btn-category"><div class="mce-widget mce-btn"><label id="category-label" class="screen_out">카테고리 선택</label><button id="category-btn" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="category-label" role="combobox" aria-controls="category-list"><i class="mce-txt">국비 프로젝트 수업</i><i class="mce-caret">더보기</i></button></div></div><div class="post-title"><textarea id="post-title-inp" class="textarea_tit" placeholder="제목을 입력하세요" style="height: 40px !important;">Spring  Boot 프로젝트 11일차[20241015]</textarea></div><div id="html-editor-container" style="display: none;"><div class="mce-top-part mce-container mce-stack-layout-item mce-first"><div class="mce-container-body"><div class="mce-toolbar-grp mce-container mce-panel mce-first mce-last" tabindex="-1" role="group"><div class="mce-container-body mce-stack-layout"><div class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last" role="toolbar"><div class="mce-container-body mce-flow-layout"><div class="mce-container mce-flow-layout-item mce-first mce-btn-group" role="group"><div><div class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-listbox mce-first" tabindex="-1" aria-labelledby="mceu_72" role="button" aria-label="첨부" aria-haspopup="true"><button role="presentation" id="attach-layer-btn" tabindex="-1"><i class="mce-ico mce-i-image"></i> <i class="mce-caret"></i></button></div><div class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-listbox mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_73" role="button" aria-label="Formats" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><span class="mce-txt">제목1</span> <i class="mce-caret"></i></button></div><div class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-listbox mce-last mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_74" role="button" aria-label="Font Family" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><span class="mce-txt">본고딕</span> <i class="mce-caret"></i></button></div></div></div><div class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div><div class="mce-widget mce-btn mce-first" tabindex="-1" aria-pressed="false" role="button" aria-label="Bold"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i></button></div><div class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Italic"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-italic"></i></button></div><div class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Underline"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-underline"></i></button></div><div class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Strikethrough"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-strikethrough"></i></button></div><div class="mce-widget mce-btn mce-forecolor mce-splitbtn mce-colorbutton" role="button" tabindex="-1" aria-haspopup="true" aria-label="글자색"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-forecolor"></i><span class="mce-preview" style="background-color: rgb(51, 51, 51);"></span></button><button type="button" class="mce-open" tabindex="-1"><i class="mce-caret"></i></button></div><div class="mce-widget mce-btn mce-hilitecolor mce-splitbtn mce-colorbutton mce-last" role="button" tabindex="-1" aria-haspopup="true" aria-label="배경색"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-hilitecolor"></i><span class="mce-preview" style="background-color: rgb(255, 255, 255);"></span></button><button type="button" class="mce-open" tabindex="-1"><i class="mce-caret"></i></button></div></div></div><div class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div><div class="mce-widget mce-btn mce-first" tabindex="-1" aria-pressed="false" role="button" aria-label="Align left"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignleft"></i></button></div><div class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Align center"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-aligncenter"></i></button></div><div class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Align right"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignright"></i></button></div><div class="mce-widget mce-btn mce-last" tabindex="-1" aria-pressed="false" role="button" aria-label="Justify"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignjustify"></i></button></div></div></div><div class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div><div class="mce-widget mce-btn mce-menubtn mce-first" tabindex="-1" aria-labelledby="mceu_85" role="button" aria-label="List" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-kList"></i></button></div><div class="mce-widget mce-btn mce-menubtn" tabindex="-1" aria-labelledby="mceu_86" role="button" aria-label="Table" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-table"></i></button></div><div class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Insert/edit link" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-link"></i></button></div><div class="mce-widget mce-btn mce-menubtn mce-fixed-width" tabindex="-1" aria-labelledby="mceu_88" role="button" aria-label="Horizontal line" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-hrList"></i></button></div><div class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-last" tabindex="-1" aria-labelledby="mceu_89" role="button" aria-label="더보기" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-more"></i></button></div></div></div><div class="mce-container mce-flow-layout-item mce-last mce-btn-group" role="group"><div><div class="mce-widget mce-btn mce-btn-has-text" role="button"><button type="button"><i class="mce-txt">기본모드</i><i class="mce-caret">더보기</i></button><div class="mce-container mce-panel mce-floatpanel mce-menu mce-animate mce-fixed mce-menu-align" role="application" style="margin-left: -11px; display: none;"><div class="mce-container-body mce-stack-layout" role="menu"><div id="editor-mode-kakao-tistory" class="mce-menu-item mce-menu-item-normal mce-stack-layout-item mce-menu-active" role="menuitem"><span class="mce-text">기본모드</span></div><div id="editor-mode-markdown-tistory" class="mce-menu-item mce-menu-item-normal mce-stack-layout-item" role="menuitem"><span class="mce-text">마크다운</span></div><div id="editor-mode-html-tistory" class="mce-menu-item mce-menu-item-normal mce-stack-layout-item" role="menuitem"><span class="mce-text">HTML</span></div></div></div></div></div></div><div class="dimmed_type1"></div></div></div></div></div></div></div><div class="mce-edit-area"><div class="ReactCodemirror"><textarea style="display: none;">&lt;p data-ke-size="size16"&gt;Spring Boot 프로젝트 11일차. 각자 작업했던 퍼블리싱들은 모두 합치고 검토하는 시간을 가졌습니다. 이후에는 만든 페이지와 회의자료를 기반으로 모델링 작업을 진행하였습니다. 모델링은 논리모델링(관계도/테이블), 물리모델링으로 나눠지며 먼저 논리모델링 작업을 진행하였습니다.&lt;/p&gt;
+&lt;p data-ke-size="size16"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h3 style="color: #000000;" data-ke-size="size23"&gt;📌&lt;b&gt;논리모델링&lt;/b&gt;&lt;/h3&gt;
+&lt;p data-ke-size="size16"&gt;논리모델링은 관계도와 테이블로 나눌 수 있습니다.&lt;/p&gt;
+&lt;p data-ke-size="size16"&gt;관계도는 두 모델간의 관계가 '1 : 1'인지 '1 : N'인지 분간하며 테이블은 실제 테이블로 구성했을시 PK, FK, NN 등을 정하는 작업입니다.&lt;/p&gt;
+&lt;p data-ke-size="size16"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;h3 style="color: #000000;" data-ke-size="size23"&gt;&lt;b&gt;논리모델링(&lt;/b&gt;&lt;/h3&gt;
+&lt;p data-ke-size="size16"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p data-ke-size="size16"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p data-ke-size="size16"&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p data-ke-size="size16"&gt;&amp;nbsp;&lt;/p&gt;</textarea><div class="CodeMirror cm-s-tistory-html CodeMirror-wrap" translate="no" style="clip-path: inset(0px);"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 193px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-tag cm-bracket">&lt;</span><span class="cm-tag">p</span> <span class="cm-attribute">data-ke-size</span>=<span class="cm-string">"size16"</span><span class="cm-tag cm-bracket">&gt;</span>Spring Boot 프로젝트 11일차. 각자 작업했던 퍼블리싱들은 모두 합치고 검토하는 시간을 가졌습니다. 이후에는 만든 페이지와 회의자료를 기반으로 모델링 작업을 진행하였습니다. 모델링은 논리모델링(관계도/테이블), 물리모델링으로 나눠지며 먼저 논리모델링 작업을 진행하였습니다.<span class="cm-tag cm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tag cm-bracket">&gt;</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters" style="left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 1px;"></div></div></div></div></div></div></div><div id="markdown-editor-container" style="display: none;"><div class="mce-top-part mce-container mce-stack-layout-item mce-first"><div class="mce-container-body"><div class="mce-toolbar-grp mce-container mce-panel mce-first mce-last" tabindex="-1" role="group"><div class="mce-container-body mce-stack-layout"><div class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last" role="toolbar"><div class="mce-container-body mce-flow-layout"><div class="mce-container mce-flow-layout-item mce-first mce-btn-group" role="group"><div><div class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-listbox mce-first" tabindex="-1" aria-labelledby="mceu_72" role="button" aria-label="첨부" aria-haspopup="true"><button role="presentation" id="attach-layer-btn" tabindex="-1"><i class="mce-ico mce-i-image"></i> <i class="mce-caret"></i></button></div><div class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-listbox mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_73" role="button" aria-label="Formats" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><span class="mce-txt">제목1</span> <i class="mce-caret"></i></button></div><div class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-listbox mce-last mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_74" role="button" aria-label="Font Family" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><span class="mce-txt">본고딕</span> <i class="mce-caret"></i></button></div></div></div><div class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div><div class="mce-widget mce-btn mce-first" tabindex="-1" aria-pressed="false" role="button" aria-label="Bold"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i></button></div><div class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Italic"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-italic"></i></button></div><div class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Underline"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-underline"></i></button></div><div class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Strikethrough"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-strikethrough"></i></button></div><div class="mce-widget mce-btn mce-forecolor mce-splitbtn mce-colorbutton" role="button" tabindex="-1" aria-haspopup="true" aria-label="글자색"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-forecolor"></i><span class="mce-preview" style="background-color: rgb(51, 51, 51);"></span></button><button type="button" class="mce-open" tabindex="-1"><i class="mce-caret"></i></button></div><div class="mce-widget mce-btn mce-hilitecolor mce-splitbtn mce-colorbutton mce-last" role="button" tabindex="-1" aria-haspopup="true" aria-label="배경색"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-hilitecolor"></i><span class="mce-preview" style="background-color: rgb(255, 255, 255);"></span></button><button type="button" class="mce-open" tabindex="-1"><i class="mce-caret"></i></button></div></div></div><div class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div><div class="mce-widget mce-btn mce-first" tabindex="-1" aria-pressed="false" role="button" aria-label="Align left"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignleft"></i></button></div><div class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Align center"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-aligncenter"></i></button></div><div class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Align right"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignright"></i></button></div><div class="mce-widget mce-btn mce-last" tabindex="-1" aria-pressed="false" role="button" aria-label="Justify"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignjustify"></i></button></div></div></div><div class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div><div class="mce-widget mce-btn mce-menubtn mce-first" tabindex="-1" aria-labelledby="mceu_85" role="button" aria-label="List" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-kList"></i></button></div><div class="mce-widget mce-btn mce-menubtn" tabindex="-1" aria-labelledby="mceu_86" role="button" aria-label="Table" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-table"></i></button></div><div class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="Insert/edit link" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-link"></i></button></div><div class="mce-widget mce-btn mce-menubtn mce-fixed-width" tabindex="-1" aria-labelledby="mceu_88" role="button" aria-label="Horizontal line" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-hrList"></i></button></div><div class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-last" tabindex="-1" aria-labelledby="mceu_89" role="button" aria-label="더보기" aria-haspopup="true"><button role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-more"></i></button></div></div></div><div class="mce-container mce-flow-layout-item mce-last mce-btn-group" role="group"><div><div class="mce-widget mce-btn mce-btn-has-text" role="button"><button type="button"><i class="mce-txt">기본모드</i><i class="mce-caret">더보기</i></button><div class="mce-container mce-panel mce-floatpanel mce-menu mce-animate mce-fixed mce-menu-align" role="application" style="margin-left: -11px; display: none;"><div class="mce-container-body mce-stack-layout" role="menu"><div id="editor-mode-kakao-tistory" class="mce-menu-item mce-menu-item-normal mce-stack-layout-item mce-menu-active" role="menuitem"><span class="mce-text">기본모드</span></div><div id="editor-mode-markdown-tistory" class="mce-menu-item mce-menu-item-normal mce-stack-layout-item" role="menuitem"><span class="mce-text">마크다운</span></div><div id="editor-mode-html-tistory" class="mce-menu-item mce-menu-item-normal mce-stack-layout-item" role="menuitem"><span class="mce-text">HTML</span></div></div></div></div></div></div><div class="dimmed_type1"></div></div></div></div></div></div></div><div class="mce-edit-area"><div class="ReactCodemirror"><textarea style="display: none;">Spring Boot 프로젝트 11일차. 각자 작업했던 퍼블리싱들은 모두 합치고 검토하는 시간을 가졌습니다. 이후에는 만든 페이지와 회의자료를 기반으로 모델링 작업을 진행하였습니다. 모델링은 논리모델링(관계도/테이블), 물리모델링으로 나눠지며 먼저 논리모델링 작업을 진행하였습니다.</textarea><div class="CodeMirror cm-s-tistory-markdown CodeMirror-wrap" translate="no" style="clip-path: inset(0px);"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 82px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;">Spring Boot 프로젝트 11일차. 각자 작업했던 퍼블리싱들은 모두 합치고 검토하는 시간을 가졌습니다. 이후에는 만든 페이지와 회의자료를 기반으로 모델링 작업을 진행하였습니다. 모델링은 논리모델링(관계도/테이블), 물리모델링으로 나눠지며 먼저 논리모델링 작업을 진행하였습니다.</span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 50px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters" style="display: none;"></div></div></div></div></div></div><div id="kakao-editor-container" style="display: block;"><div id="mceu_19" class="mce-tinymce mce-container mce-panel" hidefocus="1" tabindex="-1" role="application" style="visibility: hidden; border-width: 1px; width: 880px;"><div id="mceu_19-body" class="mce-container-body mce-stack-layout"><div id="mceu_20" class="mce-top-part mce-container mce-stack-layout-item mce-first"><div id="mceu_20-body" class="mce-container-body"><div id="mceu_21" class="mce-toolbar-grp mce-container mce-panel mce-first mce-last" hidefocus="1" tabindex="-1" role="group"><div id="mceu_21-body" class="mce-container-body mce-stack-layout"><div id="mceu_22" class="mce-container mce-toolbar mce-stack-layout-item mce-first mce-last" role="toolbar"><div id="mceu_22-body" class="mce-container-body mce-flow-layout"><div id="mceu_23" class="mce-container mce-flow-layout-item mce-first mce-btn-group" role="group"><div id="mceu_23-body"><div id="mceu_0" class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-first" tabindex="-1" aria-labelledby="mceu_0" role="button" aria-label="첨부" aria-haspopup="true"><button id="mceu_0-open" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-image"></i> <i class="mce-caret"></i></button></div><div id="mceu_1" class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-listbox mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_1" role="button" aria-label="문단모양" aria-haspopup="true" aria-expanded="false"><button id="mceu_1-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">제목2</span> <i class="mce-caret"></i></button></div><div id="mceu_2" class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-listbox mce-last mce-btn-has-text" tabindex="-1" aria-labelledby="mceu_2" role="button" aria-label="글꼴" aria-haspopup="true"><button id="mceu_2-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">기본서체</span> <i class="mce-caret"></i></button></div></div></div><div id="mceu_24" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_24-body"><div id="mceu_3" class="mce-widget mce-btn mce-first mce-active" tabindex="-1" aria-pressed="true" role="button" aria-label="굵게" data-log-action-layer="toolbar bold"><button id="mceu_3-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-bold"></i></button></div><div id="mceu_4" class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="기울임꼴"><button id="mceu_4-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-italic"></i></button></div><div id="mceu_5" class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="밑줄"><button id="mceu_5-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-underline"></i></button></div><div id="mceu_6" class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="취소선"><button id="mceu_6-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-strikethrough"></i></button></div><div id="mceu_7" class="mce-widget mce-btn mce-forecolor mce-splitbtn mce-colorbutton" role="button" tabindex="-1" aria-haspopup="true" aria-label="글자색"><button role="presentation" hidefocus="1" type="button" tabindex="-1"><i class="mce-ico mce-i-forecolor"></i><span id="mceu_7-preview" class="mce-preview"></span></button><button type="button" class="mce-open" hidefocus="1" tabindex="-1"> <i class="mce-caret"></i></button></div><div id="mceu_8" class="mce-widget mce-btn mce-hilitecolor mce-splitbtn mce-colorbutton mce-last" role="button" tabindex="-1" aria-haspopup="true" aria-label="배경색"><button role="presentation" hidefocus="1" type="button" tabindex="-1"><i class="mce-ico mce-i-hilitecolor"></i><span id="mceu_8-preview" class="mce-preview"></span></button><button type="button" class="mce-open" hidefocus="1" tabindex="-1"> <i class="mce-caret"></i></button></div></div></div><div id="mceu_25" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_25-body"><div id="mceu_9" class="mce-widget mce-btn mce-first mce-active" tabindex="-1" aria-pressed="true" role="button" aria-label="왼쪽 정렬"><button id="mceu_9-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignleft"></i></button></div><div id="mceu_10" class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="가운데 정렬"><button id="mceu_10-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-aligncenter"></i></button></div><div id="mceu_11" class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="오른쪽 정렬"><button id="mceu_11-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignright"></i></button></div><div id="mceu_12" class="mce-widget mce-btn mce-last" tabindex="-1" aria-pressed="false" role="button" aria-label="양쪽정렬"><button id="mceu_12-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-alignjustify"></i></button></div></div></div><div id="mceu_26" class="mce-container mce-flow-layout-item mce-btn-group" role="group"><div id="mceu_26-body"><div id="mceu_13" class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-first" tabindex="-1" aria-labelledby="mceu_13" role="button" aria-label="인용" aria-haspopup="true"><button id="mceu_13-open" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-blockquote"></i></button></div><div id="mceu_14" class="mce-widget mce-btn" tabindex="-1" role="button" aria-label="이모티콘" aria-haspopup="true"><button id="mceu_14-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-emoticon"></i></button></div><div id="mceu_15" class="mce-widget mce-btn mce-menubtn" tabindex="-1" aria-labelledby="mceu_15" role="button" aria-label="테이블" aria-haspopup="true"><button id="mceu_15-open" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-table"></i></button></div><div id="mceu_16" class="mce-widget mce-btn" tabindex="-1" aria-pressed="false" role="button" aria-label="링크 삽입/수정" aria-haspopup="true"><button id="mceu_16-button" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-link"></i></button></div><div id="mceu_17" class="mce-widget mce-btn mce-menubtn" tabindex="-1" aria-labelledby="mceu_17" role="button" aria-label="리스트" aria-haspopup="true"><button id="mceu_17-open" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-kList"></i></button></div><div id="mceu_18" class="mce-widget mce-btn mce-menubtn mce-fixed-width" tabindex="-1" aria-labelledby="mceu_18" role="button" aria-label="구분선" aria-haspopup="true"><button id="mceu_18-open" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-hrList"></i></button></div><div id="more-plugin-btn" class="mce-widget mce-btn mce-menubtn mce-fixed-width mce-last" tabindex="-1" aria-labelledby="more-plugin-btn" role="button" aria-label="더보기" aria-haspopup="true"><button id="more-plugin-btn-open" role="presentation" type="button" tabindex="-1"><i class="mce-ico mce-i-more"></i></button></div></div></div><div id="mceu_27" class="mce-container mce-flow-layout-item mce-last mce-btn-group" role="group"><div id="mceu_27-body"><div id="editor-mode-layer-btn" class="mce-widget mce-btn mce-tistory-mode mce-menubtn mce-fixed-width mce-listbox mce-first mce-last mce-btn-has-text" tabindex="-1" aria-labelledby="editor-mode-layer-btn" role="button" aria-haspopup="true"><button id="editor-mode-layer-btn-open" role="presentation" type="button" tabindex="-1"><span class="mce-txt">기본모드</span> <i class="mce-caret"></i></button></div></div></div></div></div></div></div></div></div><div id="mceu_28" class="mce-edit-area mce-container mce-panel mce-stack-layout-item mce-last" hidefocus="1" tabindex="-1" role="group" style="border-width: 1px 0px 0px;"><iframe id="editor-tistory_ifr" frameborder="0" allowtransparency="true" title="서식 있는 텍스트 편집기 입니다. ALT-F9를 누르면 메뉴, ALT-F10를 누르면 툴바, ALT-0을 누르면 도움말을 볼 수 있습니다." style="width: 100%; height: 587px; display: block;" data-mce-style="width: 100%; height: 587px; display: block;" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/saved_resource.html"></iframe></div></div></div><textarea id="editor-tistory" aria-hidden="true" style="display: none;"></textarea></div><div class="editor_tag"><span class="inp_tag"><span>#</span><div style="display: inline-block;"><input type="text" title="태그" name="tagText" id="tagText" placeholder="태그입력" class="tf_g" value="" style="box-sizing: content-box; width: 47px;"><div style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: 13px; font-family: Pretendard-Regular, AppleSDGothicNeo-Regular, &quot;Malgun Gothic&quot;, &quot;맑은 고딕&quot;, dotum, 돋움, sans-serif; font-weight: 400; font-style: normal; letter-spacing: normal; text-transform: none;"></div><div style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: 13px; font-family: Pretendard-Regular, AppleSDGothicNeo-Regular, &quot;Malgun Gothic&quot;, &quot;맑은 고딕&quot;, dotum, 돋움, sans-serif; font-weight: 400; font-style: normal; letter-spacing: normal; text-transform: none;">태그입력</div></div></span></div></div></main><div class="content-aside"><div class="wrap_btn_edit"><button id="preview-btn" aria-expanded="false" class="btn_type1"><span class="mce-ico ico_preview"></span><span class="btn_txt">미리보기</span></button><button id="grammar-check-btn" class="btn_type1"><span class="mce-ico ico_validator"></span><span class="btn_txt">맞춤법</span></button><button id="contents-search-btn" class="btn_type1"><span class="mce-ico ico_contentsearch"></span><span class="btn_txt">글감검색</span></button><a class="opensource" href="http://t1.daumcdn.net/osa/hermes/notice/1397.html" target="_blank" rel="noreferrer"><span class="ico-opensource">open source</span></a><span class="txt_bar_opensource">/</span><a class="link_dwn" href="https://t1.daumcdn.net/keditor/opensource/KEDITOR-0.7.21.zip" target="_blank" rel="noreferrer"><span class="txt_download">DOWNLOAD</span></a><a class="opensource link_company" href="https://www.tiny.cloud/" target="_blank" rel="noreferrer"><span class="ico-tinymce">POWERED BY TINY</span></a></div><div class="status-text-bar hidden"></div><div class="wrap_btn"><button id="publish-layer-btn" class="btn btn-default">완료</button></div><div class="toast"><span class="message">0개의 파일을 업로드 중입니다.</span></div></div><div id="toast-container"></div></div></div>
+<div id="photosContainer" class="photos-container"></div>
+
+<script>
+    window.Config = {
+        production: true,
+        service: "tistory",
+        blog: {"image":"https:\/\/t1.daumcdn.net\/tistory_admin\/static\/manage\/images\/r3\/default_L.png","domain":"https:\/\/0720kmc.tistory.com","manageUrl":"https:\/\/0720kmc.tistory.com\/manage","customDomain":"","title":"코딩계의 메시","categories":[{"id":1255295,"name":"개발","label":"개발","priority":0,"entries":11,"visibility":20,"viewChannel":null,"children":[{"id":1255297,"name":"Spring Boot","label":"개발\/Spring Boot","priority":0,"entries":0,"visibility":20,"viewChannel":null,"children":[],"leaf":true,"categoryInfo":{"liststyle":"","image":"","description":""}},{"id":1255298,"name":"Java","label":"개발\/Java","priority":1,"entries":0,"visibility":20,"viewChannel":null,"children":[],"leaf":true,"categoryInfo":{"liststyle":"","image":"","description":""}},{"id":1257841,"name":"국비 프로젝트 수업","label":"개발\/국비 프로젝트 수업","priority":2,"entries":11,"visibility":20,"viewChannel":null,"children":[],"leaf":true,"categoryInfo":{"liststyle":"","image":"","description":""}}],"leaf":false,"categoryInfo":{"liststyle":"","image":"","description":""}}],"blogSettings":{"blogId":"7350850","url":"","logo":"","logoLabel":"","logoWidth":"0","logoHeight":"0","entriesOnPage":"8","entriesOnList":"8","entriesOnRSS":"10","publishWholeOnRSS":"1","allowWriteOnGuestbook":"1","allowWriteDoubleCommentOnGuestbook":"0","commentWritePermission":"1","useCommentRecognition":"0","useGuestbookRecognition":"0","language":"ko","timezone":"Asia\/Seoul","showLocalSearchTag":"1","useSlogan":"0","description":"MessiOfCoding"},"activePlugins":["AddLinkToPostWithSearch","AD_Referer_Default","AD_Visitor_Default","DaumShow","DragSearchHandler","EnglishPatient","EnglishSeriousPatient","lightbox","LocationTag","PostListinCategory","refererkeyword","SyntaxHighlight"],"plugins":[{"name":"prev-post","title":"이전 발행 글 넣기","url":"\/plugin\/AddLinkToPostWithSearch\/","width":450,"height":570,"scroll":1}],"created":"2024-09-27","visibilityType":"0","visibility":20,"useMobileSkin":true,"skinInfo":{"name":"pg_Poster","title":"Poster","version":"1.0","license":"MIT License","description":"블로그 홈을 처음 접하는 초심자에게 추천합니다.\n단정한 첫인상을 블로그에 입혀 보세요.","layout":"etc","author":{"name":"TISTORY","email":"tistoryblog@daum.net","homePage":"http:\/\/www.tistory.com"},"preview":"https:\/\/tistory1.daumcdn.net\/tistory\/0\/pg_Poster\/preview256.jpg","preview560":"","preview1600":"","useWizard":true,"useBlogmenu":true,"default":"{\"entriesOnPage\":\"8\",\"entriesOnList\":\"8\",\"recentEntries\":\"5\",\"recentComments\":\"4\",\"recentTrackbacks\":\"4\",\"itemsOnGuestbook\":\"10\",\"tagsInCloud\":\"30\",\"sortInCloud\":\"3\",\"expandComment\":\"1\",\"lengthOfRecentNotice\":\"25\",\"lengthOfRecentEntry\":\"27\",\"lengthOfRecentComment\":\"30\",\"lengthOfRecentTrackback\":\"30\",\"lengthOfLink\":\"30\",\"showListOnCategory\":\"1\",\"showListOnArchive\":\"1\",\"commentMessage\":{\"none\":\"0\",\"single\":\"1\"},\"trackbackMessage\":{\"none\":\"0\",\"single\":\"1\"},\"tree\":{\"color\":\"000000\",\"bgColor\":\"ffffff\",\"activeColor\":\"000000\",\"activeBgColor\":\"eeeeee\",\"labelLength\":\"27\",\"showValue\":\"1\"},\"contentWidth\":\"860\",\"cover\":\"\\n\\t\\t\\n\\t\\t[\\n\\t\\t\\t{\\n\\t\\t\\t\\t\\\"name\\\": \\\"cover-slider\\\",\\n\\t\\t\\t\\t\\\"title\\\": \\\"\\\",\\n\\t\\t\\t\\t\\\"dataType\\\": \\\"CUSTOM\\\",\\n\\t\\t\\t\\t\\\"data\\\": [\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\uc2ac\\ub77c\\uc774\\ub354 \\uc608\\uc2dc\\uc785\\ub2c8\\ub2e4.\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/c17755694dbb4c2faf8707919e966490\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\uc815\\ubcf4\\ub97c \\uc9c1\\uc811 \\uc785\\ub825\\ud558\\uc2dc\\uac70\\ub098\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/399a6e27c5644e14962b8678ee4f0b07\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\uae30\\uc874 \\uac8c\\uc2dc\\ubb3c\\uc744 \\ubc30\\uce58\\ud560 \\uc218 \\uc788\\uc2b5\\ub2c8\\ub2e4.\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/a90369ea210f4c7fb495b72080516f04\\\"\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t]\\n\\t\\t\\t},\\n\\t\\t\\t{\\n\\t\\t\\t\\t\\\"name\\\": \\\"cover-thumbnail-list\\\",\\n\\t\\t\\t\\t\\\"title\\\": \\\"\\uc12c\\ub124\\uc77c \\ub9ac\\uc2a4\\ud2b8 \\uc608\\uc2dc\\\",\\n\\t\\t\\t\\t\\\"dataType\\\": \\\"CUSTOM\\\",\\n\\t\\t\\t\\t\\\"data\\\": [\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\uc544\\uc774\\ud15c \\uc218\\uc815\\uc744 \\ud1b5\\ud574\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/8157627ae59049f38765917fd52a9814\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\uc5ec\\ub7ec\\ubd84\\uc758 \\uac8c\\uc2dc\\ubb3c\\uc744\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/2db6c59d18ea4bec82115e426a6136a1\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\ucd5c\\uc2e0\\uc21c\\uc73c\\ub85c\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/718f011fac174b7fa7e7da782a86d565\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\ub178\\ucd9c\\ud560 \\uc218 \\uc788\\uc2b5\\ub2c8\\ub2e4.\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/6f049bf8ca094acc8028ed54a3c64091\\\"\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t]\\n\\t\\t\\t},\\n\\t\\t\\t{\\n\\t\\t\\t\\t\\\"name\\\": \\\"cover-masonry\\\",\\n\\t\\t\\t\\t\\\"title\\\": \\\"\\ubcbd\\ub3cc \\ub9ac\\uc2a4\\ud2b8 \\uc608\\uc2dc\\\",\\n\\t\\t\\t\\t\\\"dataType\\\": \\\"CUSTOM\\\",\\n\\t\\t\\t\\t\\\"data\\\": [\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\ucf58\\ud150\\uce20 \\uc120\\ud0dd (1)\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"\\uce74\\ud14c\\uace0\\ub9ac\\ubcc4 \\ucd5c\\uc2e0\\uae00 \\ub178\\ucd9c, \\ud2b9\\uc815 \\uae00 \\uc120\\ud0dd, \\uc9c1\\uc811 \\uc785\\ub825 \\ub4f1 \\ub2e4\\uc591\\ud55c \\ubc29\\uc2dd\\uc73c\\ub85c \\uc5ec\\ub7ec\\ubd84\\uc758 \\ud2f0\\uc2a4\\ud1a0\\ub9ac \\uccab\\ud654\\uba74\\uc744 \\uafb8\\ubc00 \\uc218 \\uc788\\uc2b5\\ub2c8\\ub2e4.\\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/35ccdd87ff554fcbbe36afb7fbd27d3f\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\ucf58\\ud150\\uce20 \\uc120\\ud0dd (2)\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"\\uc5ec\\ub7ec\\ubd84\\uc758 \\ucf58\\ud150\\uce20\\ub85c \\uccab \\ud654\\uba74\\uc744 \\uba4b\\uc9c0\\uac8c \\uc7a5\\uc2dd\\ud574\\uc8fc\\uc138\\uc694.\\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/f73872beff2b4b70844fa5acf1b34ed3\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\uc544\\uc774\\ud15c \\uc120\\ud0dd (1)\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"\\ucee4\\ubc84 \\uc544\\uc774\\ud15c\\uc758 \\uc885\\ub958\\uc640 \\uc21c\\uc11c\\ub97c \\ud3b8\\uc9d1\\ud574\\ubcf4\\uc138\\uc694. \\ud558\\ub098\\uc758 \\uc2a4\\ud0a8\\uc73c\\ub85c \\ub2e4\\uc591\\ud55c \\ud648 \\ud654\\uba74\\uc744 \\ub9cc\\ub4e4\\uc5b4\\ub0bc \\uc218 \\uc788\\uc2b5\\ub2c8\\ub2e4.\\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/b255b80899b8480ca25f35a6037a3986\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\uc544\\uc774\\ud15c \\uc120\\ud0dd (2)\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"\\ud558\\ub098\\uc758 \\ucee4\\ubc84 \\uc544\\uc774\\ud15c\\uc744 \\uc5ec\\ub7ec \\ubc88 \\uc0bd\\uc785\\ud558\\ub294 \\uac83\\ub3c4 \\uac00\\ub2a5\\ud569\\ub2c8\\ub2e4.\\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/e7016b3788ee431fb207273d66f2b81d\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\uc2a4\\ud0a8\\uc635\\uc158 (1)\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"\\uc2a4\\ud0a8 \\uc635\\uc158\\uc73c\\ub85c\\ub3c4 \\uccab\\ud654\\uba74\\uc744 \\ub2e4\\ub974\\uac8c \\uc124\\uc815\\ud560 \\uc218 \\uc788\\uc2b5\\ub2c8\\ub2e4. \\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/68de250314ca436b97c2f4fd53a9b241\\\"\\n\\t\\t\\t\\t\\t},\\n\\t\\t\\t\\t\\t{\\n\\t\\t\\t\\t\\t\\t\\\"title\\\": \\\"\\uc2a4\\ud0a8 \\uc635\\uc158 (2)\\\",\\n\\t\\t\\t\\t\\t\\t\\\"summary\\\": \\\"Poster \\uc2a4\\ud0a8\\uc5d0\\uc11c\\ub294 \\ubaa9\\ub85d \\ub354\\ubcf4\\uae30, \\uceec\\ub7ec \\ud0c0\\uc785, \\ub9ac\\uc2a4\\ud2b8 \\ud0c0\\uc785, \\ud478\\ud130 \\uc601\\uc5ed \\uc815\\ubcf4 \\ub4f1 \\uc5ec\\ub7ec \\uc635\\uc158\\uc744 \\uc81c\\uacf5\\ud569\\ub2c8\\ub2e4.\\\",\\n\\t\\t\\t\\t\\t\\t\\\"url\\\": \\\"\\\",\\n\\t\\t\\t\\t\\t\\t\\\"thumbnail\\\": \\\"https:\\\/\\\/t1.daumcdn.net\\\/tistory_admin\\\/assets\\\/promotions\\\/636ac9bcb0ac4ee989b5789b2d74f74f\\\"\\n\\t\\t\\t\\t\\t}\\n\\t\\t\\t\\t]\\n\\t\\t\\t},\\n\\t\\t\\t{\\n\\t\\t\\t\\t\\\"name\\\": \\\"cover-list\\\",\\n\\t\\t\\t\\t\\\"title\\\": \\\"\\ub9ac\\uc2a4\\ud2b8 \\uc608\\uc2dc: \\uac8c\\uc2dc\\ubb3c\\uc774 \\uc874\\uc7ac\\ud560 \\uacbd\\uc6b0 3\\uac74\\uc744 \\ub178\\ucd9c\\ud569\\ub2c8\\ub2e4.\\\",\\n\\t\\t\\t\\t\\\"dataType\\\": \\\"RECENT\\\",\\n\\t\\t\\t\\t\\\"data\\\": {\\n\\t\\t\\t\\t\\t\\\"category\\\": \\\"ALL\\\",\\n\\t\\t\\t\\t\\t\\\"size\\\": \\\"3\\\"\\n\\t\\t\\t\\t}\\n\\t\\t\\t},\\n\\t\\t\\t{\\n\\t\\t\\t\\t\\\"name\\\": \\\"cover-gallery\\\",\\n\\t\\t\\t\\t\\\"title\\\": \\\"\\uac24\\ub7ec\\ub9ac \\uc608\\uc2dc: \\uac8c\\uc2dc\\ubb3c\\uc774 \\uc874\\uc7ac\\ud560 \\uacbd\\uc6b0 4\\uac74\\uc744 \\ub178\\ucd9c\\ud569\\ub2c8\\ub2e4.\\\",\\n\\t\\t\\t\\t\\\"dataType\\\": \\\"RECENT\\\",\\n\\t\\t\\t\\t\\\"data\\\": {\\n\\t\\t\\t\\t\\t\\\"category\\\": \\\"ALL\\\",\\n\\t\\t\\t\\t\\t\\\"size\\\": \\\"4\\\"\\n\\t\\t\\t\\t}\\n\\t\\t\\t}\\n\\t\\t]\\n\\t\\t\\n\\t\\t\"}","variables":"[{\"name\":\"view-more\",\"label\":\"\\ubaa9\\ub85d \\ub354\\ubcf4\\uae30\",\"description\":\"\\ud398\\uc774\\uc9d5 \\ub300\\uc2e0 \\ubaa9\\ub85d \\ub354\\ubcf4\\uae30\\ub97c \\uc0ac\\uc6a9\\ud569\\ub2c8\\ub2e4.\",\"type\":\"BOOL\",\"default\":\"true\",\"option\":\"\"},{\"name\":\"color-type\",\"label\":\"\\uceec\\ub7ec \\ud0c0\\uc785\",\"description\":\"\\ud3ec\\uc778\\ud2b8 \\uc0c9\\uc0c1\\uc744 \\uc120\\ud0dd\\ud574\\uc8fc\\uc138\\uc694.\",\"type\":\"SELECT\",\"default\":\"color-gray\",\"option\":\"[{\\\"name\\\":\\\"color-gray\\\",\\\"label\\\":\\\"\\uae30\\ubcf8(Gray)\\\",\\\"value\\\":\\\"color-gray\\\"}, {\\\"name\\\":\\\"chocolate\\\",\\\"label\\\":\\\"\\ucd08\\ucf5c\\ub9bf(chocolate)\\\",\\\"value\\\":\\\"color-chocolate\\\"}]\"},{\"name\":\"post-type\",\"label\":\"\\ub9ac\\uc2a4\\ud2b8 \\ud0c0\\uc785\",\"description\":\"\\uc12c\\ub124\\uc77c\\ud615 \\ub610\\ub294 \\ub9ac\\uc2a4\\ud2b8 \\ud0c0\\uc785\\uc744 \\uc120\\ud0dd\\ud569\\ub2c8\\ub2e4.\",\"type\":\"SELECT\",\"default\":\"post-type-text\",\"option\":\"[{\\\"name\\\":\\\"post-type-thumbnail\\\",\\\"label\\\":\\\"\\uc12c\\ub124\\uc77c\\ud615\\\",\\\"value\\\":\\\"post-type-thumbnail\\\"}, {\\\"name\\\":\\\"post-type-text\\\",\\\"label\\\":\\\"\\ub9ac\\uc2a4\\ud2b8\\ud615\\\",\\\"value\\\":\\\"post-type-text\\\"}]\"},{\"name\":\"footer-text\",\"label\":\"\\ud478\\ud130 \\ud14d\\uc2a4\\ud2b8\",\"description\":\"\\ud478\\ud130 \\ud14d\\uc2a4\\ud2b8\\ub97c \\uc785\\ub825\\ud574\\uc8fc\\uc138\\uc694.\",\"type\":\"STRING\",\"default\":\"\",\"option\":\"\"},{\"name\":\"footer-image\",\"label\":\"\\ud478\\ud130 \\uc774\\ubbf8\\uc9c0\",\"description\":\"\\ud478\\ud130 \\uc774\\ubbf8\\uc9c0\\ub97c \\ubcc0\\uacbd\\ud569\\ub2c8\\ub2e4.\",\"type\":\"IMAGE\",\"default\":\"\",\"option\":\"\"},{\"name\":\"sns-pinterest\",\"label\":\"Pinterest URL\",\"description\":\"Pinterest URL\\ub97c \\uc785\\ub825\\ud574\\uc8fc\\uc138\\uc694.\",\"type\":\"STRING\",\"default\":\"\",\"option\":\"\"},{\"name\":\"sns-facebook\",\"label\":\"Facebook URL\",\"description\":\"Facebook URL\\ub97c \\uc785\\ub825\\ud574\\uc8fc\\uc138\\uc694.\",\"type\":\"STRING\",\"default\":\"\",\"option\":\"\"},{\"name\":\"sns-twitter\",\"label\":\"Twitter URL\",\"description\":\"Twitter URL\\ub97c \\uc785\\ub825\\ud574\\uc8fc\\uc138\\uc694.\",\"type\":\"STRING\",\"default\":\"\",\"option\":\"\"},{\"name\":\"sns-instagram\",\"label\":\"Instagram URL\",\"description\":\"Instagram URL\\ub97c \\uc785\\ub825\\ud574\\uc8fc\\uc138\\uc694.\",\"type\":\"STRING\",\"default\":\"\",\"option\":\"\"}]","liststyle":"","cover":"[{\"name\":\"cover-slider\",\"label\":\"\\uc2ac\\ub77c\\uc774\\ub354\",\"description\":\"\\uc88c\\uc6b0 \\uc2a4\\uc640\\uc774\\ud504\\uac00 \\uac00\\ub2a5\\ud55c \\uc2ac\\ub77c\\uc774\\ub354\\uc785\\ub2c8\\ub2e4.\"},{\"name\":\"cover-list\",\"label\":\"\\ub9ac\\uc2a4\\ud2b8\",\"description\":\"\\uc81c\\ubaa9\\uacfc \\ubcf8\\ubb38 \\ub0b4\\uc6a9\\uc744 \\uc8fc\\uc694\\ud558\\uac8c \\ubcf4\\uc5ec\\uc8fc\\ub294 \\uc77c\\ubc18 \\ub9ac\\uc2a4\\ud2b8\\uc785\\ub2c8\\ub2e4.\"},{\"name\":\"cover-thumbnail-list\",\"label\":\"\\uc12c\\ub124\\uc77c \\ub9ac\\uc2a4\\ud2b8\",\"description\":\"\\uc12c\\ub124\\uc77c\\uc744 \\uc8fc\\uc694\\ud558\\uac8c \\ubcf4\\uc5ec\\uc8fc\\ub294 \\ub9ac\\uc2a4\\ud2b8\\uc785\\ub2c8\\ub2e4.\"},{\"name\":\"cover-masonry\",\"label\":\"\\ubcbd\\ub3cc \\ub9ac\\uc2a4\\ud2b8\",\"description\":\"\\uc12c\\ub124\\uc77c \\ud06c\\uae30\\uc5d0 \\ub530\\ub77c \\uc790\\ub3d9\\uc73c\\ub85c \\ubc30\\uce58\\ub418\\ub294 \\ubcbd\\ub3cc \\ub9ac\\uc2a4\\ud2b8\\uc785\\ub2c8\\ub2e4.\"},{\"name\":\"cover-gallery\",\"label\":\"\\uac24\\ub7ec\\ub9ac\",\"description\":\"\\uc12c\\ub124\\uc77c\\ub9cc \\ub098\\uc5f4\\ud558\\uc5ec \\ubcf4\\uc5ec\\uc90d\\ub2c8\\ub2e4. \\ub9c8\\uc6b0\\uc2a4\\uc624\\ubc84\\uc2dc \\ud0c0\\uc774\\ud2c0\\uc774 \\ub178\\ucd9c\\ub429\\ub2c8\\ub2e4.\"}]","demoUrl":"https:\/\/skin-demo-041c2.tistory.com","skinUrl":"https:\/\/www.tistory.com\/skin\/pg_Poster","showcaseCoverContent":"  <strong class=\"tit_guide\">Poster의 커버 아이템 타입<\/strong>\n  <p class=\"desc_g\">Poster는 5가지의 커버 아이템을 제공합니다.<br>\n    슬라이더 \/ 리스트 \/ 섬네일 리스트 \/ 벽돌 리스트 \/ 갤러리 모두 카테고리별 최신 글 설정, 발행된 글 중에 선택, 또는 직접 입력이 가능합니다.<\/p>\n\n  <img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_02cover_00.png\" class=\"thumb_g\">\n\n  <div class=\"detail_guide\">\n    <img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_02cover_01.png\" class=\"thumb_g\">\n\n    <p class=\"desc_g\">좌우 스와이프가 가능한 슬라이더입니다. <\/p>\n\n    <img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_02cover_02.png\" class=\"thumb_g\">\n\n    <p class=\"desc_g\">제목과 본문 내용을 주요하게 보여주는 일반 리스트입니다.<\/p>\n\n    <img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_02cover_03.png\" class=\"thumb_g\">\n\n    <p class=\"desc_g\">섬네일을 주요하게 보여주는 리스트입니다.<\/p>\n\n    <img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_02cover_04.png\" class=\"thumb_g\">\n\n    <p class=\"desc_g\">대표 이미지의 크기에 따라 자동으로 배치되는 벽돌 리스트입니다.<\/p>\n\n    <img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_02cover_05.png\" class=\"thumb_g\">\n\n    <p class=\"desc_g\">이미지만 나열하여 보여줍니다. 마우스오버시 타이틀이 노출됩니다.<\/p>\n  <\/div>","showcaseImages":"[\"showcase_list_01.jpg\",\"showcase_list_02.jpg\",\"showcase_list_03.jpg\"]","showcaseSettingContent":"<strong class=\"tit_guide\">Poster에 대하여<\/strong>\n<p class=\"desc_g\">군더더기 없이 글과 이미지를 배열할 수 있는 스킨입니다.<\/p>\n<img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_01summary.png\" class=\"thumb_g\">\n<strong class=\"tit_guide\">반응형웹 설정 안내<\/strong>\n<p class=\"desc_g\">*본 스킨은 반응형웹으로 제작되어 있습니다.<br>\n  '블로그 관리>꾸미기>모바일 메뉴'에서 '모바일웹 자동연결을 사용하지 않습니다.' 로 설정해주세요.<\/p>","showcaseVariableContent":"<strong class=\"tit_guide\">Poster의 스킨 옵션 설정<\/strong>\n\n<p class=\"desc_g\">Poster에서는 다양한 스킨 옵션을 제공합니다.<br>\n  목록 더보기 \/ 컬러 타입 \/ 리스트 타입에 따라 다양하게 연출 할 수 있습니다.<br>\n  푸터 이미지와 SNS 주소를 입력하시면 푸터 하단에 노출됩니다.<\/p>\n\n<img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_03option_00.png\" class=\"thumb_g\">\n\n<div class=\"detail_guide\">\n  <img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_03option_01.png\" class=\"thumb_g\">\n\n  <p class=\"desc_g\">글 목록에서 페이지를 표기하는 방식을 '목록 더보기' 방식으로 사용합니다.<\/p>\n\n  <img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_03option_02.png\" class=\"thumb_g\">\n\n  <p class=\"desc_g\">기본(Gray) 타입 또는 초콜릿(chocolate) 컬러를 선택할 수 있습니다.<\/p>\n\n  <img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_03option_03.png\" class=\"thumb_g\">\n\n  <p class=\"desc_g\">글 리스트의 기본 타입을 이미지 중심 타입 또는 텍스트 중심 타입으로 선택할 수 있습니다.<\/p>\n\n  <img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_03option_04.png\" class=\"thumb_g\">\n\n  <p class=\"desc_g\">커버 하단에 이미지를 등록할 수 있습니다.<\/p>\n\n  <img src=\"https:\/\/t1.daumcdn.net\/tistory_admin\/assets\/skin\/poster_03option_05.png\" class=\"thumb_g\">\n\n  <p class=\"desc_g\">핀터레스트, 페이스북, 트위터, 인스타그램<br>\n    URL을 입력하면 푸터 하단에 노출됩니다.<\/p>\n<\/div>"},"targetNotification":[],"cclCommercial":0,"cclDerive":0,"uselessMargin":"1","useMobile":"1"},
+        user: {"userId":"6878418","role":"owner","accountType":"kakao","roleLabel":"소유자","name":"0720kmc","loginId":"0720kmc@naver.com","profileImageUrl":"https:\/\/t1.daumcdn.net\/tistory_admin\/static\/manage\/images\/r3\/default_S.png"},
+        blogs: {"ownerBlogs":[{"id":"7350850","name":"0720kmc","defaultUrl":"https:\/\/0720kmc.tistory.com","adminUrl":"http:\/\/0720kmc.tistory.com\/manage","title":"코딩계의 메시"}],"memberBlogs":[]},
+        post: {"id":"12","title":"Spring  Boot 프로젝트 11일차[20241015]","slogan":"Spring-Boot-프로젝트-11일차20241015","content":"<p data-ke-size=\"size16\">Spring Boot 프로젝트 11일차. 각자 작업했던 퍼블리싱들은 모두 합치고 검토하는 시간을 가졌습니다. 이후에는 만든 페이지와 회의자료를 기반으로 모델링 작업을 진행하였습니다. 모델링은 논리모델링(관계도\/테이블), 물리모델링으로 나눠지며 먼저 논리모델링 작업을 진행하였습니다.<\/p>\n<p data-ke-size=\"size16\">&nbsp;<\/p>\n<p data-ke-size=\"size16\">&nbsp;<\/p>\n<p data-ke-size=\"size16\">&nbsp;<\/p>\n<p data-ke-size=\"size16\">&nbsp;<\/p>","published":0,"orgPublished":"1728986430","category":"1257841","type":"0","visibility":0,"password":"42NTg4OT","acceptComment":"1","uselessMargin":"1","cclCommercial":"0","cclDerive":"0","device":"KE_EDITOR","restrictType":null,"restrictLocked":null,"tags":[],"daumLikeCategory":null,"thumbnail":null},
+        postType: "post",
+        attachments: [],
+        keditor_base_url: "https://t1.daumcdn.net/keditor/dist/0.8.9",
+        MAX_ATTACHMENT_COUNT: 50,
+        draftCount: 0,
+        useBlogList: true,
+        frontSentry: "https:\/\/50846f827939437fb91ae430e8689a6d@aem-kakao-collector.onkakao.net\/5219",
+        attachmentRawData: [],
+        revenue: [],
+        shouldConvert: false
+    };
+
+    window.appInfo = {
+        service: "tistory",
+        kakaoTvServiceKey: "daum_tistory",
+        kakaoTvPopupUrl: "https:\/\/tv.kakao.com\/uploader\/kakao\/popup?service=daum_tistory",
+        domain: "tistory.com",
+        topUrl: "https://www.tistory.com",
+        loginUrl: "https://www.tistory.com/auth/login",
+        logoutUrl: "https://www.tistory.com/auth/logout",
+        memberUrl: "https://www.tistory.com/member",
+        gnbBaseUrl: "https://www.tistory.com/accio",
+        manageUrl: "https://0720kmc.tistory.com/manage",
+        thumbnailBaseUrl: "https://img1.daumcdn.net/thumb",
+        returnUrl: "ENTRY",
+        fontStyleUrl: "https://t1.daumcdn.net/tistory_admin/www/style/font.css",
+        contentStyleUrl: "https://tistory1.daumcdn.net/tistory_admin/manage/manage-f99b3f329d8d5c28398adf48a7ce71dcd5e7f698/manage-static/style/editor-content.css",
+        needCaptcha: false
+    };
+
+    window.daumLikeCategories = [{"value":"1000","label":"여행·맛집","subItems":[{"value":"201","label":"국내여행"},{"value":"202","label":"해외여행"},{"value":"203","label":"캠핑·등산"},{"value":"204","label":"맛집"},{"value":"205","label":"카페·디저트"}]},{"value":"2000","label":"리빙·스타일","subItems":[{"value":"105","label":"생활정보"},{"value":"111","label":"인테리어"},{"value":"112","label":"패션·뷰티"},{"value":"109","label":"요리"}]},{"value":"3000","label":"가족·연애","subItems":[{"value":"101","label":"일상"},{"value":"103","label":"연애·결혼"},{"value":"104","label":"육아"},{"value":"102","label":"해외생활"},{"value":"114","label":"군대"},{"value":"106","label":"반려동물"}]},{"value":"4000","label":"직장·자기계발","subItems":[{"value":"401","label":"IT 인터넷"},{"value":"402","label":"모바일"},{"value":"404","label":"과학"},{"value":"405","label":"IT 제품리뷰"},{"value":"606","label":"경영·직장"}]},{"value":"5000","label":"시사·지식","subItems":[{"value":"601","label":"정치"},{"value":"602","label":"사회"},{"value":"603","label":"교육"},{"value":"604","label":"국제"},{"value":"605","label":"경제"}]},{"value":"6000","label":"도서·창작","subItems":[{"value":"305","label":"책"},{"value":"308","label":"창작"}]},{"value":"7000","label":"엔터테인먼트","subItems":[{"value":"301","label":"TV"},{"value":"302","label":"스타"},{"value":"303","label":"영화"},{"value":"304","label":"음악"},{"value":"306","label":"만화·애니"},{"value":"307","label":"공연·전시·축제"}]},{"value":"8000","label":"취미·건강","subItems":[{"value":"107","label":"취미"},{"value":"113","label":"건강"},{"value":"506","label":"스포츠일반"},{"value":"501","label":"축구"},{"value":"502","label":"야구"},{"value":"503","label":"농구"},{"value":"504","label":"배구"},{"value":"505","label":"골프"},{"value":"110","label":"자동차"},{"value":"403","label":"게임"},{"value":"108","label":"사진"}]}];
+
+    window.user = window.Config.user;
+</script>
+
+<link rel="stylesheet" href="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/KeditorPhotosEditor.min.css">
+<script src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/KeditorPhotosEditor.min.js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/polyfill.min.js.다운로드"></script>
+<script src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/tinymce.min.js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/theme.min.js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min.js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(1).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(2).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(3).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(4).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(5).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(6).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(7).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(8).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(9).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(10).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(11).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(12).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(13).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(14).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(15).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(16).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(17).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(18).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(19).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(20).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(21).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(22).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(23).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(24).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(25).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(26).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/plugin.min(27).js.다운로드"></script>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/ko_KR.min.js.다운로드"></script>
+<script src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/post-editor.min.js.다운로드"></script><textarea tabindex="-1" aria-hidden="true" style="min-height: 0px !important; max-height: none !important; height: 0px !important; visibility: hidden !important; overflow: hidden !important; position: absolute !important; z-index: -1000 !important; top: 0px !important; right: 0px !important; border-width: 0px; box-sizing: content-box; font-family: Pretendard-Regular, AppleSDGothicNeo-Regular, &quot;Malgun Gothic&quot;, dotum, sans-serif; font-size: 30px; font-style: normal; font-weight: 400; letter-spacing: -0.4px; line-height: 40px; padding: 0px; tab-size: 8; text-indent: 0px; text-rendering: auto; text-transform: none; width: 860px; word-break: normal;"></textarea><div class="ReactModalPortal"></div><div class="ReactModalPortal"></div><div class="ReactModalPortal"></div>
+<script type="text/javascript" src="./&#39;Spring Boot 프로젝트 11일차[20241015]&#39; 수정하기_files/tiara.min.js.다운로드"></script>
+
+
+<div class="ke_photos" style="position:fixed;top: 0;right:0;bottom:0;left:0;z-index:99999;display:none;"></div><div id="mceu_37" class="mce-styleFormat mce-container mce-panel mce-floatpanel mce-menu mce-animate mce-menu-align" hidefocus="1" tabindex="-1" role="application" aria-labelledby="mceu_37" aria-describedby="mceu_37-none" style="border-width: 1px; z-index: 65536; left: 336px; top: 50px; width: 115.412px; display: none;"><div id="mceu_37-body" class="mce-container-body mce-stack-layout" role="menu" style="width: 115.412px;"><div id="mceu_38" class="mce-menu-item mce-menu-item-normal mce-stack-layout-item mce-first" tabindex="-1" role="menuitem" aria-checked="false">
+        <i class="mce-ico mce-i-none"></i>&nbsp;
+        <span id="mceu_38-text" class="mce-text" style="font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Apple SD Gothic Neo&quot;, Arial, sans-serif;font-size:25.92px;font-weight:400;font-style:normal;text-decoration:none solid rgb(0, 0, 0);text-transform:none;background:rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;background-color:rgba(0, 0, 0, 0);padding:0 2px;border:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);border-radius:0px;outline:rgb(0, 0, 0) none 0px;text-shadow:none;padding:0px;">제목1</span>
+        
+        
+        
+      </div><div id="mceu_39" class="mce-menu-item mce-menu-item-normal mce-stack-layout-item mce-active" tabindex="-1" role="menuitem" aria-checked="true" aria-pressed="true" data-log-action-layer="toolbar styleFormat 제목2">
+        <i class="mce-ico mce-i-none"></i>&nbsp;
+        <span id="mceu_39-text" class="mce-text" style="font-family: -apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Apple SD Gothic Neo&quot;, Arial, sans-serif; font-size: 23.04px; font-weight: 400; font-style: normal; text-decoration: none solid rgb(0, 0, 0); text-transform: none; background-image: none; background-position: 0% 0%; background-size: auto; background-repeat: repeat; background-attachment: scroll; background-origin: padding-box; background-clip: border-box; border: 0px none rgb(0, 0, 0); border-radius: 0px; outline: rgb(0, 0, 0) none 0px; text-shadow: none; padding: 0px;">제목2</span>
+        
+        
+        
+      </div><div id="mceu_40" class="mce-menu-item mce-menu-item-normal mce-stack-layout-item" tabindex="-1" role="menuitem" aria-checked="false">
+        <i class="mce-ico mce-i-none"></i>&nbsp;
+        <span id="mceu_40-text" class="mce-text" style="font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Apple SD Gothic Neo&quot;, Arial, sans-serif;font-size:20px;font-weight:400;font-style:normal;text-decoration:none solid rgb(0, 0, 0);text-transform:none;background:rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;background-color:rgba(0, 0, 0, 0);padding:0 2px;border:0px none rgb(0, 0, 0);border-left:0px none rgb(0, 0, 0);border-bottom:0px none rgb(0, 0, 0);border-right:0px none rgb(0, 0, 0);border-top:0px none rgb(0, 0, 0);border-radius:0px;outline:rgb(0, 0, 0) none 0px;text-shadow:none;padding:0px;">제목3</span>
+        
+        
+        
+      </div><div id="mceu_41" class="mce-menu-item mce-menu-item-normal mce-stack-layout-item" tabindex="-1" role="menuitem" aria-checked="false">
+        <i class="mce-ico mce-i-none"></i>&nbsp;
+        <span id="mceu_41-text" class="mce-text" style="font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Apple SD Gothic Neo&quot;, Arial, sans-serif;font-size:17.92px;font-weight:400;font-style:normal;text-decoration:none solid rgb(51, 51, 51);text-transform:none;color:rgb(51, 51, 51);background:rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;background-color:rgba(0, 0, 0, 0);padding:0 2px;border:0px none rgb(51, 51, 51);border-left:0px none rgb(51, 51, 51);border-bottom:0px none rgb(51, 51, 51);border-right:0px none rgb(51, 51, 51);border-top:0px none rgb(51, 51, 51);border-radius:0px;outline:rgb(51, 51, 51) none 0px;text-shadow:none;padding:0px;">본문1</span>
+        
+        
+        
+      </div><div id="mceu_42" class="mce-menu-item mce-menu-item-normal mce-stack-layout-item" tabindex="-1" role="menuitem" aria-checked="false">
+        <i class="mce-ico mce-i-none"></i>&nbsp;
+        <span id="mceu_42-text" class="mce-text" style="font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Apple SD Gothic Neo&quot;, Arial, sans-serif;font-size:16px;font-weight:400;font-style:normal;text-decoration:none solid rgb(51, 51, 51);text-transform:none;color:rgb(51, 51, 51);background:rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;background-color:rgba(0, 0, 0, 0);padding:0 2px;border:0px none rgb(51, 51, 51);border-left:0px none rgb(51, 51, 51);border-bottom:0px none rgb(51, 51, 51);border-right:0px none rgb(51, 51, 51);border-top:0px none rgb(51, 51, 51);border-radius:0px;outline:rgb(51, 51, 51) none 0px;text-shadow:none;padding:0px;">본문2</span>
+        
+        
+        
+      </div><div id="mceu_43" class="mce-menu-item mce-menu-item-normal mce-stack-layout-item mce-last" tabindex="-1" role="menuitem" aria-checked="false">
+        <i class="mce-ico mce-i-none"></i>&nbsp;
+        <span id="mceu_43-text" class="mce-text" style="font-family:-apple-system, BlinkMacSystemFont, &quot;Helvetica Neue&quot;, &quot;Apple SD Gothic Neo&quot;, Arial, sans-serif;font-size:13.92px;font-weight:400;font-style:normal;text-decoration:none solid rgb(51, 51, 51);text-transform:none;color:rgb(51, 51, 51);background:rgba(0, 0, 0, 0) none repeat scroll 0% 0% / auto padding-box border-box;background-color:rgba(0, 0, 0, 0);padding:0 2px;border:0px none rgb(51, 51, 51);border-left:0px none rgb(51, 51, 51);border-bottom:0px none rgb(51, 51, 51);border-right:0px none rgb(51, 51, 51);border-top:0px none rgb(51, 51, 51);border-radius:0px;outline:rgb(51, 51, 51) none 0px;text-shadow:none;padding:0px;">본문3</span>
+        
+        
+        
+      </div></div></div></body></html>

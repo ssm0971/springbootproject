@@ -57,7 +57,7 @@ function deleteAlert() {
 }
 
 function endAlert() {
-  const contentReport = prompt('신고사유를 입력해주세요');
+  const contentReport = prompt('신고사유를 100글자 이내로 입력해주세요');
   
   if (contentReport !== null) { // 사용자가 확인을 누르면
     console.log('게시글이 신고되었습니다');
@@ -71,7 +71,7 @@ function endAlert() {
 
 //댓글신고
 function CommentReportClick() {
-  const commentReport = prompt('신고사유를 입력해주세요');
+  const commentReport = prompt('신고사유를 100글자 이내로 입력해주세요');
   
   if (commentReport !== null) { // 사용자가 확인을 눌렀을 때
     console.log('댓글이 신고되었습니다');

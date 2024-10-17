@@ -64,7 +64,7 @@ function CommentDeleteClick() {
 
 // 게시글 신고 버튼
 function ContentReportClick() {
-  const contentReport = prompt('신고사유를 입력해주세요');
+  const contentReport = prompt('신고사유를 100글자 이내로 입력해주세요');
   if (result) {
     console.log('게시글이 신고되었습니다')
     // 이후에 값 넘기기
@@ -76,7 +76,7 @@ function ContentReportClick() {
 
 // 댓글 신고 버튼
 function CommentReportClick() {
-  const commentReport = prompt('신고사유를 입력해주세요');
+  const commentReport = prompt('신고사유를 100글자 이내로 입력해주세요');
   if (result) {
     console.log('댓글이 신고되었습니다')
     // 이후에 값 넘기기

@@ -15,7 +15,7 @@ function deleteAlert() {
 }
 
 function endAlert() {
-  const contentReport = prompt('신고사유를 입력해주세요');
+  const contentReport = prompt('신고사유를 100글자 이내로 입력해주세요');
   
   if (contentReport !== null) { // 사용자가 확인을 누르면
     console.log('게시글이 신고되었습니다');
